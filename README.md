@@ -1,4 +1,4 @@
-# ЛовимВместе
+# English fishing
 
  * Сайт: http://englishfishing.ru/
  * Front-end: [Jekins](https://github.com/jekins)
