@@ -1,0 +1,233 @@
+/* header ***********************/
+.header {
+  padding-bottom: 10px;
+
+  &__top-line {
+    background-color: $bg-primary;
+    @include white-content;
+    padding-top: $indent-small;
+    padding-bottom: $indent-small;
+
+    &-inner {
+      @extend %container;
+      display: flex;
+      justify-content: space-between;
+    }
+    &-left {
+      @media (max-width: $screen-lg) {
+        display: none;
+      }
+    }
+    &-center {
+      white-space: nowrap;
+
+      span {
+        opacity: .7;
+        @media (max-width: $screen-sm) {
+          display: none;
+        }
+      }
+    }
+    &-right {
+      display: flex;
+
+      > * {
+        margin-right: $indent-large;
+        @media (max-width: $screen-sm) {
+          margin-right: $indent-medium;
+        }
+
+        &:last-child {
+          margin-right: 0;
+        }
+      }
+    }
+  }
+  &__inner {
+    position: relative;
+    @extend %container;
+
+    &-top {
+      padding-top: $indent-large;
+      padding-bottom: $indent-large;
+      @include cols($indent-large);
+      align-items: flex-end;
+      justify-content: space-between;
+      @media (max-width: $screen-lg) {
+        align-items: center;
+        @include cols($indent-medium);
+      }
+      @media (max-width: $screen-sm) {
+        padding-top: $indent-medium;
+        padding-bottom: $indent-medium;
+      }
+    }
+    &-bottom {
+      @include cols($indent-small);
+      align-items: center;
+      justify-content: space-between;
+      @media (max-width: $screen-sm) {
+        margin-top: 42px + $indent-medium;
+      }
+    }
+  }
+  &__basket {
+    @media (max-width: $screen-sm) {
+      .basket-button {
+        padding-left: 16px;
+        padding-right: 16px;
+        height: 36px;
+
+        svg {
+          width: 21px;
+          margin-right: 0;
+        }
+        span {
+          display: none;
+        }
+      }
+    }
+    @media (max-width: $screen-xs) {
+      .basket-button {
+        padding-left: 14px;
+        padding-right: 14px;
+        height: 36px;
+
+        svg {
+          width: 21px;
+        }
+      }
+    }
+  }
+  &__logo {
+    display: block;
+    text-decoration: none !important;
+
+    img {
+      @media (max-width: $screen-lg) {
+        width: 217px;
+      }
+      @media (max-width: $screen-xs) {
+        width: 197px;
+      }
+    }
+    span {
+      display: block;
+      margin-top: $indent-xsmall;
+      color: $c-dark;
+      font-size: 14px;
+      @media (max-width: $screen-sm) {
+        margin-top: 0;
+      }
+      @media (max-width: $screen-xs) {
+        font-size: 13px;
+      }
+    }
+  }
+  &__search {
+    flex-grow: 1;
+
+    @media (max-width: $screen-lg) {
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      padding-right: $indent-medium;
+      width: 520px;
+    }
+    @media (max-width: $screen-sm) {
+      bottom: $indent-medium + 42px;
+      width: 100%;
+    }
+  }
+  &__all-catalog {
+    @media (max-width: $screen-sm) {
+      flex-grow: 1;
+    }
+
+    .dropdown__list {
+      @media (max-width: $screen-sm) {
+        width: 100% !important;
+      }
+    }
+    .btn {
+      padding-left: $indent-medium;
+      padding-right: $indent-medium;
+      @media (max-width: $screen-lg) {
+        height: 42px;
+        width: 217px;
+        display: flex;
+        justify-content: center;
+      }
+      @media (max-width: $screen-sm) {
+        width: 100%;
+        justify-content: flex-start;
+      }
+
+      span {
+        font-weight: $fw-semi-bold;
+      }
+      img {
+        &:last-child {
+          position: absolute;
+          right: $indent-medium;
+          @media (min-width: $screen-sm) {
+            display: none;
+          }
+        }
+      }
+    }
+  }
+  &__links {
+    flex-grow: 1;
+    @media (min-width: $screen-lg) {
+      display: none;
+    }
+    @media (max-width: $screen-sm) {
+      display: none;
+    }
+
+    ul {
+      @include reset-list;
+      @include cols($indent-small);
+
+      li {
+
+      }
+    }
+  }
+  &__nav {
+    @media (max-width: $screen-lg) {
+      display: none;
+    }
+
+    .nav {
+      border-bottom: none;
+      position: relative;
+      top: 8px;
+
+      a {
+        height: $btn-medium;
+        padding-bottom: $indent-medium;
+      }
+    }
+  }
+  &__login {
+    max-width: 206px;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    @media (max-width: $screen-sm) {
+      max-width: 130px;
+    }
+    @media (max-width: $screen-xs) {
+      max-width: 120px;
+    }
+  }
+  &__fav {
+    @media (max-width: $screen-xs) {
+      span {
+        display: none !important;
+      }
+    }
+  }
+}

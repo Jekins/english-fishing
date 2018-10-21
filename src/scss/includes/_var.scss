@@ -1,0 +1,92 @@
+/* variables ***********************/
+// colors
+$c-primary: #1ABC9C;
+$c-accent: #FE8500;
+$c-attention: #FF0000;
+$c-danger: #F97070;
+$c-success: #16A085;
+$c-warning: #B87C1F;
+$c-secondary: #777777;
+$c-info: #0094FF;
+$c-border: rgba(0, 0, 0, 0.1);
+$c-text: #000000;
+$c-link: $c-success;
+$c-dark: #555555;
+
+//bg
+$bg-secondary: #F1F1F1;
+$bg-secondary-light: #F7F8F9;
+$bg-accent: #264667;
+$bg-primary: $c-primary;
+$bg-danger: #FFE5E8;
+$bg-warning: #F9F8F3;
+$bg-info: $c-info;
+$bg-success: #E8F8F5;
+$bg-promo: #EAF2E0;
+$bg-dark: $c-dark;
+
+// path
+$img: "../img/";
+
+// font-size
+$fz-medium: 15px;
+$fz-small: 12px;
+$fz-xsmall: 10px;
+$fz-large: 18px;
+$fz-xlarge: 20px;
+
+// line-height
+$lh-base: 1.6;
+$lh-small: $lh-base - .2;
+$lh-large: $lh-base + .2;
+
+// font-weight
+$fw-light: 300;
+$fw-regular: 400;
+$fw-semi-bold: 600;
+$fw-bold: 700;
+$fw-extra-bold: 800;
+
+// font-family
+$ff-base: 'Open Sans', Arial, sans-serif;
+
+// indents
+$indent-xsmall: 4px;
+$indent-small: 8px;
+$indent-medium: 15px;
+$indent-large: 30px;
+$indent-xlarge: 60px;
+$indent-section: 45px;
+$indent-space: $indent-medium;
+
+// radius
+$r-medium: 2px;
+$r-large: 4px;
+
+// transition
+$trans-fast: .1s;
+$trans-medium: .2s;
+$trans-long: .3s;
+
+// screen width
+$screen-lg: 1230px;
+$screen-md: 992px;
+$screen-sm: 768px;
+$screen-xs: 375px;
+
+// btn
+$btn-small: 28px;
+$btn-medium: 36px;
+$btn-large: 50px;
+
+// input
+$input-small: $btn-small;
+$input-medium: $btn-medium;
+$input-large: $btn-large;
+$input-padding-medium: 8px 10px;
+$input-padding-large: 15px 10px;
+
+// search form
+$search-form-height: 42px;
+
+

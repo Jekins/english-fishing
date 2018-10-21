@@ -1,0 +1,32 @@
+/* catalog-headline ***********************/
+.catalog-headline {
+  @media (min-width: $screen-lg) {
+    background-color: $bg-secondary-light;
+  }
+  @media (max-width: $screen-sm) {
+    margin-bottom: -$indent-small;
+  }
+
+  &__inner {
+    @extend %container;
+    @include reset-last-indent;
+    padding-bottom: $indent-large;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    @media (max-width: $screen-lg) {
+      padding-bottom: 0;
+    }
+  }
+  &__title {
+    margin-bottom: 0;
+    @media (max-width: $screen-sm) {
+      font-size: 22px;
+    }
+  }
+  &__sort {
+    @media (max-width: $screen-lg) {
+      display: none;
+    }
+  }
+}

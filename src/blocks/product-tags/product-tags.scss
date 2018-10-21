@@ -1,0 +1,33 @@
+/* product-tags ***********************/
+.product-tags {
+  @include reset-list;
+  @include cols($indent-xsmall / 2);
+  flex-wrap: wrap;
+  margin-bottom: -$indent-xsmall;
+
+  &__item {
+    margin-bottom: $indent-xsmall !important;
+  }
+  &__btn {
+    display: block;
+    border-radius: $r-medium;
+    border: 1px solid #C5C5C5;
+    transition: $trans-medium;
+    color: $c-secondary;
+    padding: 7px 10px;
+    line-height: 1;
+    font-size: 13px;
+    text-decoration: none !important;
+
+    &:hover {
+      border-color: $c-primary;
+      color: $c-success;
+    }
+  }
+
+  &__item_active &__btn {
+    background-color: $bg-success;
+    border-color: $c-primary;
+    color: $c-success;
+  }
+}

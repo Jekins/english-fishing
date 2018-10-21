@@ -1,0 +1,44 @@
+/* basket-button ***********************/
+.basket-button {
+  background: white;
+  border: 1px solid $c-primary;
+  height: $search-form-height;
+  padding: 0 20px;
+  display: flex;
+  font-size: $fz-medium;
+  align-items: center;
+  line-height: 1;
+  text-align: left;
+  border-radius: $r-medium;
+  color: black;
+  text-decoration: none !important;
+  transition: $trans-medium;
+
+  &:hover {
+    color: $c-primary;
+  }
+  &__icon {
+    margin-right: $indent-medium;
+  }
+  &__content {
+    display: block;
+
+    span {
+      display: block;
+
+      &:first-child {
+        text-transform: uppercase;
+        font-weight: $fw-semi-bold;
+      }
+      &:last-child {
+        font-size: 14px;
+      }
+    }
+  }
+
+  &_active {
+    border-color: $c-accent;
+    background: $c-accent;
+    @include white-content;
+  }
+}

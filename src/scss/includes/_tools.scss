@@ -1,0 +1,132 @@
+/* tools ***********************/
+.td {
+  &-none {
+    text-decoration: none;
+  }
+  &-underline {
+    text-decoration: underline;
+  }
+}
+
+.fw {
+  &-normal {
+    font-weight: $fw-regular;
+  }
+  &-bold {
+    font-weight: $fw-bold;
+  }
+}
+
+.fs {
+  &-normal {
+    font-style: normal;
+  }
+  &-italic {
+    font-style: italic;
+  }
+}
+
+.d {
+  &-block {
+    display: block;
+  }
+  &-none {
+    display: none;
+  }
+  &-inline {
+    display: inline;
+  }
+  &-inline-block {
+    display: inline-block;
+  }
+  &-flex {
+    display: flex;
+  }
+}
+
+.indent {
+  &-xlarge {
+    margin-bottom: $indent-xlarge !important;
+  }
+  &-large {
+    margin-bottom: $indent-large !important;
+  }
+  &-medium {
+    margin-bottom: $indent-medium !important;
+  }
+  &-small {
+    margin-bottom: $indent-small !important;
+  }
+  &-xsmall {
+    margin-bottom: $indent-xsmall !important;
+  }
+  &-reset {
+    margin-top: 0 !important;
+    margin-bottom: 0 !important;
+  }
+  &-sm {
+    &-xlarge {
+      @media (max-width: $screen-sm) {
+        margin-bottom: $indent-xlarge !important;
+      }
+    }
+  }
+  &-lg {
+    &-large {
+      @media (max-width: $screen-lg) {
+        margin-bottom: $indent-large !important;
+      }
+    }
+    &-xlarge {
+      @media (max-width: $screen-lg) {
+        margin-bottom: $indent-xlarge !important;
+      }
+    }
+  }
+}
+
+.c {
+  &-attention {
+    color: $c-attention;
+  }
+  &-secondary {
+    color: $c-secondary;
+  }
+  &-primary {
+    color: $c-primary;
+  }
+}
+
+.text {
+  &-center {
+    text-align: center !important;
+  }
+  &-right {
+    text-align: right !important;
+  }
+  &-left {
+    text-align: left !important;
+  }
+
+  &-black {
+    color: black !important;
+  }
+  &-secondary {
+    color: $c-secondary !important;
+  }
+  &-attention {
+    color: $c-attention !important;
+  }
+}
+
+.bg {
+  &-secondary {
+    background-color: $bg-secondary;
+  }
+  &-primary {
+    background-color: $bg-primary;
+  }
+  &-accent {
+    background-color: $bg-accent;
+  }
+}

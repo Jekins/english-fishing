@@ -1,0 +1,103 @@
+/* checkbox ***********************/
+.checkbox,
+.radio {
+  [type="checkbox"]:not(:checked),
+  [type="checkbox"]:checked,
+  [type="radio"]:not(:checked),
+  [type="radio"]:checked {
+    position: absolute;
+    left: -9999px;
+    outline: none !important;
+
+    &:focus,
+    &:active {
+      outline: none !important;
+    }
+  }
+
+  [type="checkbox"]:not(:checked) + span,
+  [type="checkbox"]:checked + span,
+  [type="radio"]:not(:checked) + span,
+  [type="radio"]:checked + span {
+    position: relative;
+    padding-left: 24px + $indent-small;
+    cursor: pointer;
+    font-size: 14px;
+    display: block;
+  }
+
+  [type="checkbox"]:not(:checked) + span:before,
+  [type="checkbox"]:checked + span:before,
+  [type="radio"]:not(:checked) + span:before,
+  [type="radio"]:checked + span:before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: -1px;
+    width: 24px;
+    height: 24px;
+    border: 1px solid $c-border;
+    transition: $trans-medium;
+  }
+  [type="checkbox"]:checked + span:after,
+  [type="radio"]:checked + span:after {
+    content: "";
+    position: absolute;
+  }
+  [type="checkbox"]:not(:checked) + span:before,
+  [type="checkbox"]:checked + span:before {
+    border-radius: $r-medium;
+  }
+  [type="radio"]:not(:checked) + span:before,
+  [type="radio"]:checked + span:before {
+    border-radius: 100%;
+  }
+
+  [type="checkbox"]:not(:checked) + span:before {
+    content: "";
+  }
+
+  [type="checkbox"]:checked + span:before {
+    content: "";
+    border-color: $c-primary;
+  }
+
+  [type="checkbox"]:checked + span:after {
+    background-image: url($img + 'icon-check-primary.svg');
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: 100%;
+    width: 15px;
+    height: 15px;
+    left: 5px;
+    top: 3px;
+    animation: $trans-medium checkbox backwards;
+  }
+
+  [type="radio"]:not(:checked) + span:before {
+    content: "";
+  }
+
+  [type="radio"]:checked + span:before {
+    content: "";
+    border-color: $c-primary;
+  }
+
+  [type="radio"]:checked + span:after {
+    width: 6px;
+    height: 6px;
+    left: 9px;
+    top: 8px;
+    border-radius: 100%;
+    background-color: $bg-primary;
+    animation: $trans-medium checkbox backwards;
+  }
+
+  /* disabled checkbox */
+  [type="checkbox"]:disabled:not(:checked) + span:before,
+  [type="checkbox"]:disabled:checked + span:before,
+  [type="radio"]:disabled:not(:checked) + span:before,
+  [type="radio"]:disabled:checked + span:before {
+    opacity: .6;
+  }
+}

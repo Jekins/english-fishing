@@ -1,0 +1,17 @@
+/* list-products ***********************/
+.list-products {
+  margin-top: $indent-large;
+
+  &__item {
+    @include reset-last-indent;
+    margin-top: $indent-xlarge;
+    margin-bottom: $indent-xlarge;
+
+    &:first-child {
+      margin-top: 0;
+    }
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+}

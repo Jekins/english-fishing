@@ -1,0 +1,61 @@
+/* catalog-menu ***********************/
+.catalog-menu {
+  border: 1px solid $c-border;
+  border-radius: $r-large;
+  @media (max-width: $screen-sm) {
+    display: none;
+  }
+
+  &__headline {
+    background-color: $bg-secondary-light;
+    padding: $indent-medium;
+    margin-bottom: 0;
+    font-size: $fz-medium;
+    border-top-left-radius: $r-large;
+    border-top-right-radius: $r-large;
+    @media (min-width: $screen-lg) {
+      border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+    }
+  }
+  &__list {
+    @include reset-list;
+    @media (max-width: $screen-lg) {
+      @include cols($indent-medium);
+      flex-wrap: wrap;
+      padding-bottom: $indent-small;
+    }
+
+    &-item {
+      @media (max-width: $screen-lg) {
+        @include width(100% / 3);
+      }
+
+      > a {
+        display: block;
+        padding: $indent-small $indent-medium;
+        text-decoration: none !important;
+        transition: $trans-medium;
+        @media (min-width: $screen-lg) {
+          border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+        }
+
+        &:hover {
+          color: black;
+        }
+      }
+      &_active {
+        > a {
+          color: black;
+          @media (max-width: $screen-lg) {
+            font-weight: $fw-bold;
+          }
+        }
+      }
+      &:last-child {
+        a {
+          border-bottom: none;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,41 @@
+/* cols ***********************/
+.cols {
+  flex: 0 1 auto;
+  display: flex;
+  justify-content: space-between;
+  margin-left: -$indent-space;
+  margin-right: -$indent-space;
+  @media (max-width: $screen-sm) {
+    display: block;
+  }
+
+  &__main {
+    padding-left: $indent-space;
+    padding-right: $indent-space;
+    @include width(66.667%);
+
+    @media (max-width: $screen-sm) {
+      max-width: 100%;
+      width: auto;
+    }
+  }
+
+  &__side {
+    padding-left: $indent-space;
+    padding-right: $indent-space;
+    @include width(33.333%);
+
+    @media (max-width: $screen-sm) {
+      max-width: 100%;
+      width: auto;
+      margin-top: $indent-large;
+    }
+  }
+
+  &_reverse-xs {
+    @media (max-width: $screen-sm) {
+      display: flex;
+      flex-direction: column-reverse;
+    }
+  }
+}

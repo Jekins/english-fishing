@@ -1,0 +1,22 @@
+/* main-cols ***********************/
+.main-cols {
+  @media (min-width: $screen-lg) {
+    @include cols($indent-medium);
+  }
+
+  &__aside {
+    @include reset-last-indent;
+    @media (min-width: $screen-lg) {
+      @include width(25%);
+    }
+    @media (max-width: $screen-lg) {
+      margin-bottom: $indent-large;
+    }
+  }
+  &__article {
+    @include reset-last-indent;
+    @media (min-width: $screen-lg) {
+      @include width(75%);
+    }
+  }
+}

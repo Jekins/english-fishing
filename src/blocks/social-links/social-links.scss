@@ -1,0 +1,17 @@
+/* social-links ***********************/
+.social-links {
+  @include reset-list;
+  @include cols($indent-small);
+
+  li {
+    a {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 32px;
+      height: 32px;
+      border-radius: 100%;
+      border: 1px solid rgba(255, 255, 255, 0.5);
+    }
+  }
+}

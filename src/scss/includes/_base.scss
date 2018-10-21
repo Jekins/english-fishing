@@ -1,0 +1,251 @@
+/* base ************************/
+html,
+body {
+  -webkit-overflow-scrolling: touch;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  background-color: white;
+  font-family: $ff-base;
+  color: $c-text;
+  font-size: $fz-medium;
+  font-weight: $fw-regular;
+  line-height: $lh-base;
+  min-width: 320px;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
+}
+
+a {
+  color: $c-link;
+  text-decoration: none;
+
+  &:hover {
+    color: $c-link;
+    text-decoration: underline;
+  }
+
+  &:focus {
+    text-decoration: none;
+  }
+}
+
+input, textarea, keygen, select, button {
+  font-family: $ff-base;
+}
+
+* {
+  &,
+  &:hover,
+  &:focus {
+    outline: none !important;
+  }
+}
+
+h1,
+.h1,
+h2,
+.h2,
+h3,
+.h3,
+h4,
+.h4,
+h5,
+.h5 {
+  margin-top: 0;
+  font-weight: $fw-bold;
+  line-height: 1.1;
+}
+
+h1 {
+  font-size: 30px;
+  margin-bottom: $indent-large;
+
+  @media (max-width: $screen-lg) {
+    font-size: 26px;
+    margin-bottom: $indent-medium;
+  }
+}
+
+h2 {
+  font-size: 24px;
+  margin-bottom: $indent-medium;
+
+  @media (max-width: $screen-lg) {
+    font-size: 22px;
+  }
+
+  @media (max-width: $screen-sm) {
+    font-size: 18px;
+    margin-bottom: $indent-small;
+  }
+}
+
+h3 {
+  font-size: 20px;
+  margin-bottom: $indent-medium;
+
+  @media (max-width: $screen-lg) {
+    font-size: 18px;
+  }
+
+  @media (max-width: $screen-sm) {
+    font-size: 16px;
+    margin-bottom: $indent-small;
+  }
+}
+
+h4 {
+  font-size: 18px;
+  margin-bottom: $indent-medium;
+
+  @media (max-width: $screen-sm) {
+    font-size: 15px;
+    margin-bottom: $indent-small;
+  }
+}
+
+h5 {
+  font-size: 15px;
+  margin-bottom: $indent-small;
+}
+
+h6 {
+  font-size: 15px;
+  margin-bottom: $indent-small;
+}
+
+b,
+strong {
+  font-weight: $fw-bold;
+}
+
+i {
+  font-style: italic;
+}
+
+ul {
+  list-style: square outside;
+  margin-bottom: $indent-medium;
+  padding-left: $indent-medium;
+  @include reset-last-indent;
+
+  li {
+    margin-bottom: $indent-small;
+  }
+}
+
+small {
+  font-size: $fz-small;
+  line-height: $lh-small;
+}
+
+iframe {
+  border: none;
+  width: 100%;
+  display: block;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+p {
+  margin-bottom: $indent-medium;
+}
+
+hr {
+  margin-top: $indent-large;
+  margin-bottom: $indent-large;
+  border-top: 1px solid $c-border;
+}
+
+label {
+  font-weight: $fw-regular;
+}
+
+form {
+  @media (max-width: $screen-sm) {
+    table,
+    tbody,
+    thead,
+    tr,
+    td,
+    th {
+      display: block;
+      width: auto;
+
+      input,
+      textarea,
+      select {
+        width: 100% !important;
+      }
+    }
+  }
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="number"],
+textarea,
+select {
+  font-size: 14px;
+  display: block;
+  width: 100%;
+  height: $input-medium;
+  padding: $input-padding-medium;
+  background-color: white;
+  border: 1px solid $c-border;
+  transition: $trans-medium;
+  border-radius: $r-medium;
+  box-shadow: inset 0 0 0 0 transparent;
+  -webkit-appearance: none;
+  @include placeholder();
+
+  &:focus {
+    border-color: $c-primary;
+  }
+
+  &:active {
+    @include box-shadow(none);
+  }
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="number"],
+select {
+  line-height: $input-medium / 2;
+}
+
+select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  background: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='100' height='100' fill='%23000000'><polygon points='0,0 100,0 50,50'/></svg>") no-repeat;
+  background-size: 9px;
+  background-position: calc(100% - 10px) 55%;
+  background-repeat: no-repeat;
+  padding-right: 29px;
+
+  &:focus {
+  }
+  &:-moz-focusring {
+    color: transparent;
+    text-shadow: 0 0 0 #000;
+    outline: none !important;
+  }
+  &[multiple] {
+    height: auto;
+  }
+}
+
+textarea {
+  height: auto;
+  padding: $input-padding-large;
+}

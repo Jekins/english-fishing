@@ -1,0 +1,22 @@
+/* container ***********************/
+.container,
+%container {
+  width: $screen-lg;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: $indent-medium;
+  padding-right: $indent-medium;
+
+  @media (max-width: $screen-lg) {
+    width: $screen-sm;
+  }
+  /*@media (max-width: $screen-md) {
+    width: $screen-md - $indent-space * 2;
+  }*/
+  @media (max-width: $screen-sm) {
+    width: $screen-xs;
+  }
+  @media (max-width: $screen-xs) {
+    width: 100%;
+  }
+}

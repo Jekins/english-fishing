@@ -1,0 +1,24 @@
+/* product-promo-tags ***********************/
+.product-promo-tags {
+  @include reset-list;
+  @include cols($indent-xsmall);
+  margin-bottom: -$indent-xsmall * 2;
+
+  li {
+    margin-bottom: $indent-xsmall * 2;
+  }
+  &__tag {
+    border-radius: $r-medium;
+    padding: 7px 10px;
+    line-height: 1;
+    color: white;
+    text-decoration: none !important;
+    display: block;
+    font-size: $fz-small;
+    background-color: $bg-info;
+
+    &:hover {
+      color: white;
+    }
+  }
+}

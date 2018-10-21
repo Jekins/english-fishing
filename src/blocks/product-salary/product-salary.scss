@@ -1,0 +1,10 @@
+/* product-salary ***********************/
+.product-salary {
+  font-weight: $fw-bold;
+
+  &_old {
+    color: $c-attention;
+    text-decoration:line-through;
+    font-weight: $fw-regular;
+  }
+}

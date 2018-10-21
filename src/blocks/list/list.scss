@@ -1,0 +1,29 @@
+/* list ***********************/
+.list {
+  @include reset-list;
+
+  &_inline {
+    @include cols($indent-medium);
+
+    &-small {
+      @include cols($indent-small);
+    }
+    &-center {
+      align-items: center;
+    }
+  }
+  &_vertical {
+    &-small {
+      @include reset-last-indent;
+
+      li {
+        margin-bottom: $indent-small;
+      }
+    }
+  }
+  &_row {
+    li {
+      margin-bottom: $indent-small;
+    }
+  }
+}

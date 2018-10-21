@@ -1,0 +1,26 @@
+/* section ***********************/
+.section {
+  &__inner {
+    @extend %container;
+    padding-top: $indent-section;
+    padding-bottom: $indent-section;
+    @media (max-width: $screen-lg) {
+      padding-top: $indent-large;
+      padding-bottom: $indent-large;
+    }
+    @media (max-width: $screen-sm) {
+      padding-top: $indent-medium;
+      padding-bottom: $indent-medium;
+    }
+  }
+
+  &_accent {
+    background-color: $bg-accent;
+    @include white-content;
+  }
+
+  &_small &__inner {
+    padding-top: $indent-large;
+    padding-bottom: $indent-large;
+  }
+}

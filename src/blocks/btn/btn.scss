@@ -1,0 +1,74 @@
+/* btn ***********************/
+.btn {
+  $btn-bg-default: #F2F2F2;
+
+  border-style: solid;
+  border-width: 1px;
+  font-weight: $fw-regular;
+  font-size: 14px;
+  border-radius: $r-medium;
+  line-height: $btn-medium - 3px;
+  height: $btn-medium;
+  padding: 0 20px;
+  vertical-align: middle;
+  display: inline-block;
+  white-space: nowrap;
+  text-align: center;
+  transition: $trans-medium;
+  @include btn-color($btn-bg-default, #BBBBBB, $c-dark);
+
+  &,
+  &:hover,
+  &:focus {
+    text-decoration: none !important;
+  }
+
+  &_large {
+    @include btn-size(30px, 16px, $btn-large);
+  }
+  &_small {
+    @include btn-size(10px, 13px, $btn-small);
+  }
+
+  &_danger {
+    @include btn-color($c-danger, #EE5C5C, white);
+  }
+  &_primary {
+    @include btn-color($c-primary, $c-primary, white);
+  }
+  &_accent {
+    @include btn-color($c-accent, $c-accent, white);
+  }
+  &_warning {
+    @include btn-color(#F7EACF, #D5A129, $c-warning);
+  }
+  &_warning {
+    @include btn-color(#F7EACF, #D5A129, $c-warning);
+  }
+  &_link {
+    @include btn-color(transparent, transparent, $c-link);
+  }
+
+  &_block {
+    width: 100%;
+    display: block;
+  }
+
+  &_icon {
+    display: inline-flex;
+    align-items: center;
+
+    span {
+      display: block;
+      margin-left: $indent-small;
+    }
+  }
+  &_icon-single {
+    padding-left: 8px;
+    padding-right: 8px;
+  }
+
+  &_upp {
+    text-transform: uppercase;
+  }
+}

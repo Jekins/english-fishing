@@ -1,0 +1,1039 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1, minimal-ui, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
+  <meta name="description" content="">
+  <meta name="keywords" content="">
+  <link rel="icon" type="image/png" href="./img/favicon-16x16.png" sizes="16x16">
+  <link rel="icon" type="image/png" href="./img/favicon-32x32.png" sizes="32x32">
+
+  <title>English fishing project</title>
+
+  <!-- styles -->
+  <link href="./plugins/select2/select2.min.css" rel="stylesheet">
+  <link href="./css/common.min.css" rel="stylesheet">
+
+  <!-- for using jquery in bottom -->
+  <script src="./js/jquery-to-bottom.js"></script>
+</head>
+<body>
+
+<div id="wrapper" class="page">
+  <header id="header" class="page__header">
+
+    <!--header-->
+    <div class="header">
+      <div class="header__top-line">
+        <div class="header__top-line-inner">
+          <div class="header__top-line-left">
+
+            <!--list-->
+            <ul class="list list_inline">
+              <li>
+                Самовывоз в <a href="">Санкт-Петербурге</a> и <a href="">Москве</a>
+              </li>
+              <li>
+                <a href="">О доставке</a>
+              </li>
+              <li>
+                <a href="">Способы оплаты</a>
+              </li>
+            </ul>
+            <!--/list-->
+
+          </div>
+          <div class="header__top-line-center">
+            <b>8 800 505-06-41</b>&nbsp;&nbsp;<span>Пт-Пн с 9 до 18</span>
+          </div>
+          <div class="header__top-line-right">
+
+            <!--link-icon-->
+            <a href="" class="header__fav header__fav_not-empty link-icon">
+              <img src="./img/icon-star-white-outline.svg" alt="">
+              <span>24</span>
+            </a>
+            <!--/link-icon-->
+
+            <div class="dropdown dropdown_left">
+              <a href="" class="header__login link-icon dropdown__link">
+                <img src="./img/icon-user-fill-white.svg" alt="">
+                <span>Александр</span>
+                <img class="dropdown__arrow" src="./img/icon-arrow-down-white.svg" alt="">
+              </a>
+              <ul class="dropdown__list">
+                <li>
+                  <a href="">
+                    <img src="./img/icon-basket-black.svg" alt="">
+                    <span class="text-black">Мои заказы</span>
+                  </a>
+                </li>
+                <li>
+                  <a href="">
+                    <img src="./img/icon-settings-black.svg" alt="">
+                    <span class="text-black">Редактировать профиль</span>
+                  </a>
+                </li>
+                <li>
+                  <a href="">
+                    <img src="./img/icon-logout-black.svg" alt="">
+                    <span class="text-black">Выход</span>
+                  </a>
+                </li>
+              </ul>
+            </div>
+
+          </div>
+        </div>
+      </div>
+      <div class="header__inner">
+        <div class="header__inner-top">
+          <a class="header__logo" href="/">
+            <img src="./img/logo.svg" alt="Логотип">
+            <span>Рыболовный интернет магазин</span>
+          </a>
+          <div class="header__links">
+            <ul>
+              <li><a href="">О доставке</a></li>
+              <li><a href="">Способы оплаты</a></li>
+            </ul>
+          </div>
+          <div class="header__search">
+
+            <!--search-form-->
+            <form class="search-form">
+              <div class="search-form__categories">
+                <select class="select-single-basic">
+                  <option value="">Везде</option>
+                  <option value="1">Раздел 1</option>
+                  <option value="2">Раздел 2</option>
+                  <option value="3">Раздел 3</option>
+                </select>
+              </div>
+              <div class="search-form__control">
+                <input type="text" placeholder="Поиск среди 4500 товаров">
+              </div>
+              <div class="search-form__action">
+                <button type="submit" class="btn btn_icon-single">
+                  <img src="./img/icon-search-black.svg" alt="">
+                </button>
+              </div>
+            </form>
+            <!--/search-form-->
+
+          </div>
+          <div class="header__basket">
+
+            <!--basket-button-->
+            <a href="" class="basket-button basket-button_active">
+              <svg class="basket-button__icon" width="23" height="22" viewBox="0 0 23 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M0 0H6V2V14H19.3335L20.6665 6H10V4H21H23L21 16H20H19H6H5H4V2H0V0ZM9 20C9 21.1046 8.10449 22 7 22C5.89551 22 5 21.1046 5 20C5 18.8954 5.89551 18 7 18C8.10449 18 9 18.8954 9 20ZM17 22C18.1045 22 19 21.1046 19 20C19 18.8954 18.1045 18 17 18C15.8955 18 15 18.8954 15 20C15 21.1046 15.8955 22 17 22Z" fill="#1ABC9C"/>
+              </svg>
+              <span class="basket-button__content">
+                <span>Корзина (5)</span>
+                <span>15 300 руб.</span>
+              </span>
+            </a>
+            <!--/basket-button-->
+
+          </div>
+        </div>
+        <div class="header__inner-bottom">
+          <div class="header__all-catalog">
+
+            <!--dropdown-->
+            <div class="dropdown">
+              <a href="" class="dropdown__link btn btn_primary btn_icon btn_upp">
+                <img src="./img/icon-menu-white.svg" alt="">
+                <span>Весь каталог</span>
+                <img src="./img/icon-chevron-down-white.svg" alt="">
+              </a>
+              <ul class="dropdown__list list-catalog" style="width: 300px">
+                <li>
+                  <a href="">
+                    <span class="list-catalog__text">Подарочные сертификаты</span>
+                    <span class="list-catalog__count">32</span>
+                  </a>
+                </li>
+                <li>
+                  <a href="">
+                    <span class="list-catalog__text">Удилища Фидерные</span>
+                    <span class="list-catalog__count">54</span>
+                  </a>
+                </li>
+                <li>
+                  <a href="">
+                    <span class="list-catalog__text">Вершинки</span>
+                    <span class="list-catalog__count">19</span>
+                  </a>
+                </li>
+                <li>
+                  <a href="">
+                    <span class="list-catalog__text">Удилища Карповые</span>
+                    <span class="list-catalog__count">18</span>
+                  </a>
+                </li>
+                <li>
+                  <a href="">
+                    <span class="list-catalog__text">Удилища Матчевые</span>
+                    <span class="list-catalog__count">28</span>
+                  </a>
+                </li>
+                <li>
+                  <a href="">
+                    <span class="list-catalog__text">Удилища Специальные</span>
+                    <span class="list-catalog__count">11</span>
+                  </a>
+                </li>
+                <li>
+                  <a href="">
+                    <span class="list-catalog__text">Спиннинги и удилища для ловли хищника</span>
+                    <span class="list-catalog__count">19</span>
+                  </a>
+                </li>
+                <li>
+                  <a href="">
+                    <span class="list-catalog__text">Воблеры, приманки</span>
+                    <span class="list-catalog__count">42</span>
+                  </a>
+                </li>
+                <li>
+                  <a href="">
+                    <span class="list-catalog__text">Армы, стойки, триподы</span>
+                    <span class="list-catalog__count">23</span>
+                  </a>
+                </li>
+                <li>
+                  <a href="">
+                    <span class="list-catalog__text">Бойлы, бустеры, дипы, насадки, пеллетс, прикормка</span>
+                    <span class="list-catalog__count">58</span>
+                  </a>
+                </li>
+                <li>
+                  <a href="">
+                    <span class="list-catalog__text">Вёдра, столики, тазы</span>
+                    <span class="list-catalog__count">28</span>
+                  </a>
+                </li>
+              </ul>
+            </div>
+            <!--/dropdown-->
+
+          </div>
+          <div class="header__nav">
+
+            <!--nav-->
+            <nav class="nav nav_upp">
+              <ul class="nav__list">
+                <li class="nav__item nav__item_active"><a href="">Удочки и катушки</a></li>
+                <li class="nav__item"><a href="">Останстка</a></li>
+                <li class="nav__item"><a href="">Комфорт</a></li>
+                <li class="nav__item"><a href="">Прикормка</a></li>
+                <li class="nav__item"><a href="">Хранение</a></li>
+                <li class="nav__item"><a href="">Одежда</a></li>
+                <li class="nav__item"><a href="">Подарочные наборы</a></li>
+                <li class="nav__item"><a href="">Распродажа<span class="text-attention">&nbsp;%</span></a></li>
+              </ul>
+            </nav>
+            <!--/nav-->
+
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--/header-->
+
+  </header>
+
+
+  <main id="body" class="page__body">
+    
+    <!--back-path-->
+    <div class="back-path">
+      <div class="back-path__inner">
+        <ul class="back-path__links">
+          <li><a href="">Главная</a></li>
+          <li><a href="">Удочки и катушки</a></li>
+          <li><a href="">Удилища фидерные</a></li>
+        </ul>
+      </div>
+    </div>
+    <!--back-path-->
+
+    <!--catalog-headline-->
+    <header class="catalog-headline">
+      <div class="catalog-headline__inner">
+        <h1 class="catalog-headline__title">Удилища фидерные</h1>
+        <form class="catalog-headline__sort">
+
+          <!--sort-->
+          <ul class="sort">
+            <li>Сортировать по:</li>
+            <li class="sort__item sort__item_asc"> <!-- sort__item_desc -->
+              <a href="">названию</a>
+            </li>
+            <li class="sort__item">
+              <a href="">производителю</a>
+            </li>
+            <li class="sort__item">
+              <a href="">цене</a>
+            </li>
+            <li class="sort__item">
+              <a href="">новизне</a>
+            </li>
+          </ul>
+          <!--/sort-->
+          
+        </form>
+      </div>
+    </header>
+    <!--/catalog-headline-->
+
+    <!--section-->
+    <section class="section section_small">
+      <div class="section__inner">
+
+        <!--main-cols-->
+        <div class="main-cols">
+          <aside class="main-cols__aside">
+
+            <!--catalog-menu-->
+            <nav class="catalog-menu indent-large">
+              <h4 class="catalog-menu__headline">
+                Удочки и катушки
+              </h4>
+              <ul class="catalog-menu__list">
+                <li class="catalog-menu__list-item catalog-menu__list-item_active">
+                  <a href="">Удилища фидерные</a>
+                </li>
+                <li class="catalog-menu__list-item">
+                  <a href="">Вершинки</a>
+                </li>
+                <li class="catalog-menu__list-item">
+                  <a href="">Удилища карповые</a>
+                </li>
+                <li class="catalog-menu__list-item">
+                  <a href="">Удилища карповые</a>
+                </li>
+                <li class="catalog-menu__list-item">
+                  <a href="">Удилища матчевые</a>
+                </li>
+                <li class="catalog-menu__list-item">
+                  <a href="">Удилища специальные</a>
+                </li>
+                <li class="catalog-menu__list-item">
+                  <a href="">Для ловли хищника</a>
+                </li>
+              </ul>
+            </nav>
+            <!--catalog-menu-->
+
+            <!--filters-wrapper-->
+            <div class="filters-wrapper">
+              <div class="filters-wrapper__filters">
+
+                <!--list-filters-->
+                <form class="list-filters">
+                  <button type="button" class="list-filters__activator btn btn_primary btn_icon">
+                    <img src="./img/icon-filters-white.svg" alt="">
+                    <span>Фильтр</span>
+                    <img src="./img/icon-chevron-down-white.svg" alt="">
+                  </button>
+                  <div class="list-filters__wrapper">
+                    <h5 class="list-filters__headline">Подбор по параметрам</h5>
+                    <section class="list-filters__item">
+                      <h5 class="list-filters__headline">Цена:</h5>
+                      <div class="list-filters__inner">
+
+                        <!--list-->
+                        <ul class="list list_inline-small list_inline-center">
+                          <li>
+                            <input class="text-center" type="text" placeholder="от">
+                          </li>
+                          <li class="text-secondary">&mdash;</li>
+                          <li>
+                            <input class="text-center" type="text" placeholder="до">
+                          </li>
+                        </ul>
+                        <!--/list-->
+
+                      </div>
+                    </section>
+                    <section class="list-filters__item">
+                      <h5 class="list-filters__headline">Параметр с чекбоксами:</h5>
+                      <div class="list-filters__inner">
+
+                        <!--list-->
+                        <ul class="list list_vertical-small">
+                          <li>
+                            <label class="checkbox">
+                              <input type="checkbox" hidden>
+                              <span>Все</span>
+                            </label>
+                          </li>
+                          <li>
+                            <label class="checkbox">
+                              <input type="checkbox" hidden>
+                              <span>Preston</span>
+                            </label>
+                          </li>
+                          <li>
+                            <label class="checkbox">
+                              <input type="checkbox" hidden>
+                              <span>Drennan</span>
+                            </label>
+                          </li>
+                          <li>
+                            <label class="checkbox">
+                              <input type="checkbox" hidden>
+                              <span>Sonubaits</span>
+                            </label>
+                          </li>
+                          <li>
+                            <label class="checkbox">
+                              <input type="checkbox" hidden>
+                              <span>Fox (Великобритания)</span>
+                            </label>
+                          </li>
+                          <li>
+                            <label class="checkbox">
+                              <input type="checkbox" hidden>
+                              <span>MAP (Великобритания)</span>
+                            </label>
+                          </li>
+                          <li>
+                            <label class="checkbox">
+                              <input type="checkbox" hidden>
+                              <span>Sensas (Франция)</span>
+                            </label>
+                          </li>
+                        </ul>
+                        <!--/list-->
+
+                      </div>
+                    </section>
+                    <section class="list-filters__item">
+                      <h5 class="list-filters__headline">Параметр с радио:</h5>
+                      <div class="list-filters__inner">
+
+                        <!--list-->
+                        <ul class="list list_vertical-small">
+                          <li>
+                            <label class="radio">
+                              <input type="radio" name="radio" hidden>
+                              <span>Готовится</span>
+                            </label>
+                          </li>
+                          <li>
+                            <label class="radio">
+                              <input type="radio" name="radio" hidden>
+                              <span>Движется</span>
+                            </label>
+                          </li>
+                          <li>
+                            <label class="radio">
+                              <input type="radio" name="radio" hidden>
+                              <span>В упаковочном цехе</span>
+                            </label>
+                          </li>
+                          <li>
+                            <label class="radio">
+                              <input type="radio" name="radio" hidden>
+                              <span>Принят</span>
+                            </label>
+                          </li>
+                        </ul>
+                        <!--/list-->
+
+                      </div>
+                    </section>
+                    <section class="list-filters__item">
+                      <h5 class="list-filters__headline">Параметр с селектом:</h5>
+                      <div class="list-filters__inner">
+                        <select class="select-full-width select-single-basic" placeholder="Плейсхолдер">
+                          <option value=""></option>
+                          <option value="1">Вариант 1</option>
+                          <option value="2">Вариант 2</option>
+                          <option value="3">Вариант 3</option>
+                          <option value="4">Вариант 4</option>
+                        </select>
+                      </div>
+                    </section>
+                    <section class="list-filters__actions">
+                      <button class="btn btn_link" type="reset">Сбросить фильтр</button>
+                      <button class="btn btn_primary" type="submit">Показать (26)</button>
+                    </section>
+                  </div>
+                </form>
+                <!--/list-filters-->
+
+              </div>
+              <div class="filters-wrapper__sort">
+                <select class="select-full-width select-single-basic">
+                  <option value="1">По названию</option>
+                  <option value="2">По производителю</option>
+                  <option value="3">По цене</option>
+                  <option value="4">По новизне</option>
+                </select>
+              </div>
+            </div>
+            <!--/filters-wrapper-->
+
+          </aside>
+          <article class="main-cols__article">
+
+            <!--top-filters-->
+            <form class="top-filters">
+              <section class="top-filters__item">
+                <input style="width: 385px;" type="text" placeholder="Введите ключевое слово или артикул">
+              </section>
+              <section class="top-filters__item">
+                <select class="select-single-basic" placeholder="Производители">
+                  <option value=""></option>
+                  <option value="1">Вариант 1</option>
+                  <option value="2">Вариант 2</option>
+                  <option value="3">Вариант 3</option>
+                  <option value="4">Вариант 4</option>
+                </select>
+              </section>
+              <section class="top-filters__actions">
+                <button class="btn btn_link" type="reset">Сбросить фильтр</button>
+                <button class="btn" type="submit">Показать (26)</button>
+              </section>
+            </form>
+            <!--/top-filters-->
+
+            <hr class="divider divider_small visible-lg">
+
+            <!--list-products-->
+            <div class="list-products">
+              <article class="list-products__item">
+
+                <!--product-preview-->
+                <div class="product-preview">
+                  <a href="" class="product-preview__img">
+                    <img src="http://img.lenagold.ru/r/ribal/ribal01.png" alt="">
+                  </a>
+                  <div class="product-preview__inner">
+                    <h3 class="product-preview__title">
+                      <a href="">Вершинка Preston Competition d3.4mm (12',13' Medium-Heavy Feeder)</a>
+                    </h3>
+                    <div class="product-preview__desc">
+                      Korum Rodiac Free Spool Reel в размере 4000 катушка станет отличным вариантом для силового речного фидера
+                    </div>
+                    <form class="product-preview__options">
+                      <label>Размеры</label>
+
+                      <!--product-tags-->
+                      <ul class="product-tags">
+                        <li class="product-tags__item product-tags__item_active">
+                          <a href="" class="product-tags__btn">
+                            <input type="radio" hidden name="size" checked>
+                            River 14' 2" 160g
+                          </a>
+                        </li>
+                        <li class="product-tags__item">
+                          <a href="" class="product-tags__btn">
+                            <input type="radio" hidden name="size">
+                            River 13' 8" 100g
+                          </a>
+                        </li>
+                      </ul>
+                      <!--/product-tags-->
+
+                    </form>
+                    <div class="product-preview__params">
+
+                      <!--product-status-->
+                      <div class="product-status">В наличии</div>
+                      <!--product-status-->
+
+                      <!--product-promo-tags-->
+                      <ul class="product-promo-tags">
+                        <li>
+                          <a href="" class="product-promo-tags__tag">+ подарок</a>
+                        </li>
+                        <li>
+                          <a href="" class="product-promo-tags__tag">Комплектом дешевле</a>
+                        </li>
+                      </ul>
+                      <!--/product-promo-tags-->
+
+                    </div>
+                    <div class="product-preview__footer">
+                      <div class="product-preview__footer-left">
+
+                        <!--product-salary-->
+                        <span class="product-salary product-salary_old">5390 руб.</span>
+                        <span class="product-salary">4590 руб.</span>
+                        <!--/product-salary-->
+
+                      </div>
+                      <div class="product-preview__footer-right">
+
+                        <!--favorite-link-->
+                        <button type="button" class="favorite-link favorite-link_active">
+                          В избранном
+                        </button>
+                        <!--/favorite-link-->
+
+                        <button type="button" class="btn btn_accent">
+                          <span class="visible-lg">Добавлено в корзину</span>
+                          <span class="hidden-lg">В корзинe</span>
+                        </button>
+
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!--/product-preview-->
+
+              </article>
+              <article class="list-products__item">
+
+                <!--product-preview-->
+                <div class="product-preview">
+                  <a href="" class="product-preview__img">
+                    <img src="http://img.lenagold.ru/r/ribal/ribal01.png" alt="">
+                  </a>
+                  <div class="product-preview__inner">
+                    <h3 class="product-preview__title">
+                      <a href="">Вершинка Preston Competition d3.4mm (12',13' Medium-Heavy Feeder)</a>
+                    </h3>
+                    <div class="product-preview__desc">
+                      Korum Rodiac Free Spool Reel в размере 4000 катушка станет отличным вариантом для силового речного фидера
+                    </div>
+                    <div class="product-preview__params">
+
+                      <!--product-status-->
+                      <div class="product-status product-status_not-available">Нет в наличии</div>
+                      <!--product-status-->
+
+                    </div>
+                    <div class="product-preview__footer">
+                      <div class="product-preview__footer-left">
+
+                        <!--product-salary-->
+                        <span class="product-salary">4590 руб.</span>
+                        <!--/product-salary-->
+
+                      </div>
+                      <div class="product-preview__footer-right">
+
+                        <!--favorite-link-->
+                        <button type="button" class="favorite-link">
+                          В избранное
+                        </button>
+                        <!--/favorite-link-->
+
+                        <button type="button" class="btn btn_primary">В корзину</button>
+
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!--/product-preview-->
+
+              </article>
+              <article class="list-products__item">
+
+                <!--product-preview-->
+                <div class="product-preview">
+                  <a href="" class="product-preview__img">
+                    <img src="http://img.lenagold.ru/r/ribal/ribal01.png" alt="">
+                  </a>
+                  <div class="product-preview__inner">
+                    <h3 class="product-preview__title">
+                      <a href="">Вершинка Preston Competition d3.4mm (12',13' Medium-Heavy Feeder)</a>
+                    </h3>
+                    <div class="product-preview__desc">
+                      Korum Rodiac Free Spool Reel в размере 4000 катушка станет отличным вариантом для силового речного фидера
+                    </div>
+                    <form class="product-preview__options">
+                      <label>Размеры</label>
+
+                      <!--product-tags-->
+                      <ul class="product-tags">
+                        <li class="product-tags__item product-tags__item_active">
+                          <a href="" class="product-tags__btn">
+                            <input type="radio" hidden name="size2" checked>
+                            Меленький
+                          </a>
+                        </li>
+                        <li class="product-tags__item">
+                          <a href="" class="product-tags__btn">
+                            <input type="radio" hidden name="size2">
+                            Средний
+                          </a>
+                        </li>
+                        <li class="product-tags__item">
+                          <a href="" class="product-tags__btn">
+                            <input type="radio" hidden name="size2">
+                            Большой
+                          </a>
+                        </li>
+                      </ul>
+                      <!--/product-tags-->
+
+                    </form>
+                    <div class="product-preview__params">
+
+                      <!--product-status-->
+                      <div class="product-status product-status_expected">Ожидается поступление: 25 октября 201</div>
+                      <!--product-status-->
+
+                    </div>
+                    <div class="product-preview__footer">
+                      <div class="product-preview__footer-left">
+
+                        <!--product-salary-->
+                        <span class="product-salary">4590 руб.</span>
+                        <!--/product-salary-->
+
+                      </div>
+                      <div class="product-preview__footer-right">
+
+                        <!--favorite-link-->
+                        <button type="button" class="favorite-link">
+                          В избранное
+                        </button>
+                        <!--/favorite-link-->
+
+                        <button type="button" class="btn btn_primary">В корзину</button>
+
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!--/product-preview-->
+
+              </article>
+              <article class="list-products__item">
+
+                <!--product-preview-->
+                <div class="product-preview">
+                  <a href="" class="product-preview__img">
+                    <img src="http://img.lenagold.ru/r/ribal/ribal01.png" alt="">
+                  </a>
+                  <div class="product-preview__inner">
+                    <h3 class="product-preview__title">
+                      <a href="">Вершинка Preston Competition d3.4mm (12',13' Medium-Heavy Feeder)</a>
+                    </h3>
+                    <div class="product-preview__desc">
+                      Korum Rodiac Free Spool Reel в размере 4000 катушка станет отличным вариантом для силового речного фидера
+                    </div>
+                    <form class="product-preview__options">
+                      <label>Размеры</label>
+
+                      <!--product-tags-->
+                      <ul class="product-tags">
+                        <li class="product-tags__item product-tags__item_active">
+                          <a href="" class="product-tags__btn">
+                            <input type="radio" hidden name="size" checked>
+                            River 14' 2" 160g
+                          </a>
+                        </li>
+                        <li class="product-tags__item">
+                          <a href="" class="product-tags__btn">
+                            <input type="radio" hidden name="size">
+                            River 13' 8" 100g
+                          </a>
+                        </li>
+                      </ul>
+                      <!--/product-tags-->
+
+                    </form>
+                    <div class="product-preview__params">
+
+                      <!--product-status-->
+                      <div class="product-status">В наличии</div>
+                      <!--product-status-->
+
+                      <!--product-promo-tags-->
+                      <ul class="product-promo-tags">
+                        <li>
+                          <a href="" class="product-promo-tags__tag">+ подарок</a>
+                        </li>
+                        <li>
+                          <a href="" class="product-promo-tags__tag">Комплектом дешевле</a>
+                        </li>
+                      </ul>
+                      <!--/product-promo-tags-->
+
+                    </div>
+                    <div class="product-preview__footer">
+                      <div class="product-preview__footer-left">
+
+                        <!--product-salary-->
+                        <span class="product-salary product-salary_old">5390 руб.</span>
+                        <span class="product-salary">4590 руб.</span>
+                        <!--/product-salary-->
+
+                      </div>
+                      <div class="product-preview__footer-right">
+
+                        <!--favorite-link-->
+                        <button type="button" class="favorite-link favorite-link_active">
+                          В избранном
+                        </button>
+                        <!--/favorite-link-->
+
+                        <button type="button" class="btn btn_accent">
+                          <span class="visible-lg">Добавлено в корзину</span>
+                          <span class="hidden-lg">В корзинe</span>
+                        </button>
+
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!--/product-preview-->
+
+              </article>
+              <article class="list-products__item">
+
+                <!--product-preview-->
+                <div class="product-preview">
+                  <a href="" class="product-preview__img">
+                    <img src="http://img.lenagold.ru/r/ribal/ribal01.png" alt="">
+                  </a>
+                  <div class="product-preview__inner">
+                    <h3 class="product-preview__title">
+                      <a href="">Вершинка Preston Competition d3.4mm (12',13' Medium-Heavy Feeder)</a>
+                    </h3>
+                    <div class="product-preview__desc">
+                      Korum Rodiac Free Spool Reel в размере 4000 катушка станет отличным вариантом для силового речного фидера
+                    </div>
+                    <div class="product-preview__params">
+
+                      <!--product-status-->
+                      <div class="product-status product-status_not-available">Нет в наличии</div>
+                      <!--product-status-->
+
+                    </div>
+                    <div class="product-preview__footer">
+                      <div class="product-preview__footer-left">
+
+                        <!--product-salary-->
+                        <span class="product-salary">4590 руб.</span>
+                        <!--/product-salary-->
+
+                      </div>
+                      <div class="product-preview__footer-right">
+
+                        <!--favorite-link-->
+                        <button type="button" class="favorite-link">
+                          В избранное
+                        </button>
+                        <!--/favorite-link-->
+
+                        <button type="button" class="btn btn_primary">В корзину</button>
+
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!--/product-preview-->
+
+              </article>
+              <article class="list-products__item">
+
+                <!--product-preview-->
+                <div class="product-preview">
+                  <a href="" class="product-preview__img">
+                    <img src="http://img.lenagold.ru/r/ribal/ribal01.png" alt="">
+                  </a>
+                  <div class="product-preview__inner">
+                    <h3 class="product-preview__title">
+                      <a href="">Вершинка Preston Competition d3.4mm (12',13' Medium-Heavy Feeder)</a>
+                    </h3>
+                    <div class="product-preview__desc">
+                      Korum Rodiac Free Spool Reel в размере 4000 катушка станет отличным вариантом для силового речного фидера
+                    </div>
+                    <form class="product-preview__options">
+                      <label>Размеры</label>
+
+                      <!--product-tags-->
+                      <ul class="product-tags">
+                        <li class="product-tags__item product-tags__item_active">
+                          <a href="" class="product-tags__btn">
+                            <input type="radio" hidden name="size2" checked>
+                            Меленький
+                          </a>
+                        </li>
+                        <li class="product-tags__item">
+                          <a href="" class="product-tags__btn">
+                            <input type="radio" hidden name="size2">
+                            Средний
+                          </a>
+                        </li>
+                        <li class="product-tags__item">
+                          <a href="" class="product-tags__btn">
+                            <input type="radio" hidden name="size2">
+                            Большой
+                          </a>
+                        </li>
+                      </ul>
+                      <!--/product-tags-->
+
+                    </form>
+                    <div class="product-preview__params">
+
+                      <!--product-status-->
+                      <div class="product-status product-status_expected">Ожидается поступление: 25 октября 201</div>
+                      <!--product-status-->
+
+                    </div>
+                    <div class="product-preview__footer">
+                      <div class="product-preview__footer-left">
+
+                        <!--product-salary-->
+                        <span class="product-salary">4590 руб.</span>
+                        <!--/product-salary-->
+
+                      </div>
+                      <div class="product-preview__footer-right">
+
+                        <!--favorite-link-->
+                        <button type="button" class="favorite-link">
+                          В избранное
+                        </button>
+                        <!--/favorite-link-->
+
+                        <button type="button" class="btn btn_primary">В корзину</button>
+
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!--/product-preview-->
+
+              </article>
+            </div>
+            <!--/list-products-->
+
+          </article>
+        </div>
+        <!--/main-cols-->
+
+      </div>
+    </section>
+    <!--section-->
+
+  </main>
+
+
+  <footer id="footer" class="page__footer">
+
+    <!--footer-->
+    <div class="footer">
+      <div class="footer__inner">
+        <div class="footer__top">
+          <div class="footer__col">
+            <h5 class="footer__headline"><a href="">Контакты</a></h5>
+            <div class="footer__phone">8 800 505-06-41</div>
+            <a class="footer__email" href="mailto:sales@englishfishing.ru">sales@englishfishing.ru</a>
+
+            <!--social-links-->
+            <ul class="social-links">
+              <li>
+                <a href="" rel="nofollow">
+                  <img src="./img/icon-fb-white.svg" alt="">
+                </a>
+              </li>
+              <li>
+                <a href="" rel="nofollow">
+                  <img src="./img/icon-vk-white.svg" alt="">
+                </a>
+              </li>
+              <li>
+                <a href="" rel="nofollow">
+                  <img src="./img/icon-yt-white.svg" alt="">
+                </a>
+              </li>
+            </ul>
+            <!--/social-links-->
+
+          </div>
+          <div class="footer__col">
+            <h5 class="footer__headline">Информация</h5>
+            
+            <!--list-->
+            <ul class="footer__links list list_row">
+              <li><a href="">О магазине</a></li>
+              <li><a href="">Как сделать заказ</a></li>
+              <li><a href="">Условия доставки</a></li>
+              <li><a href="">Способы оплаты</a></li>
+              <li><a href="">Форум</a></li>
+            </ul>
+            <!--/list-->
+            
+          </div>
+          <div class="footer__col">
+            <h5 class="footer__headline"><a href="">Доставка</a></h5>
+            <p>
+              Курьером или самовывоз в&nbsp;Москве и&nbsp;Санкт-Петербурге
+            </p>
+            <p>
+              По&nbsp;России, а&nbsp;также в&nbsp;Белоруссию, Украину и&nbsp;страны СНГ — почтовыми службами
+            </p>
+          </div>
+          <div class="footer__col">
+            <h5 class="footer__headline"><a href="">Оплата</a></h5>
+            <p>
+              Принимаем оплату наличными, безналичными, банковским переводом
+            </p>
+
+            <!--pay-method-->
+            <ul class="pay-method">
+              <li>
+                <a href="" rel="nofollow" target="_blank">
+                  <img src="./img/logo-mastercard.svg" alt="">
+                </a>
+              </li>
+              <li>
+                <a href="" rel="nofollow" target="_blank">
+                  <img src="./img/logo-visa.svg" alt="">
+                </a>
+              </li>
+              <li>
+                <a href="" rel="nofollow" target="_blank">
+                  <img src="./img/logo-paypal.svg" alt="">
+                </a>
+              </li>
+              <li>
+                <a href="" rel="nofollow" target="_blank">
+                  <img src="./img/logo-mir.svg" alt="">
+                </a>
+              </li>
+            </ul>
+            <!--/pay-method-->
+
+          </div>
+        </div>
+        <div class="footer__bottom">
+          <div>© Английская Снасть, 2013 — 2019</div>
+          <div>Дизайн — <a href="" rel="nofollow" target="_blank">auddit</a></div>
+        </div>
+      </div>
+    </div>
+    <!--/footer-->
+
+  </footer>
+</div>
+
+
+<div id="dialogs">
+  <!-- place for dialogs -->
+</div>
+
+<!-- scripts -->
+<script src="./plugins/jquery/jquery-3.3.1.min.js"></script>
+<script src="./plugins/select2/select2.full.min.js"></script>
+<script src="./js/helpers.js"></script>
+<script src="./js/common.min.js"></script>
+
+</body>
+</html>

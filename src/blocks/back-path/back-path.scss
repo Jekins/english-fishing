@@ -1,0 +1,47 @@
+/* back-path ***********************/
+.back-path {
+  @media (min-width: $screen-lg) {
+    background-color: $bg-secondary-light;
+  }
+
+  &__inner {
+    @extend %container;
+    padding-top: $indent-medium;
+    padding-bottom: $indent-medium;
+    white-space: nowrap;
+    @media (max-width: $screen-sm) {
+      padding-top: 0;
+    }
+  }
+  &__links {
+    @include  reset-list;
+    display: flex;
+    font-size: 13px;
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+
+    li {
+      position: relative;
+      margin-right: $indent-small;
+
+      a {
+        color: $c-dark;
+      }
+      &:after {
+        content: '';
+        background-image: url($img + 'icon-chevron-right-primary.svg');
+        background-repeat: no-repeat;
+        background-position: center center;
+        width: 6px;
+        height: 10px;
+        display: inline-block;
+        margin-left: $indent-small;
+      }
+      &:last-child {
+        &:after {
+          display: none;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,19 @@
+/* top-filters ***********************/
+.top-filters {
+  @include cols($indent-medium);
+  @media (max-width: $screen-lg) {
+    display: none;
+  }
+
+  .select2 {
+    width: 174px;
+  }
+  &__actions {
+    display: flex;
+
+    .btn_link {
+      color: $c-secondary;
+      padding-left: 0;
+    }
+  }
+}

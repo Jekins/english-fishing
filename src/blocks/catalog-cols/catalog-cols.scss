@@ -1,0 +1,50 @@
+/* catalog-cols ***********************/
+.catalog-cols {
+  @include cols($indent-medium);
+  margin-bottom: -$indent-large;
+
+  &__left,
+  &__right {
+    @include width(50%);
+    @include cols($indent-medium);
+    @media (max-width: $screen-lg) {
+      display: block;
+    }
+  }
+  &__item {
+    @include width(50%);
+    @media (max-width: $screen-lg) {
+      @include width(100%);
+    }
+  }
+  &__section {
+    @include reset-last-indent;
+    margin-bottom: $indent-large;
+  }
+  a {
+    border-bottom: none;
+  }
+  &__title {
+    font-weight: $fw-semi-bold;
+
+    a {
+      color: $c-primary;
+
+      &:hover,
+      &:focus {
+        color: $c-primary;
+      }
+    }
+  }
+  &__list {
+    @include reset-list;
+
+    li {
+      a {
+        padding-top: $indent-small;
+        padding-bottom: $indent-small;
+        display: block;
+      }
+    }
+  }
+}

@@ -1,0 +1,24 @@
+/* hidden ***********************/
+@media (max-width: $screen-xs) {
+  .hidden-xs {
+    display: none !important;
+  }
+}
+
+@media (min-width: $screen-xs) and (max-width: $screen-sm - 1) {
+  .hidden-sm {
+    display: none !important;
+  }
+}
+
+@media (min-width: $screen-md) and (max-width: $screen-lg - 1) {
+  .hidden-md {
+    display: none !important;
+  }
+}
+
+@media (min-width: $screen-lg) {
+  .hidden-lg {
+    display: none !important;
+  }
+}

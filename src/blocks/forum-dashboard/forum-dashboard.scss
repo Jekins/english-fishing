@@ -1,0 +1,122 @@
+/* forum-dashboard ***********************/
+.forum-dashboard {
+  background-color: $bg-secondary;
+
+  &__inner {
+    @extend %container;
+    display: flex;
+    @media (max-width: $screen-lg) {
+      flex-direction: column;
+    }
+  }
+  &__left {
+    @include width(50%);
+    padding: $indent-large $indent-large $indent-large 0;
+    @media (max-width: $screen-lg) {
+      @include width(100%);
+      padding-right: 0;
+    }
+    @media (max-width: $screen-sm) {
+      padding-top: $indent-medium;
+      padding-bottom: $indent-medium;
+    }
+  }
+  &__right {
+    @include width(50%);
+    padding: $indent-large;
+    background-color: white;
+    @media (max-width: $screen-lg) {
+      @include width(100%);
+    }
+    @media (max-width: $screen-sm) {
+      padding: $indent-medium;
+    }
+    @media (max-width: $screen-xs) {
+      @include width(auto);
+      max-width: initial;
+      margin-left: -$indent-space;
+      margin-right: -$indent-space;
+    }
+  }
+  &__action {
+    @media (max-width: $screen-lg) {
+      text-align: center;
+    }
+    @media (max-width: $screen-sm) {
+      .btn {
+        display: block;
+        width: 100%;
+      }
+    }
+  }
+  &__cards {
+    display: flex;
+    @include cols($indent-medium);
+    margin-top: $indent-large;
+    margin-bottom: $indent-large;
+    @media (max-width: $screen-sm) {
+      flex-direction: column;
+      margin-top: $indent-medium;
+      margin-bottom: $indent-medium;
+    }
+
+    &-item {
+      @include width(100% / 3);
+      text-align: center;
+      @media (max-width: $screen-sm) {
+        @include width(100%);
+        margin-bottom: 1px;
+      }
+    }
+    &-inner {
+      height: 100%;
+      background-color: white;
+      padding: $indent-medium $indent-small;
+      @media (max-width: $screen-sm) {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: $indent-medium + $indent-small $indent-medium;
+      }
+    }
+    &-number {
+      font-size: 38px;
+      line-height: 1;
+      font-weight: $fw-light;
+      margin-bottom: $indent-medium;
+      color: $c-success;
+      @media (max-width: $screen-sm) {
+        margin-bottom: 0;
+      }
+    }
+  }
+  &__popular {
+    @include reset-list;
+
+    li {
+      a {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        text-decoration: none !important;
+        padding-top: $indent-medium - 5;
+        padding-bottom: $indent-medium - 5;
+      }
+    }
+    &-text {
+      flex-grow: 1;
+      padding-right: $indent-medium;
+    }
+    &-count {
+      display: flex;
+      align-items: center;
+      white-space: nowrap;
+      color: black;
+      flex-shrink: 0;
+
+      img {
+        margin-right: $indent-small;
+      }
+    }
+  }
+}

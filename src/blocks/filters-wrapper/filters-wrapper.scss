@@ -1,0 +1,25 @@
+/* filters-wrapper ***********************/
+.filters-wrapper {
+  @media (max-width: $screen-lg) {
+    @include cols($indent-medium);
+  }
+  @media (max-width: $screen-sm) {
+    @include cols($indent-small);
+  }
+
+  &__filters {
+    @media (max-width: $screen-lg) {
+      @include width(50%);
+    }
+  }
+  &__sort {
+    @include width(50%);
+    @media (min-width: $screen-lg) {
+      display: none;
+    }
+
+    .select2 {
+      width: 100%;
+    }
+  }
+}

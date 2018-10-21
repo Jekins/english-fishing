@@ -1,0 +1,7 @@
+/* divider ***********************/
+.divider {
+  &_small {
+    margin-top: $indent-medium;
+    margin-bottom: $indent-medium;
+  }
+}

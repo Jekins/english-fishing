@@ -1,0 +1,31 @@
+/* list-catalog ***********************/
+.list-catalog {
+  @include reset-list;
+
+  li {
+    a {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      color: black;
+      line-height: $lh-small;
+    }
+  }
+  &__text {
+    flex-grow: 1;
+    padding-right: $indent-small;
+  }
+  &__count {
+    flex-shrink: 0;
+    border-radius: $r-medium;
+    background-color: $bg-secondary;
+    padding: $indent-xsmall $indent-small;
+    line-height: 1;
+    font-size: $fz-small;
+
+    &,
+    .dropdown__list li a:hover & {
+      color: black !important;
+    }
+  }
+}

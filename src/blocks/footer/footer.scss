@@ -1,0 +1,66 @@
+/* footer ***********************/
+.footer {
+  background-color: $bg-primary;
+  @include white-content;
+  padding-top: $indent-large;
+  font-size: 14px;
+  @media (max-width: $screen-lg) {
+    font-size: 13px;
+  }
+  @media (max-width: $screen-sm) {
+    padding-top: $indent-medium;
+  }
+
+  &__inner {
+    @extend %container;
+  }
+  &__top {
+    @include cols($indent-medium);
+    padding-bottom: $indent-large;
+    @include reset-last-indent;
+    @media (max-width: $screen-sm) {
+      flex-direction: column;
+      padding-bottom: $indent-medium;
+    }
+  }
+  &__bottom {
+    display: flex;
+    justify-content: space-between;
+    padding-top: $indent-medium;
+    padding-bottom: $indent-medium;
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+    @media (max-width: $screen-xs) {
+      display: block;
+      text-align: center;
+    }
+  }
+  &__col {
+    @include width(100% / 4);
+    @include reset-last-indent;
+    @media (max-width: $screen-sm) {
+      @include width(100%);
+      margin-bottom: $indent-large;
+    }
+  }
+  &__phone {
+    font-size: 20px;
+    font-weight: $fw-bold;
+    margin-bottom: $indent-xsmall;
+  }
+  &__headline {
+    margin-bottom: $indent-large;
+    @media (max-width: $screen-sm) {
+      margin-bottom: $indent-medium;
+    }
+  }
+  &__email {
+    display: inline-block;
+    margin-bottom: $indent-medium;
+  }
+  &__links {
+    @media (max-width: $screen-sm) {
+      @include cols($indent-small);
+      flex-wrap: wrap;
+    }
+  }
+}

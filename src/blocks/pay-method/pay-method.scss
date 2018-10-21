@@ -1,0 +1,18 @@
+/* pay-method ***********************/
+.pay-method {
+  @include reset-list;
+  background-color: white;
+  border-radius: $r-large;
+  display: flex;
+  justify-content: center;
+  padding: $indent-small;
+  align-items: center;
+
+  li {
+    margin-right: $indent-small;
+
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+}

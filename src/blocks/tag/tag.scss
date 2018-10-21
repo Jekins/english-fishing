@@ -1,0 +1,29 @@
+/* tag ***********************/
+.tag {
+  padding: 0 8px;
+  text-transform: uppercase;
+  background-color: $bg-dark;
+  @include white-content;
+  line-height: 1;
+  font-size: 11px;
+  font-weight: $fw-bold;
+  display: inline-flex;
+  align-items: center;
+  white-space: nowrap;
+  height: 25px;
+  text-decoration: none !important;
+  border: none !important;
+
+  &:hover {
+    color: white;
+  }
+  img {
+    margin-left: 8px;
+  }
+  &_danger {
+    background-color: #FF5C48;
+  }
+  &_attention {
+    background-color: $c-attention;
+  }
+}

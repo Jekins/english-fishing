@@ -1,0 +1,17 @@
+@keyframes dropdown {
+  from {
+    transform: translateY(-$indent-small);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
+
+@keyframes checkbox {
+  from {
+    transform: scale(0);
+  }
+  to {
+    transform: scale(1);
+  }
+}

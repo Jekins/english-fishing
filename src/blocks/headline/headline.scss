@@ -1,0 +1,27 @@
+/* headline ***********************/
+.headline {
+  &__title {
+    @include reset-last-indent;
+    display: flex;
+    align-items: baseline;
+    margin-bottom: $indent-large;
+    @media (max-width: $screen-sm) {
+      margin-bottom: $indent-medium;
+    }
+
+    h1, h2, h3, h4, h5, h6 {
+      margin-bottom: 0;
+      font-size: 38px;
+      font-weight: $fw-light;
+      @media (max-width: $screen-sm) {
+        font-size: 26px;
+      }
+    }
+    img {
+      margin-left: $indent-medium;
+      @media (max-width: $screen-sm) {
+        max-height: 24px;
+      }
+    }
+  }
+}
