@@ -1,0 +1,40 @@
+/* params ***********************/
+.params {
+  display: table;
+  font-size: 14px;
+  width: 100%;
+
+  dl {
+    display: table-row;
+    width: 100%;
+  }
+  dt {
+    display: table-cell;
+    padding-right: $indent-large - $indent-small;
+    padding-top: $indent-xsmall;
+    padding-bottom: $indent-xsmall;
+    white-space: nowrap;
+    width: 0.1%;
+    overflow: hidden;
+
+    span {
+      position: relative;
+
+      &:after {
+        content: '';
+        display: block;
+        position: absolute;
+        top: 50%;
+        height: 1px;
+        background-color: rgba(0, 0, 0, 0.1);;
+        left: 100%;
+        width: 1000px;
+        margin-left: $indent-small;
+      }
+    }
+  }
+  dd {
+    padding-left: $indent-small;
+    display: table-cell;
+  }
+}

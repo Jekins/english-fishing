@@ -1,0 +1,24 @@
+/* count-switcher ***********************/
+.count-switcher {
+  display: flex;
+  align-items: center;
+  border-radius: $r-medium;
+  border: 1px solid $c-border;
+  line-height: 1;
+
+  input {
+    display: none;
+  }
+  button {
+    @include reset-button;
+    height: 36px;
+    width: 36px;
+    font-size: 26px;
+    color: $c-secondary;
+    transition: $trans-medium;
+
+    &:hover {
+      color: $c-success;
+    }
+  }
+}

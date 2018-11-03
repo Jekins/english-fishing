@@ -1,0 +1,1013 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1, minimal-ui, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
+  <meta name="description" content="">
+  <meta name="keywords" content="">
+  <link rel="icon" type="image/png" href="./img/favicon-16x16.png" sizes="16x16">
+  <link rel="icon" type="image/png" href="./img/favicon-32x32.png" sizes="32x32">
+
+  <title>English fishing project</title>
+
+  <!-- styles -->
+  <link href="./plugins/fancybox/jquery.fancybox.min.css" rel="stylesheet">
+  <link href="./plugins/select2/select2.min.css" rel="stylesheet">
+  <link href="./css/common.min.css" rel="stylesheet">
+
+  <!-- for using jquery in bottom -->
+  <script src="./js/jquery-to-bottom.js"></script>
+</head>
+<body>
+
+<div id="wrapper" class="page">
+  <header id="header" class="page__header">
+
+    <!--header-->
+    <div class="header">
+      <div class="header__top-line">
+        <div class="header__top-line-inner">
+          <div class="header__top-line-left">
+
+            <!--list-->
+            <ul class="list list_inline">
+              <li>
+                Самовывоз в <a href="">Санкт-Петербурге</a> и <a href="">Москве</a>
+              </li>
+              <li>
+                <a href="">О доставке</a>
+              </li>
+              <li>
+                <a href="">Способы оплаты</a>
+              </li>
+            </ul>
+            <!--/list-->
+
+          </div>
+          <div class="header__top-line-center">
+            <b>8 800 505-06-41</b>&nbsp;&nbsp;<span>Пт-Пн с 9 до 18</span>
+          </div>
+          <div class="header__top-line-right">
+
+            <!--link-icon-->
+            <a href="" class="header__fav header__fav_not-empty link-icon">
+              <img src="./img/icon-star-white-outline.svg" alt="">
+              <span>24</span>
+            </a>
+            <!--/link-icon-->
+
+            <div class="dropdown dropdown_left">
+              <a href="" class="header__login link-icon dropdown__link">
+                <img src="./img/icon-user-fill-white.svg" alt="">
+                <span>Александр</span>
+                <img class="dropdown__arrow" src="./img/icon-arrow-down-white.svg" alt="">
+              </a>
+              <ul class="dropdown__list">
+                <li>
+                  <a href="">
+                    <img src="./img/icon-basket-black.svg" alt="">
+                    <span class="text-black">Мои заказы</span>
+                  </a>
+                </li>
+                <li>
+                  <a href="">
+                    <img src="./img/icon-settings-black.svg" alt="">
+                    <span class="text-black">Редактировать профиль</span>
+                  </a>
+                </li>
+                <li>
+                  <a href="">
+                    <img src="./img/icon-logout-black.svg" alt="">
+                    <span class="text-black">Выход</span>
+                  </a>
+                </li>
+              </ul>
+            </div>
+
+          </div>
+        </div>
+      </div>
+      <div class="header__inner">
+        <div class="header__inner-top">
+          <a class="header__logo" href="/">
+            <img src="./img/logo.svg" alt="Логотип">
+            <span>Рыболовный интернет магазин</span>
+          </a>
+          <div class="header__links">
+            <ul>
+              <li><a href="">О доставке</a></li>
+              <li><a href="">Способы оплаты</a></li>
+            </ul>
+          </div>
+          <div class="header__search">
+
+            <!--search-form-->
+            <form class="search-form">
+              <div class="search-form__categories">
+                <select class="select-single-basic">
+                  <option value="">Везде</option>
+                  <option value="1">Раздел 1</option>
+                  <option value="2">Раздел 2</option>
+                  <option value="3">Раздел 3</option>
+                </select>
+              </div>
+              <div class="search-form__control">
+                <input type="text" placeholder="Поиск среди 4500 товаров">
+              </div>
+              <div class="search-form__action">
+                <button type="submit" class="btn btn_icon-single">
+                  <img src="./img/icon-search-black.svg" alt="">
+                </button>
+              </div>
+            </form>
+            <!--/search-form-->
+
+          </div>
+          <div class="header__basket">
+
+            <!--basket-button-->
+            <a href="" class="basket-button basket-button_active">
+              <svg class="basket-button__icon" width="23" height="22" viewBox="0 0 23 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M0 0H6V2V14H19.3335L20.6665 6H10V4H21H23L21 16H20H19H6H5H4V2H0V0ZM9 20C9 21.1046 8.10449 22 7 22C5.89551 22 5 21.1046 5 20C5 18.8954 5.89551 18 7 18C8.10449 18 9 18.8954 9 20ZM17 22C18.1045 22 19 21.1046 19 20C19 18.8954 18.1045 18 17 18C15.8955 18 15 18.8954 15 20C15 21.1046 15.8955 22 17 22Z" fill="#1ABC9C"/>
+              </svg>
+              <span class="basket-button__content">
+                <span>Корзина (5)</span>
+                <span>15 300 руб.</span>
+              </span>
+            </a>
+            <!--/basket-button-->
+
+          </div>
+        </div>
+        <div class="header__inner-bottom">
+          <div class="header__all-catalog">
+
+            <!--dropdown-->
+            <div class="dropdown">
+              <a href="" class="dropdown__link btn btn_primary btn_icon btn_upp">
+                <img src="./img/icon-menu-white.svg" alt="">
+                <span>Весь каталог</span>
+                <img src="./img/icon-chevron-down-white.svg" alt="">
+              </a>
+              <ul class="dropdown__list list-catalog" style="width: 300px">
+                <li>
+                  <a href="">
+                    <span class="list-catalog__text">Подарочные сертификаты</span>
+                    <span class="list-catalog__count">32</span>
+                  </a>
+                </li>
+                <li>
+                  <a href="">
+                    <span class="list-catalog__text">Удилища Фидерные</span>
+                    <span class="list-catalog__count">54</span>
+                  </a>
+                </li>
+                <li>
+                  <a href="">
+                    <span class="list-catalog__text">Вершинки</span>
+                    <span class="list-catalog__count">19</span>
+                  </a>
+                </li>
+                <li>
+                  <a href="">
+                    <span class="list-catalog__text">Удилища Карповые</span>
+                    <span class="list-catalog__count">18</span>
+                  </a>
+                </li>
+                <li>
+                  <a href="">
+                    <span class="list-catalog__text">Удилища Матчевые</span>
+                    <span class="list-catalog__count">28</span>
+                  </a>
+                </li>
+                <li>
+                  <a href="">
+                    <span class="list-catalog__text">Удилища Специальные</span>
+                    <span class="list-catalog__count">11</span>
+                  </a>
+                </li>
+                <li>
+                  <a href="">
+                    <span class="list-catalog__text">Спиннинги и удилища для ловли хищника</span>
+                    <span class="list-catalog__count">19</span>
+                  </a>
+                </li>
+                <li>
+                  <a href="">
+                    <span class="list-catalog__text">Воблеры, приманки</span>
+                    <span class="list-catalog__count">42</span>
+                  </a>
+                </li>
+                <li>
+                  <a href="">
+                    <span class="list-catalog__text">Армы, стойки, триподы</span>
+                    <span class="list-catalog__count">23</span>
+                  </a>
+                </li>
+                <li>
+                  <a href="">
+                    <span class="list-catalog__text">Бойлы, бустеры, дипы, насадки, пеллетс, прикормка</span>
+                    <span class="list-catalog__count">58</span>
+                  </a>
+                </li>
+                <li>
+                  <a href="">
+                    <span class="list-catalog__text">Вёдра, столики, тазы</span>
+                    <span class="list-catalog__count">28</span>
+                  </a>
+                </li>
+              </ul>
+            </div>
+            <!--/dropdown-->
+
+          </div>
+          <div class="header__nav">
+
+            <!--nav-->
+            <nav class="nav nav_upp">
+              <ul class="nav__list">
+                <li class="nav__item nav__item_active"><a href="">Удочки и катушки</a></li>
+                <li class="nav__item"><a href="">Останстка</a></li>
+                <li class="nav__item"><a href="">Комфорт</a></li>
+                <li class="nav__item"><a href="">Прикормка</a></li>
+                <li class="nav__item"><a href="">Хранение</a></li>
+                <li class="nav__item"><a href="">Одежда</a></li>
+                <li class="nav__item"><a href="">Подарочные наборы</a></li>
+                <li class="nav__item"><a href="">Распродажа<span class="text-attention">&nbsp;%</span></a></li>
+              </ul>
+            </nav>
+            <!--/nav-->
+
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--/header-->
+
+  </header>
+
+
+  <main id="body" class="page__body">
+    
+    <!--back-path-->
+    <div class="back-path">
+      <div class="back-path__inner">
+        <ul class="back-path__links">
+          <li><a href="">Главная</a></li>
+          <li><a href="">Удочки и катушки</a></li>
+          <li><a href="">Удилища фидерные</a></li>
+        </ul>
+      </div>
+    </div>
+    <!--back-path-->
+
+    <!--product-headline-->
+    <header class="product-headline">
+      <div class="product-headline__inner">
+        <h1 class="product-headline__title">Удилища фидерные</h1>
+        <div class="product-headline__info">
+
+          <!--product-promo-tags-->
+          <ul class="product-promo-tags">
+            <li>
+              <a href="" class="product-promo-tags__tag">+ подарок</a>
+            </li>
+            <li>
+              <a href="" class="product-promo-tags__tag">Комплектом дешевле</a>
+            </li>
+          </ul>
+          <!--/product-promo-tags-->
+
+        </div>
+      </div>
+    </header>
+    <!--/product-headline-->
+
+    <!--product-info-->
+    <article class="product-info">
+      <div class="product-info__inner">
+        <div class="product-info__gallery">
+
+          <!--product-gallery-->
+          <div class="product-gallery">
+            <div class="product-gallery__preview"><!--preview container--></div>
+            <div class="product-gallery__images">
+              <div class="product-gallery__item">
+                <a href="https://ae01.alicdn.com/kf/HTB10JT3SXXXXXbcaXXXq6xXFXXXH/2-1-3-7.jpg_640x640.jpg">
+                  <img src="https://ae01.alicdn.com/kf/HTB10JT3SXXXXXbcaXXXq6xXFXXXH/2-1-3-7.jpg_640x640.jpg" alt="" />
+                </a>
+              </div>
+              <div class="product-gallery__item">
+                <a href="https://rybkinaulybka.ru/shop/image/cache/catalog/Products/Zima/Udochki/Rapala/zimnyaya-udochka-Rapala_TeleStick_Ice-1200x1200.jpg">
+                  <img src="https://rybkinaulybka.ru/shop/image/cache/catalog/Products/Zima/Udochki/Rapala/zimnyaya-udochka-Rapala_TeleStick_Ice-1200x1200.jpg" alt="" />
+                </a>
+              </div>
+              <div class="product-gallery__item">
+                <a href="https://kalevala-welt.ru/wp-content/uploads/2016/11/%D0%A0%D1%8B%D0%B1%D0%B0%D0%BB%D0%BA%D0%B0-%D0%B2-%D0%9A%D0%B0%D1%80%D0%B5%D0%BB%D0%B8%D0%B8-%D0%BB%D0%B5%D1%82%D0%BE%D0%BC-%D0%B8-%D0%BE%D1%81%D0%B5%D0%BD%D1%8C%D1%8E-06.jpg">
+                  <img src="https://kalevala-welt.ru/wp-content/uploads/2016/11/%D0%A0%D1%8B%D0%B1%D0%B0%D0%BB%D0%BA%D0%B0-%D0%B2-%D0%9A%D0%B0%D1%80%D0%B5%D0%BB%D0%B8%D0%B8-%D0%BB%D0%B5%D1%82%D0%BE%D0%BC-%D0%B8-%D0%BE%D1%81%D0%B5%D0%BD%D1%8C%D1%8E-06.jpg" alt="" />
+                </a>
+              </div>
+              <div class="product-gallery__item">
+                <a href="https://newsnn.ru/attachments/c3c266a0db0f58a4cf8418fa3263bcb6f9ceab31/store/fill/780/440/505d86d0681a7819cb63f4fc94f0641382e96f151fc1751c8dbe32bbee28/IMG_3085.JPG">
+                  <img src="https://newsnn.ru/attachments/c3c266a0db0f58a4cf8418fa3263bcb6f9ceab31/store/fill/780/440/505d86d0681a7819cb63f4fc94f0641382e96f151fc1751c8dbe32bbee28/IMG_3085.JPG" alt="" />
+                </a>
+              </div>
+            </div>
+          </div>
+          <!--/product-gallery-->
+
+        </div>
+        <div class="product-info__description visible-lg">
+          <p>
+            Продвинутая безынерционная катушка, которая наверняка станет идеальным вариантом для любителей современной английской донки как в классическом ее понимании, так и при ловле на флэт-фидер и методные оснастки...
+          </p>
+
+          <!--params-->
+          <div class="params">
+            <dl>
+              <dt><span>Артикул</span></dt>
+              <dd>KFF/4000</dd>
+            </dl>
+            <dl>
+              <dt><span>Производитель</span></dt>
+              <dd><a href="">Korum (Великобритания)</a></dd>
+            </dl>
+            <dl>
+              <dt><span>Передаточное число</span></dt>
+              <dd>5,1:1</dd>
+            </dl>
+            <dl>
+              <dt><span>Лесоемкость</span></dt>
+              <dd>0,26/250</dd>
+            </dl>
+            <dl>
+              <dt><span>Вес</span></dt>
+              <dd>270г</dd>
+            </dl>
+            <dl>
+              <dt><span>Запасная шпуля пластик</span></dt>
+              <dd>1 шт.</dd>
+            </dl>
+          </div>
+          <!--/params-->
+
+          <div class="product-info__menu-actions">
+            <ul>
+              <li>
+                <a href="#tab-reviews" data-toggle="tab">Отзывы (12)</a>
+              </li>
+              <li>
+                <a href="#tab-description" data-toggle="tab">Описание</a>
+              </li>
+              <li>
+                <a href="#tab-characteristics" data-toggle="tab">Характеристики</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <form class="product-info__buy-card">
+          <div class="product-info__buy-card-inner">
+            <div class="product-info__price">
+
+              <!--product-price-->
+              <span class="product-price product-price_old">5390 руб.</span>
+              <span class="product-price" data-count-switcher-price="4590">4590 руб.</span>
+              <!--/product-price-->
+
+            </div>
+            <div class="product-info__buy-card-row">
+
+              <!--count-switcher-->
+              <div class="count-switcher">
+                <input type="text" hidden>
+                <button type="button" class="count-switcher__minus">–</button>
+                <div class="count-switcher__count" data-count-switcher-max="12"><!--count place--></div>
+                <button type="button" class="count-switcher__plus">+</button>
+              </div>
+              <!--/count-switcher-->
+
+              <!--product-status-->
+              <div class="product-status">В наличии</div>
+              <!--product-status-->
+
+            </div>
+            <div class="product-info__buy-card-row">
+              <div class="product-info__sum">
+                <div>Сумма</div>
+                <b data-count-switcher-sum><span><!--sum place--></span> руб.</b>
+              </div>
+              <button type="button" class="btn btn_primary btn_large">В корзину</button>
+            </div>
+            <hr>
+            <div class="product-info__buy-card-row product-info__buy-card-row_small">
+              <a href="">Доставка курьером</a>
+              <div>300 руб.</div>
+            </div>
+            <div class="product-info__buy-card-row product-info__buy-card-row_small">
+              <a href="">Доставка по России</a>
+              <div>от 600 руб.</div>
+            </div>
+            <div class="product-info__buy-card-row product-info__buy-card-row_small">
+              <a href="">Оплата</a>
+
+              <!--pay-method-->
+              <ul class="pay-method pay-method_padding-null">
+                <li>
+                  <a href="" rel="nofollow" target="_blank">
+                    <img src="./img/logo-mastercard.svg" alt="">
+                  </a>
+                </li>
+                <li>
+                  <a href="" rel="nofollow" target="_blank">
+                    <img src="./img/logo-visa.svg" alt="">
+                  </a>
+                </li>
+                <li>
+                  <a href="" rel="nofollow" target="_blank">
+                    <img src="./img/logo-paypal.svg" alt="">
+                  </a>
+                </li>
+                <li>
+                  <a href="" rel="nofollow" target="_blank">
+                    <img src="./img/logo-mir.svg" alt="">
+                  </a>
+                </li>
+              </ul>
+              <!--/pay-method-->
+
+            </div>
+            <div class="product-info__fav">
+
+              <!--favorite-link-->
+              <button type="button" class="favorite-link favorite-link_active">
+                В избранном
+              </button>
+              <!--/favorite-link-->
+
+            </div>
+          </div>
+        </form>
+      </div>
+      <!--Дизайнер нарисовал так, что описание невозможно адаптировать так же, как и в макете, без его дублирования-->
+      <div class="product-info__description hidden-lg">
+        Продвинутая безынерционная катушка, которая наверняка станет идеальным вариантом для любителей современной английской донки как в классическом ее понимании, так и при ловле на флэт-фидер и методные оснастки...
+      </div>
+    </article>
+    <!--/product-info-->
+
+
+    <!--section-->
+    <section class="section section_small">
+      <div class="section__inner">
+
+        <!--headline-->
+        <div class="headline">
+          <div class="headline__title headline__title_small">
+            <h2>С этим товаром покупают</h2>
+          </div>
+        </div>
+        <!--/headline-->
+
+        <!--products-card-line-->
+        <div class="products-card-line">
+          <div class="products-card-line__inner">
+            <article class="products-card-line__item">
+              <div class="products-card-line__item-inner">
+                <div class="products-card-line__img">
+                  <a href="" class="products-card-line__img-inner">
+                    <img src="https://rybkinaulybka.ru/shop/image/cache/catalog/Products/Zima/Udochki/Rapala/zimnyaya-udochka-Rapala_TeleStick_Ice-1200x1200.jpg" alt="">
+                  </a>
+                </div>
+                <div class="products-card-line__title">
+                  <h3><a href="">Чехол для катушки Drennan Reel Bag</a></h3>
+                </div>
+                <div class="products-card-line__price">
+
+                  <!--product-price-->
+                  <span class="product-price product-price_old">5390 руб.</span>
+                  <span class="product-price">4590 руб.</span>
+                  <!--/product-price-->
+
+                </div>
+                <div class="products-card-line__discount">-15%</div>
+                <button type="button" class="products-card-line__action btn btn_primary">В корзину</button>
+              </div>
+            </article>
+            <article class="products-card-line__item">
+              <div class="products-card-line__item-inner">
+                <div class="products-card-line__img">
+                  <a href="" class="products-card-line__img-inner">
+                    <img src="https://rybkinaulybka.ru/shop/image/cache/catalog/Products/Zima/Udochki/Rapala/zimnyaya-udochka-Rapala_TeleStick_Ice-1200x1200.jpg" alt="">
+                  </a>
+                </div>
+                <div class="products-card-line__title">
+                  <h3><a href="">Чехол для катушки Drennan Reel Bag</a></h3>
+                </div>
+                <div class="products-card-line__price">
+
+                  <!--product-price-->
+                  <span class="product-price">4590 руб.</span>
+                  <!--/product-price-->
+
+                </div>
+                <button type="button" class="products-card-line__action btn btn_primary">В корзину</button>
+              </div>
+            </article>
+            <article class="products-card-line__item">
+              <div class="products-card-line__item-inner">
+                <div class="products-card-line__img">
+                  <a href="" class="products-card-line__img-inner">
+                    <img src="https://rybkinaulybka.ru/shop/image/cache/catalog/Products/Zima/Udochki/Rapala/zimnyaya-udochka-Rapala_TeleStick_Ice-1200x1200.jpg" alt="">
+                  </a>
+                </div>
+                <div class="products-card-line__title">
+                  <h3><a href="">Чехол для катушки Drennan Reel Bag</a></h3>
+                </div>
+                <div class="products-card-line__price">
+
+                  <!--product-price-->
+                  <span class="product-price product-price_old">5390 руб.</span>
+                  <span class="product-price">4590 руб.</span>
+                  <!--/product-price-->
+
+                </div>
+                <div class="products-card-line__discount">-15%</div>
+                <button type="button" class="products-card-line__action btn btn_primary">В корзину</button>
+              </div>
+            </article>
+            <article class="products-card-line__item">
+              <div class="products-card-line__item-inner">
+                <div class="products-card-line__img">
+                  <a href="" class="products-card-line__img-inner">
+                    <img src="https://rybkinaulybka.ru/shop/image/cache/catalog/Products/Zima/Udochki/Rapala/zimnyaya-udochka-Rapala_TeleStick_Ice-1200x1200.jpg" alt="">
+                  </a>
+                </div>
+                <div class="products-card-line__title">
+                  <h3><a href="">Чехол для катушки Drennan Reel Bag</a></h3>
+                </div>
+                <div class="products-card-line__price">
+
+                  <!--product-price-->
+                  <span class="product-price">4590 руб.</span>
+                  <!--/product-price-->
+
+                </div>
+                <button type="button" class="products-card-line__action btn btn_primary">В корзину</button>
+              </div>
+            </article>
+            <article class="products-card-line__item">
+              <div class="products-card-line__item-inner">
+                <div class="products-card-line__img">
+                  <a href="" class="products-card-line__img-inner">
+                    <img src="https://rybkinaulybka.ru/shop/image/cache/catalog/Products/Zima/Udochki/Rapala/zimnyaya-udochka-Rapala_TeleStick_Ice-1200x1200.jpg" alt="">
+                  </a>
+                </div>
+                <div class="products-card-line__title">
+                  <h3><a href="">Чехол для катушки Drennan Reel Bag</a></h3>
+                </div>
+                <div class="products-card-line__price">
+
+                  <!--product-price-->
+                  <span class="product-price">4590 руб.</span>
+                  <!--/product-price-->
+
+                </div>
+                <button type="button" class="products-card-line__action btn btn_primary">В корзину</button>
+              </div>
+            </article>
+          </div>
+        </div>
+        <!--/products-card-line-->
+
+      </div>
+    </section>
+    <!--/section-->
+
+
+    <!--section-->
+    <section class="section section_small visible-lg">
+      <div class="section__inner">
+
+        <!--headline-->
+        <div class="headline">
+          <div class="headline__title headline__title_small headline__title_attention">
+            <h2>Покупай в комплекте и экономь!</h2>
+          </div>
+        </div>
+        <!--/headline-->
+
+        <!--products-set-->
+        <!--На макете написаны рандомные цифры, поэтому до конца не понял, как должен работать подсчет сумм. Сделал только для итоговой суммы. Возможно здесь вообще статическая сумма, без возможности выбрать по checkbox`ам-->
+        <form class="products-set">
+          <div class="products-set__left">
+
+            <!--products-card-line-->
+            <div class="products-card-line products-card-line_static">
+              <div class="products-card-line__inner">
+                <article class="products-card-line__item">
+                  <div class="products-card-line__item-inner">
+                    <div class="products-card-line__img">
+                      <a href="" class="products-card-line__img-inner">
+                        <img src="https://rybkinaulybka.ru/shop/image/cache/catalog/Products/Zima/Udochki/Rapala/zimnyaya-udochka-Rapala_TeleStick_Ice-1200x1200.jpg" alt="">
+                      </a>
+                    </div>
+                    <div class="products-card-line__title">
+                      <h3><a href="">Чехол для катушки Drennan Reel Bag</a></h3>
+                    </div>
+                    <div class="products-card-line__price">
+
+                      <!--product-price-->
+                      <span class="product-price product-price_old">5390 руб.</span>
+                      <span class="product-price">4590 руб.</span>
+                      <!--/product-price-->
+
+                    </div>
+                    <div class="products-card-line__discount">-15%</div>
+                    <div class="products-card-line__checkbox">
+                      <label class="checkbox">
+                        <input type="checkbox" value="4590" checked disabled>
+                        <span></span>
+                      </label>
+                    </div>
+                  </div>
+                </article>
+                <article class="products-card-line__item">
+                  <div class="products-card-line__item-inner">
+                    <div class="products-card-line__img">
+                      <a href="" class="products-card-line__img-inner">
+                        <img src="https://rybkinaulybka.ru/shop/image/cache/catalog/Products/Zima/Udochki/Rapala/zimnyaya-udochka-Rapala_TeleStick_Ice-1200x1200.jpg" alt="">
+                      </a>
+                    </div>
+                    <div class="products-card-line__title">
+                      <h3><a href="">Чехол для катушки Drennan Reel Bag</a></h3>
+                    </div>
+                    <div class="products-card-line__price">
+
+                      <!--product-price-->
+                      <span class="product-price">2000 руб.</span>
+                      <!--/product-price-->
+
+                    </div>
+                    <div class="products-card-line__checkbox">
+                      <label class="checkbox">
+                        <input type="checkbox" value="2000">
+                        <span></span>
+                      </label>
+                    </div>
+                  </div>
+                </article>
+                <article class="products-card-line__item">
+                  <div class="products-card-line__item-inner">
+                    <div class="products-card-line__img">
+                      <a href="" class="products-card-line__img-inner">
+                        <img src="https://rybkinaulybka.ru/shop/image/cache/catalog/Products/Zima/Udochki/Rapala/zimnyaya-udochka-Rapala_TeleStick_Ice-1200x1200.jpg" alt="">
+                      </a>
+                    </div>
+                    <div class="products-card-line__title">
+                      <h3><a href="">Чехол для катушки Drennan Reel Bag</a></h3>
+                    </div>
+                    <div class="products-card-line__price">
+
+                      <!--product-price-->
+                      <span class="product-price">240 руб.</span>
+                      <!--/product-price-->
+
+                    </div>
+                    <div class="products-card-line__checkbox">
+                      <label class="checkbox">
+                        <input type="checkbox" value="240">
+                        <span></span>
+                      </label>
+                    </div>
+                  </div>
+                </article>
+              </div>
+            </div>
+            <!--/products-card-line-->
+
+          </div>
+          <div class="products-set__center">
+            <img src="./img/icon-equal-green-light.svg" alt="">
+          </div>
+          <div class="products-set__right">
+            <div class="products-set__sum">Общая цена: <span class="text-strike"><span data-sum>4840</span> руб</span></div>
+            <div class="products-set__saving">Ваша экономия: <span data-saving>690</span> руб.</div>
+            <div class="products-set__total">Итоговая цена: <span data-total>4150</span> руб.</div>
+            <button type="button" class="btn btn_primary btn_large">Купить комплект</button>
+          </div>
+        </form>
+        <!--/products-set-->
+
+      </div>
+    </section>
+    <!--/section-->
+
+
+    <!--section-->
+    <section class="section section_small">
+      <div class="section__inner section__inner_sm-top-null">
+
+        <!--main-cols-->
+        <div class="main-cols">
+          <article class="main-cols__article">
+
+            <!--tabs-->
+            <div class="tabs">
+              <div class="tabs__actions">
+                <ul>
+                  <li class="tabs__actions-item">
+                    <a href="#tab-description">
+                      <img src="./img/icon-description-primary.svg" alt="">
+                      <span>Описание</span>
+                    </a>
+                  </li>
+                  <li class="tabs__actions-item">
+                    <a href="#tab-characteristics">
+                      <img src="./img/icon-characteristics-primary.svg" alt="">
+                      Характеристики
+                    </a>
+                  </li>
+                  <li class="tabs__actions-item">
+                    <a href="#tab-reviews">
+                      <img src="./img/icon-review-primary.svg" alt="">
+                      Отзывы (12)
+                    </a>
+                  </li>
+                  <li class="tabs__actions-item">
+                    <a href="#tab-overviews">
+                      <img src="./img/icon-overview-primary.svg" alt="">
+                      Обзоры (2)
+                    </a>
+                  </li>
+                </ul>
+              </div>
+              <div class="tabs__content">
+                <section class="tabs__content-item" id="tab-description">
+                  Разрабатывая данную модель, инженеры Korum, в первую очередь, стремились получить универсальный механизм, который с одинаковым успехом подойдет как любителям фидерной ловли, так и поплавочникам и даже спиннингистам. Полученный результат превзошел все ожидания : Korum Front Force обрела среди рыболовов огромную популярность. Катушка облачена в компактный и легкий корпус, выполненный из графита, который обеспечивает максимальную прочность и износостойкость практически в любых условиях ловли. «Сердцем» данной модели является главная пара шестерен, выполненная из алюминиевого сплава. Ее передаточное число составляет 5.1:1, что в сочетании со шпулей большого диаметра обеспечивает не только оптимальные тяговые характеристики, но также и высокую скорость выматывания. Это обстоятельство весьма часто играет решающую роль при ловле крупной рыбы матчевой снастью и фидером, когда рыболову важно соблюсти баланс между скоростью выматывания и тягой. Еще одним неотъемлемым атрибутом данной катушки является качественный многодисковый фрикционный тормоз с передней его регулировкой. С его помощью рыболов получает возможность применять самые тонкие поводки, не боясь при этом обрыва во время вываживания – каждый разворот, каждый рывок рыбы будет покорно нивелирован фрикционным тормозом. 4000 модель отличается более крупной шпулей и шестернями увеличенного размера, а потому отлично подходит для среднего фидера, серьезных поплавочных снастей и ловли крупной рыбы.
+                </section>
+                <section class="tabs__content-item" id="tab-characteristics">
+                  В макете не нарисовано что здесь должно быть и это очень странно. Как можно рисовать дизайн и не предусматривать такие вещи?
+                </section>
+                <section class="tabs__content-item" id="tab-reviews">
+                  И даже здесь не прорисовано, а ведь в макете не нарисовано что здесь должно быть и это очень странно. Как можно рисовать дизайн и не предусматривать такие вещи?
+                </section>
+                <section class="tabs__content-item" id="tab-overviews">
+                  Какое удивление! И здесь не нарисовано. Как это неожиданно! И даже здесь не прорисовано, а ведь в макете не нарисовано что здесь должно быть и это очень странно. Как можно рисовать дизайн и не предусматривать такие вещи?
+                </section>
+              </div>
+            </div>
+            <!--/tabs-->
+
+          </article>
+        </div>
+        <!--main-cols-->
+      </div>
+    </section>
+    <!--/section-->
+
+
+    <!--section-->
+    <section class="section">
+      <div class="section__inner">
+
+        <!--headline-->
+        <div class="headline">
+          <div class="headline__title headline__title_small">
+            <h2>Похожие товары</h2>
+          </div>
+        </div>
+        <!--/headline-->
+
+        <!--products-card-line-->
+        <div class="products-card-line">
+          <div class="products-card-line__inner">
+            <article class="products-card-line__item">
+              <div class="products-card-line__item-inner">
+                <div class="products-card-line__img">
+                  <a href="" class="products-card-line__img-inner">
+                    <img src="https://rybkinaulybka.ru/shop/image/cache/catalog/Products/Zima/Udochki/Rapala/zimnyaya-udochka-Rapala_TeleStick_Ice-1200x1200.jpg" alt="">
+                  </a>
+                </div>
+                <div class="products-card-line__title">
+                  <h3><a href="">Чехол для катушки Drennan Reel Bag</a></h3>
+                </div>
+                <div class="products-card-line__price">
+
+                  <!--product-price-->
+                  <span class="product-price product-price_old">5390 руб.</span>
+                  <span class="product-price">4590 руб.</span>
+                  <!--/product-price-->
+
+                </div>
+                <div class="products-card-line__discount">-15%</div>
+                <button type="button" class="products-card-line__action btn btn_primary">В корзину</button>
+              </div>
+            </article>
+            <article class="products-card-line__item">
+              <div class="products-card-line__item-inner">
+                <div class="products-card-line__img">
+                  <a href="" class="products-card-line__img-inner">
+                    <img src="https://rybkinaulybka.ru/shop/image/cache/catalog/Products/Zima/Udochki/Rapala/zimnyaya-udochka-Rapala_TeleStick_Ice-1200x1200.jpg" alt="">
+                  </a>
+                </div>
+                <div class="products-card-line__title">
+                  <h3><a href="">Чехол для катушки Drennan Reel Bag</a></h3>
+                </div>
+                <div class="products-card-line__price">
+
+                  <!--product-price-->
+                  <span class="product-price">4590 руб.</span>
+                  <!--/product-price-->
+
+                </div>
+                <button type="button" class="products-card-line__action btn btn_primary">В корзину</button>
+              </div>
+            </article>
+            <article class="products-card-line__item">
+              <div class="products-card-line__item-inner">
+                <div class="products-card-line__img">
+                  <a href="" class="products-card-line__img-inner">
+                    <img src="https://rybkinaulybka.ru/shop/image/cache/catalog/Products/Zima/Udochki/Rapala/zimnyaya-udochka-Rapala_TeleStick_Ice-1200x1200.jpg" alt="">
+                  </a>
+                </div>
+                <div class="products-card-line__title">
+                  <h3><a href="">Чехол для катушки Drennan Reel Bag</a></h3>
+                </div>
+                <div class="products-card-line__price">
+
+                  <!--product-price-->
+                  <span class="product-price product-price_old">5390 руб.</span>
+                  <span class="product-price">4590 руб.</span>
+                  <!--/product-price-->
+
+                </div>
+                <div class="products-card-line__discount">-15%</div>
+                <button type="button" class="products-card-line__action btn btn_primary">В корзину</button>
+              </div>
+            </article>
+            <article class="products-card-line__item">
+              <div class="products-card-line__item-inner">
+                <div class="products-card-line__img">
+                  <a href="" class="products-card-line__img-inner">
+                    <img src="https://rybkinaulybka.ru/shop/image/cache/catalog/Products/Zima/Udochki/Rapala/zimnyaya-udochka-Rapala_TeleStick_Ice-1200x1200.jpg" alt="">
+                  </a>
+                </div>
+                <div class="products-card-line__title">
+                  <h3><a href="">Чехол для катушки Drennan Reel Bag</a></h3>
+                </div>
+                <div class="products-card-line__price">
+
+                  <!--product-price-->
+                  <span class="product-price">4590 руб.</span>
+                  <!--/product-price-->
+
+                </div>
+                <button type="button" class="products-card-line__action btn btn_primary">В корзину</button>
+              </div>
+            </article>
+            <article class="products-card-line__item">
+              <div class="products-card-line__item-inner">
+                <div class="products-card-line__img">
+                  <a href="" class="products-card-line__img-inner">
+                    <img src="https://rybkinaulybka.ru/shop/image/cache/catalog/Products/Zima/Udochki/Rapala/zimnyaya-udochka-Rapala_TeleStick_Ice-1200x1200.jpg" alt="">
+                  </a>
+                </div>
+                <div class="products-card-line__title">
+                  <h3><a href="">Чехол для катушки Drennan Reel Bag</a></h3>
+                </div>
+                <div class="products-card-line__price">
+
+                  <!--product-price-->
+                  <span class="product-price">4590 руб.</span>
+                  <!--/product-price-->
+
+                </div>
+                <button type="button" class="products-card-line__action btn btn_primary">В корзину</button>
+              </div>
+            </article>
+          </div>
+        </div>
+        <!--/products-card-line-->
+
+      </div>
+    </section>
+    <!--/section-->
+
+  </main>
+
+
+  <footer id="footer" class="page__footer">
+
+    <!--footer-->
+    <div class="footer">
+      <div class="footer__inner">
+        <div class="footer__top">
+          <div class="footer__col">
+            <h5 class="footer__headline"><a href="">Контакты</a></h5>
+            <div class="footer__phone">8 800 505-06-41</div>
+            <a class="footer__email" href="mailto:sales@englishfishing.ru">sales@englishfishing.ru</a>
+
+            <!--social-links-->
+            <ul class="social-links">
+              <li>
+                <a href="" rel="nofollow">
+                  <img src="./img/icon-fb-white.svg" alt="">
+                </a>
+              </li>
+              <li>
+                <a href="" rel="nofollow">
+                  <img src="./img/icon-vk-white.svg" alt="">
+                </a>
+              </li>
+              <li>
+                <a href="" rel="nofollow">
+                  <img src="./img/icon-yt-white.svg" alt="">
+                </a>
+              </li>
+            </ul>
+            <!--/social-links-->
+
+          </div>
+          <div class="footer__col">
+            <h5 class="footer__headline">Информация</h5>
+            
+            <!--list-->
+            <ul class="footer__links list list_row">
+              <li><a href="">О магазине</a></li>
+              <li><a href="">Как сделать заказ</a></li>
+              <li><a href="">Условия доставки</a></li>
+              <li><a href="">Способы оплаты</a></li>
+              <li><a href="">Форум</a></li>
+            </ul>
+            <!--/list-->
+            
+          </div>
+          <div class="footer__col">
+            <h5 class="footer__headline"><a href="">Доставка</a></h5>
+            <p>
+              Курьером или самовывоз в&nbsp;Москве и&nbsp;Санкт-Петербурге
+            </p>
+            <p>
+              По&nbsp;России, а&nbsp;также в&nbsp;Белоруссию, Украину и&nbsp;страны СНГ — почтовыми службами
+            </p>
+          </div>
+          <div class="footer__col">
+            <h5 class="footer__headline"><a href="">Оплата</a></h5>
+            <p>
+              Принимаем оплату наличными, безналичными, банковским переводом
+            </p>
+
+            <!--pay-method-->
+            <ul class="pay-method">
+              <li>
+                <a href="" rel="nofollow" target="_blank">
+                  <img src="./img/logo-mastercard.svg" alt="">
+                </a>
+              </li>
+              <li>
+                <a href="" rel="nofollow" target="_blank">
+                  <img src="./img/logo-visa.svg" alt="">
+                </a>
+              </li>
+              <li>
+                <a href="" rel="nofollow" target="_blank">
+                  <img src="./img/logo-paypal.svg" alt="">
+                </a>
+              </li>
+              <li>
+                <a href="" rel="nofollow" target="_blank">
+                  <img src="./img/logo-mir.svg" alt="">
+                </a>
+              </li>
+            </ul>
+            <!--/pay-method-->
+
+          </div>
+        </div>
+        <div class="footer__bottom">
+          <div>© Английская Снасть, 2013 — 2019</div>
+          <div>Дизайн — <a href="" rel="nofollow" target="_blank">auddit</a></div>
+        </div>
+      </div>
+    </div>
+    <!--/footer-->
+
+  </footer>
+</div>
+
+
+<div id="dialogs">
+  <!-- place for dialogs -->
+</div>
+
+<!-- scripts -->
+<script src="./plugins/jquery/jquery-3.3.1.min.js"></script>
+<script src="./plugins/fancybox/jquery.fancybox.min.js"></script>
+<script src="./plugins/select2/select2.full.min.js"></script>
+<script src="./js/helpers.js"></script>
+<script src="./js/common.min.js"></script>
+
+</body>
+</html>

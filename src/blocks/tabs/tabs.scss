@@ -1,0 +1,64 @@
+/* tabs ***********************/
+.tabs {
+  &__actions {
+    overflow-x: auto;
+    border-bottom: 1px solid $c-border;
+
+    ul {
+      @include reset-list;
+      display: flex;
+
+      li {
+        flex-shrink: 0;
+      }
+    }
+    &-item {
+      margin-right: $indent-large + $indent-small;
+      @media (max-width: $screen-sm) {
+        margin-right: $indent-large;
+      }
+
+      &:last-child {
+        margin-right: 0;
+      }
+      a {
+        display: flex;
+        align-items: center;
+        color: $c-text;
+        padding-top: $indent-small + $indent-xsmall;
+        padding-bottom: $indent-small + $indent-xsmall;
+        transition: $trans-medium;
+        text-decoration: none !important;
+        white-space: nowrap;
+
+        &:hover {
+          color: $c-link;
+        }
+        img {
+          margin-right: $indent-xsmall;
+        }
+      }
+
+      &_active {
+        a {
+          color: $c-link;
+          box-shadow: inset 0 -2px 0 0 $c-primary;
+        }
+      }
+    }
+  }
+  &__content {
+    &-item {
+      display: none;
+      padding-top: $indent-large;
+      animation: tabs $trans-medium forwards;
+      @media (max-width: $screen-sm) {
+        padding-top: $indent-medium;
+      }
+
+      &_active {
+        display: block;
+      }
+    }
+  }
+}

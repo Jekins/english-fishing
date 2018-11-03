@@ -44,6 +44,14 @@ input, textarea, keygen, select, button {
   }
 }
 
+b {
+  &,
+  span,
+  small {
+    font-weight: $fw-bold;
+  }
+}
+
 h1,
 .h1,
 h2,

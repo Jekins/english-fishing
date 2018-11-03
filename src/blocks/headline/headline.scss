@@ -23,5 +23,20 @@
         max-height: 24px;
       }
     }
+
+    &_small {
+      h1, h2, h3, h4, h5, h6 {
+        font-size: $fz-xlarge;
+        font-weight: $fw-bold;
+        @media (max-width: $screen-sm) {
+          font-size: $fz-large;
+        }
+      }
+    }
+    &_attention {
+      > * {
+        color: $c-attention;
+      }
+    }
   }
 }

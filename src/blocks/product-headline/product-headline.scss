@@ -1,0 +1,25 @@
+/* product-headline ***********************/
+.product-headline {
+  padding-bottom: $indent-large;
+  @media (min-width: $screen-lg) {
+    padding-top: $indent-large;
+  }
+
+  &__inner {
+    @extend %container;
+    @include reset-last-indent;
+    display: flex;
+    flex-wrap: wrap;
+  }
+  &__title {
+    margin-bottom: 0;
+    margin-right: $indent-medium;
+    @media (max-width: $screen-sm) {
+      font-size: 22px;
+    }
+  }
+  &__info {
+    position: relative;
+    top: 3px;
+  }
+}

@@ -12,6 +12,12 @@
       padding-top: $indent-medium;
       padding-bottom: $indent-medium;
     }
+
+    &_sm-top-null {
+      @media (max-width: $screen-sm) {
+        padding-top: 0 !important;
+      }
+    }
   }
 
   &_accent {

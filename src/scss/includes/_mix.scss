@@ -637,6 +637,12 @@ $zero: 0;
   }
 }
 
+@mixin reset-button() {
+  background: none;
+  border: none;
+  padding: 0;
+}
+
 @mixin reset-list() {
   list-style: none;
   margin-bottom: 0;

@@ -1,0 +1,103 @@
+/* product-info ***********************/
+.product-info {
+  @extend %container;
+
+  &__inner {
+    @include cols($indent-medium);
+    @media (max-width: $screen-lg) {
+      margin-bottom: $indent-large;
+    }
+    @media (max-width: $screen-sm) {
+      flex-wrap: wrap;
+    }
+
+    > * {
+      @include width(100% / 3);
+      @media (max-width: $screen-lg) {
+        @include width(100% / 2);
+      }
+      @media (max-width: $screen-sm) {
+        @include width(100%);
+      }
+    }
+  }
+  &__gallery {
+    @media (max-width: $screen-sm) {
+      margin-bottom: $indent-medium;
+    }
+  }
+  &__description {
+    font-size: 14px;
+    @include reset-last-indent;
+  }
+  &__menu-actions {
+    margin-top: $indent-medium + $indent-small;
+    padding-top: $indent-medium + $indent-small;
+    border-top: 1px solid $c-border;
+
+    ul {
+      @include reset-list;
+      @include cols($indent-medium);
+    }
+    li {
+      a {
+        text-decoration: none !important;
+        border-bottom: 1px dotted $c-link;
+
+        &:hover {
+          border-bottom-color: transparent;
+        }
+      }
+    }
+  }
+  &__buy-card {
+    font-size: 14px;
+
+    &-inner {
+      border-radius: $r-medium;
+      border: 1px solid $c-border;
+      padding: $indent-small + $indent-medium;
+    }
+    &-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-top: $indent-medium + $indent-small;
+      margin-bottom: $indent-medium + $indent-small;
+
+      &_small {
+        margin-top: $indent-medium;
+        margin-bottom: $indent-medium;
+      }
+    }
+  }
+  &__price {
+    font-size: 26px;
+    line-height: 1;
+
+    .product-price_old {
+      font-size: 20px;
+    }
+    .product-price {
+      font-weight: $fw-regular;
+    }
+  }
+  &__fav {
+    text-align: center;
+    padding-top: $indent-medium;
+    margin-top: $indent-medium + $indent-small;
+    margin-bottom: -$indent-small;
+    position: relative;
+
+    &:before {
+      content: '';
+      display: block;
+      position: absolute;
+      bottom: 100%;
+      height: 1px;
+      background-color: $c-border;
+      left: -$indent-medium - $indent-small;
+      right: -$indent-medium - $indent-small;
+    }
+  }
+}

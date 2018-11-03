@@ -1,0 +1,74 @@
+/* product-gallery ***********************/
+.product-gallery {
+  &__preview {
+    position: relative;
+    height: 280px;
+    margin-bottom: $indent-large;
+    @media (max-width: $screen-sm) {
+      margin-bottom: $indent-medium;
+    }
+
+    a {
+      border-radius: $r-medium;
+      border: 1px solid $c-border;
+      @include img-cover;
+      animation: fade $trans-long forwards;
+
+      &:after {
+        content: '';
+        display: block;
+        position: absolute;
+        z-index: 1;
+        top: 10px;
+        right: 10px;
+        background-color: $bg-secondary;
+        background-image: url($img + 'icon-magnifier-primary.svg');
+        background-repeat: no-repeat;
+        background-size: 24px 24px;
+        background-position: center center;
+        height: 40px;
+        width: 40px;
+        border-radius: $r-medium;
+      }
+    }
+  }
+  &__images {
+    @include cols($indent-xsmall);
+    flex-wrap: wrap;
+    margin-bottom: -$indent-small;
+  }
+  &__item {
+    position: relative;
+    @include width(69px + $indent-xsmall * 2);
+    height: 69px;
+    margin-bottom: $indent-small;
+    @media (max-width: $screen-sm) {
+      @include width(50px + $indent-xsmall * 2);
+      height: 50px;
+    }
+
+    a {
+      border-radius: $r-medium;
+      display: block;
+      border: 1px solid $c-border;
+      @include img-cover;
+      left: $indent-xsmall;
+      right: $indent-xsmall;
+      transition: $trans-medium;
+
+      img {
+        border-radius: $r-medium;
+        border: 4px solid white;
+      }
+    }
+
+    &_active {
+      a {
+        border-color: $c-primary;
+        box-shadow: 0 0 0 1px $c-primary;
+      }
+    }
+  }
+  &__description {
+  }
+}
