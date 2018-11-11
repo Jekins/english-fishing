@@ -1,0 +1,88 @@
+/* coupon-panel ***********************/
+.coupon-panel {
+  background-color: $bg-promo;
+  padding: 25px 20px;
+  border-top: 1px dashed rgba(0, 0, 0, 0.2);
+  position: relative;
+
+  &:before {
+    content: '';
+    display: block;
+    background-image: url($img + 'icon-cut-black.svg');
+    background-repeat: no-repeat;
+    background-size: 100%;
+    width: 22px;
+    height: 17px;
+    position: absolute;
+    top: -9px;
+    right: 20px;
+  }
+  &__inner {
+    @include cols($indent-medium);
+    align-items: center;
+    flex-wrap: wrap;
+    position: relative;
+    @media (max-width: $screen-sm) {
+      justify-content: center;
+    }
+
+    &:after,
+    &:before {
+      content: '';
+      display: block;
+      width: 32px;
+      height: 32px;
+      border-radius: 100%;
+      background-color: white;
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      @media (max-width: $screen-sm) {
+        width: 20px;
+        height: 20px;
+      }
+    }
+    &:before {
+      right: 100%;
+      margin-right: -5px;
+    }
+    &:after {
+      left: 100%;
+      margin-left: -5px;
+    }
+  }
+  &__input {
+    display: flex;
+    text-align: center;
+    @media (max-width: $screen-sm) {
+      margin-bottom: $indent-medium;
+    }
+
+    input {
+      margin-right: $indent-medium;
+      width: 200px;
+      @media (max-width: $screen-sm) {
+        width: 166px;
+      }
+      @media (max-width: $screen-xs) {
+        width: 110px;
+      }
+    }
+  }
+  &__submit {}
+  &__info {
+    position: relative;
+    top: -2px;
+    @media (max-width: $screen-sm) {
+      text-align: center;
+    }
+  }
+  &__status {
+    line-height: 1;
+    color: $c-success;
+  }
+  &__discount {
+    line-height: 1;
+    color: #333333;
+  }
+}

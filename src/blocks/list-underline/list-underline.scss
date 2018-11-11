@@ -1,0 +1,31 @@
+/* list-underline ***********************/
+.list-underline {
+  @include reset-list;
+  display: flex;
+  flex-wrap: wrap;
+
+  &__item {
+    margin-right: $indent-large;
+
+    &:last-child {
+      margin-right: 0;
+    }
+    a {
+      color: $c-text;
+      font-size: 16px;
+      display: block;
+      padding-top: $indent-small;
+      padding-bottom: $indent-small - 2;
+      border-bottom: 2px solid transparent;
+      text-decoration: none !important;
+    }
+
+    &:hover,
+    &_active {
+      a {
+        color: $c-link;
+        border-color: $c-primary;
+      }
+    }
+  }
+}

@@ -1,0 +1,74 @@
+/* basket-products-table ***********************/
+.basket-products-table {
+  @media (min-width: $screen-sm) {
+    border: 1px solid $c-border;
+    border-radius: $r-medium;
+  }
+
+  &__header {
+    background-color: $bg-secondary-light;
+    padding: $indent-medium;
+    display: flex;
+    @media (max-width: $screen-sm) {
+      display: none;
+    }
+  }
+  &__col {
+    font-weight: $fw-bold;
+    padding-right: $indent-medium + $indent-small;
+
+    &:nth-child(1) {
+      width: 103px;
+      flex-shrink: 0;
+    }
+    &:nth-child(2) {
+      flex-grow: 1;
+    }
+    &:nth-child(3),
+    &:nth-child(4),
+    &:nth-child(5) {
+      width: 130px;
+      flex-shrink: 0;
+      @media (max-width: $screen-lg) {
+        width: 100px;
+      }
+    }
+    &:last-child {
+      padding-right: 0;
+    }
+  }
+  &__body {
+    @media (min-width: $screen-sm) {
+      padding-left: $indent-medium;
+      padding-right: $indent-medium;
+    }
+  }
+  &__footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: $indent-medium;
+    @media (max-width: $screen-sm) {
+      padding-left: 0;
+      padding-right: 0;
+    }
+
+    &-left {}
+    &-right {
+      display: flex;
+
+      > * {
+        &:last-child {
+          width: 130px;
+          flex-shrink: 0;
+          @media (max-width: $screen-lg) {
+            width: 100px;
+          }
+          @media (max-width: $screen-sm) {
+            width: auto;
+          }
+        }
+      }
+    }
+  }
+}

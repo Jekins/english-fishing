@@ -18,5 +18,8 @@
     @media (min-width: $screen-lg) {
       @include width(75%);
     }
+    @media (max-width: $screen-lg) {
+      margin-bottom: $indent-large;
+    }
   }
 }

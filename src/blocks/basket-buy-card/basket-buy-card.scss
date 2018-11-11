@@ -1,0 +1,60 @@
+/* basket-buy-card ***********************/
+.basket-buy-card {
+  padding: $indent-medium $indent-large $indent-large $indent-large;
+  border: 2px solid $c-primary;
+  border-radius: $r-medium;
+
+  &__layer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 6px;
+    padding-bottom: 6px;
+    margin-bottom: $indent-xsmall;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+    &_highlighted {
+      background-color: $bg-promo;
+      margin-left: -$indent-medium;
+      margin-right: -$indent-medium;
+      padding-left: $indent-medium;
+      padding-right: $indent-medium;
+      border-radius: $r-medium;
+    }
+  }
+  &__sum {
+    padding-top: $indent-medium;
+    margin-top: $indent-small + $indent-xsmall;
+    border-top: 1px solid $c-border;
+    @media (min-width: $screen-sm) and (max-width: $screen-lg) {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    &-inner {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      > *:first-child {
+        @media (min-width: $screen-sm) and (max-width: $screen-lg) {
+          margin-right: $indent-large;
+        }
+      }
+    }
+  }
+  &__price {
+    font-size: 24px;
+    color: $c-success;
+    line-height: 1;
+  }
+  &__action {
+    margin-top: $indent-large;
+    @media (min-width: $screen-sm) and (max-width: $screen-lg) {
+      margin-top: 0;
+    }
+  }
+}

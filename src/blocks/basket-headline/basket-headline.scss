@@ -1,0 +1,30 @@
+/* basket-headline ***********************/
+.basket-headline {
+  background-color: $bg-secondary-light;
+  padding-top: $indent-large;
+  padding-bottom: $indent-large;
+  @media (max-width: $screen-lg) {
+    padding-top: $indent-medium;
+    padding-bottom: $indent-medium;
+  }
+
+  &__inner {
+    @extend %container;
+    @include reset-last-indent;
+    display: flex;
+    flex-wrap: wrap;
+    @media (min-width: $screen-sm) {
+      justify-content: space-between;
+      align-items: center;
+    }
+  }
+  &__title {
+    margin-bottom: 0;
+    margin-right: $indent-medium;
+    @media (max-width: $screen-sm) {
+      font-size: 22px;
+    }
+  }
+  &__menu {
+  }
+}

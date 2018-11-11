@@ -2,9 +2,19 @@
 .product-price {
   font-weight: $fw-bold;
 
+  & + .product-price {
+    margin-left: $indent-small;
+
+    &:first-child {
+      margin-left: 0;
+    }
+  }
   &_old {
     color: $c-attention;
     text-decoration:line-through;
+    font-weight: $fw-regular;
+  }
+  &_regular {
     font-weight: $fw-regular;
   }
 }
