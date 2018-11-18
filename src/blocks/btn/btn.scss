@@ -52,6 +52,13 @@
   &_block {
     width: 100%;
     display: block;
+
+    &-sm {
+      @media (max-width: $screen-sm) {
+        display: block;
+        width: 100%;
+      }
+    }
   }
 
   &_icon {

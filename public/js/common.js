@@ -1,4 +1,4 @@
-/*! Englishfishing 11-11-2018 | Front-end: Jekins */
+/*! Englishfishing 17-11-2018 | Front-end: Jekins */
 /* close-outside ***********************/
 function closeOutside(el, activeClass) {
   $('html').on('click', function(e) {
@@ -82,6 +82,24 @@ $.fn.dropdown = function () {
 
 $(function() {
   $('.dropdown').dropdown();
+});
+/* form ***********************/
+$.fn.formGo = function () {
+  $(this).on('click', function (e) {
+    e.preventDefault();
+
+    var blockName = '.form',
+        id = '#' + $(this).data('form-go'),
+        $form = $(this).closest(blockName),
+        $section = $form.find(blockName + '__section');
+
+    $section.hide();
+    $form.find(id).show();
+  });
+};
+
+$(function () {
+  $('[data-form-go]').formGo();
 });
 /* list-filters ***********************/
 $.fn.listFiltersToggle = function () {
@@ -302,4 +320,29 @@ $.fn.initTabs = function () {
 
 $(function () {
   $('.tabs').initTabs();
+});
+/* text-field ***********************/
+$.fn.initTextField = function () {
+  this.each(function () {
+    var blockName = '.text-field',
+        $block = $(this),
+        $control = $block.find(blockName + '__control'),
+        focused = (blockName + '_focused').replace(/^\./g,'');
+
+    $control.focus(function () {
+      $block.addClass(focused);
+    });
+
+    $control.blur(function () {
+      !$control.val() && $block.removeClass(focused);
+    });
+
+    if ($control.val()) {
+      $block.addClass(focused);
+    }
+  });
+};
+
+$(function () {
+  $('.text-field').initTextField();
 });

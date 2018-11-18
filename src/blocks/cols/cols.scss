@@ -2,33 +2,22 @@
 .cols {
   flex: 0 1 auto;
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
   margin-left: -$indent-space;
   margin-right: -$indent-space;
-  @media (max-width: $screen-sm) {
-    display: block;
-  }
 
-  &__main {
+  &__item {
     padding-left: $indent-space;
     padding-right: $indent-space;
-    @include width(66.667%);
 
-    @media (max-width: $screen-sm) {
-      max-width: 100%;
-      width: auto;
-    }
-  }
-
-  &__side {
-    padding-left: $indent-space;
-    padding-right: $indent-space;
-    @include width(33.333%);
-
-    @media (max-width: $screen-sm) {
-      max-width: 100%;
-      width: auto;
-      margin-top: $indent-large;
+    &_sm-6 {
+      @media (min-width: $screen-sm) {
+        @include width(100% / 2);
+      }
+      @media (max-width: $screen-sm) {
+        @include width(100%);
+      }
     }
   }
 
@@ -36,6 +25,22 @@
     @media (max-width: $screen-sm) {
       display: flex;
       flex-direction: column-reverse;
+    }
+  }
+
+  &_space-between {
+    justify-content: space-between;
+  }
+
+  &_vertical {
+    &-center {
+      align-items: center;
+    }
+  }
+
+  &_sm-and-down-row {
+    @media (max-width: $screen-sm) {
+      display: block;
     }
   }
 }

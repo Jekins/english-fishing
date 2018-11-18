@@ -1,0 +1,717 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1, minimal-ui, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
+  <meta name="description" content="">
+  <meta name="keywords" content="">
+  <link rel="icon" type="image/png" href="./img/favicon-16x16.png" sizes="16x16">
+  <link rel="icon" type="image/png" href="./img/favicon-32x32.png" sizes="32x32">
+
+  <title>English fishing project</title>
+
+  <!-- styles -->
+  <link href="./plugins/fancybox/jquery.fancybox.min.css" rel="stylesheet">
+  <link href="./plugins/select2/select2.min.css" rel="stylesheet">
+  <link href="./css/common.min.css" rel="stylesheet">
+
+  <!-- for using jquery in bottom -->
+  <script src="./js/jquery-to-bottom.js"></script>
+</head>
+<body>
+
+<div id="wrapper" class="page">
+  <header id="header" class="page__header">
+
+    <!--header-->
+    <div class="header">
+      <div class="header__top-line">
+        <div class="header__top-line-inner">
+          <div class="header__top-line-left">
+
+            <!--list-->
+            <ul class="list list_inline">
+              <li>
+                Самовывоз в <a href="">Санкт-Петербурге</a> и <a href="">Москве</a>
+              </li>
+              <li>
+                <a href="">О доставке</a>
+              </li>
+              <li>
+                <a href="">Способы оплаты</a>
+              </li>
+            </ul>
+            <!--/list-->
+
+          </div>
+          <div class="header__top-line-center">
+            <b>8 800 505-06-41</b>&nbsp;&nbsp;<span>Пт-Пн с 9 до 18</span>
+          </div>
+          <div class="header__top-line-right">
+
+            <!--link-icon-->
+            <a href="" class="header__fav header__fav_not-empty link-icon">
+              <img src="./img/icon-star-white-outline.svg" alt="">
+              <span>24</span>
+            </a>
+            <!--/link-icon-->
+
+            <div class="dropdown dropdown_left">
+              <a href="" class="header__login link-icon dropdown__link">
+                <img src="./img/icon-user-fill-white.svg" alt="">
+                <span>Александр</span>
+                <img class="dropdown__arrow" src="./img/icon-arrow-down-white.svg" alt="">
+              </a>
+              <ul class="dropdown__list">
+                <li>
+                  <a href="">
+                    <img src="./img/icon-basket-black.svg" alt="">
+                    <span class="text-black">Мои заказы</span>
+                  </a>
+                </li>
+                <li>
+                  <a href="">
+                    <img src="./img/icon-settings-black.svg" alt="">
+                    <span class="text-black">Редактировать профиль</span>
+                  </a>
+                </li>
+                <li>
+                  <a href="">
+                    <img src="./img/icon-logout-black.svg" alt="">
+                    <span class="text-black">Выход</span>
+                  </a>
+                </li>
+              </ul>
+            </div>
+
+          </div>
+        </div>
+      </div>
+      <div class="header__inner">
+        <div class="header__inner-top">
+          <a class="header__logo" href="/">
+            <img src="./img/logo.svg" alt="Логотип">
+            <span>Рыболовный интернет магазин</span>
+          </a>
+          <div class="header__links">
+            <ul>
+              <li><a href="">О доставке</a></li>
+              <li><a href="">Способы оплаты</a></li>
+            </ul>
+          </div>
+          <div class="header__search">
+
+            <!--search-form-->
+            <form class="search-form">
+              <div class="search-form__categories">
+                <select class="select-single-basic">
+                  <option value="">Везде</option>
+                  <option value="1">Раздел 1</option>
+                  <option value="2">Раздел 2</option>
+                  <option value="3">Раздел 3</option>
+                </select>
+              </div>
+              <div class="search-form__control">
+                <input type="text" placeholder="Поиск среди 4500 товаров">
+              </div>
+              <div class="search-form__action">
+                <button type="submit" class="btn btn_icon-single">
+                  <img src="./img/icon-search-black.svg" alt="">
+                </button>
+              </div>
+            </form>
+            <!--/search-form-->
+
+          </div>
+          <div class="header__basket">
+
+            <!--basket-button-->
+            <a href="" class="basket-button basket-button_active">
+              <svg class="basket-button__icon" width="23" height="22" viewBox="0 0 23 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M0 0H6V2V14H19.3335L20.6665 6H10V4H21H23L21 16H20H19H6H5H4V2H0V0ZM9 20C9 21.1046 8.10449 22 7 22C5.89551 22 5 21.1046 5 20C5 18.8954 5.89551 18 7 18C8.10449 18 9 18.8954 9 20ZM17 22C18.1045 22 19 21.1046 19 20C19 18.8954 18.1045 18 17 18C15.8955 18 15 18.8954 15 20C15 21.1046 15.8955 22 17 22Z" fill="#1ABC9C"/>
+              </svg>
+              <span class="basket-button__content">
+                <span>Корзина (5)</span>
+                <span>15 300 руб.</span>
+              </span>
+            </a>
+            <!--/basket-button-->
+
+          </div>
+        </div>
+        <div class="header__inner-bottom">
+          <div class="header__all-catalog">
+
+            <!--dropdown-->
+            <div class="dropdown">
+              <a href="" class="dropdown__link btn btn_primary btn_icon btn_upp">
+                <img src="./img/icon-menu-white.svg" alt="">
+                <span>Весь каталог</span>
+                <img src="./img/icon-chevron-down-white.svg" alt="">
+              </a>
+              <ul class="dropdown__list list-catalog" style="width: 300px">
+                <li>
+                  <a href="">
+                    <span class="list-catalog__text">Подарочные сертификаты</span>
+                    <span class="list-catalog__count">32</span>
+                  </a>
+                </li>
+                <li>
+                  <a href="">
+                    <span class="list-catalog__text">Удилища Фидерные</span>
+                    <span class="list-catalog__count">54</span>
+                  </a>
+                </li>
+                <li>
+                  <a href="">
+                    <span class="list-catalog__text">Вершинки</span>
+                    <span class="list-catalog__count">19</span>
+                  </a>
+                </li>
+                <li>
+                  <a href="">
+                    <span class="list-catalog__text">Удилища Карповые</span>
+                    <span class="list-catalog__count">18</span>
+                  </a>
+                </li>
+                <li>
+                  <a href="">
+                    <span class="list-catalog__text">Удилища Матчевые</span>
+                    <span class="list-catalog__count">28</span>
+                  </a>
+                </li>
+                <li>
+                  <a href="">
+                    <span class="list-catalog__text">Удилища Специальные</span>
+                    <span class="list-catalog__count">11</span>
+                  </a>
+                </li>
+                <li>
+                  <a href="">
+                    <span class="list-catalog__text">Спиннинги и удилища для ловли хищника</span>
+                    <span class="list-catalog__count">19</span>
+                  </a>
+                </li>
+                <li>
+                  <a href="">
+                    <span class="list-catalog__text">Воблеры, приманки</span>
+                    <span class="list-catalog__count">42</span>
+                  </a>
+                </li>
+                <li>
+                  <a href="">
+                    <span class="list-catalog__text">Армы, стойки, триподы</span>
+                    <span class="list-catalog__count">23</span>
+                  </a>
+                </li>
+                <li>
+                  <a href="">
+                    <span class="list-catalog__text">Бойлы, бустеры, дипы, насадки, пеллетс, прикормка</span>
+                    <span class="list-catalog__count">58</span>
+                  </a>
+                </li>
+                <li>
+                  <a href="">
+                    <span class="list-catalog__text">Вёдра, столики, тазы</span>
+                    <span class="list-catalog__count">28</span>
+                  </a>
+                </li>
+              </ul>
+            </div>
+            <!--/dropdown-->
+
+          </div>
+          <div class="header__nav">
+
+            <!--nav-->
+            <nav class="nav nav_upp">
+              <ul class="nav__list">
+                <li class="nav__item nav__item_active"><a href="">Удочки и катушки</a></li>
+                <li class="nav__item"><a href="">Останстка</a></li>
+                <li class="nav__item"><a href="">Комфорт</a></li>
+                <li class="nav__item"><a href="">Прикормка</a></li>
+                <li class="nav__item"><a href="">Хранение</a></li>
+                <li class="nav__item"><a href="">Одежда</a></li>
+                <li class="nav__item"><a href="">Подарочные наборы</a></li>
+                <li class="nav__item"><a href="">Распродажа<span class="text-attention">&nbsp;%</span></a></li>
+              </ul>
+            </nav>
+            <!--/nav-->
+
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--/header-->
+
+  </header>
+
+
+  <main id="body" class="page__body">
+
+    <!--order-headline-->
+    <header class="order-headline">
+      <div class="order-headline__inner">
+        <h1 class="order-headline__title">Оформление заказа</h1>
+      </div>
+    </header>
+    <!--/order-headline-->
+
+
+    <!--section-->
+    <section class="section section_small">
+      <div class="section__inner">
+
+        <!--main-cols-->
+        <div class="main-cols main-cols_v2">
+          <article class="main-cols__article">
+
+            <!--order-section-->
+            <div class="order-section">
+              <div class="order-section__header">
+                <h2 class="order-section__title">Способ оформления</h2>
+              </div>
+              <div class="order-section__body">
+
+                <!--cols-->
+                <div class="cols">
+                  <div class="cols__item cols__item_sm-6">
+                    <h5 class="indent-medium">Новый покупатель</h5>
+                    <p class="text-secondary indent-large">
+                      Если вы не покупали у нас раньше, вы можете зарегистрироваться сразу при оформлении
+                    </p>
+                    <a href="" class="btn btn_primary">Продолжить оформление</a>
+                  </div>
+                  <div class="cols__item cols__item_sm-6">
+                    <br class="visible-xs">
+                    <h5 class="indent-medium">Я уже зарегистрирован</h5>
+
+                    <!--form-->
+                    <form class="form">
+                      <div class="form__section" id="login">
+                        <section class="form__group">
+
+                          <!--text-field-->
+                          <div class="text-field text-field_float-label">
+                            <label class="text-field__label">Логин</label>
+                            <input type="text" class="text-field__control">
+                          </div>
+                          <!--/text-field-->
+
+                        </section>
+                        <section class="form__group">
+
+                          <!--text-field-->
+                          <div class="text-field text-field_remind text-field_float-label">
+                            <label class="text-field__label">Пароль</label>
+                            <input type="password" class="text-field__control">
+                            <a href="#" class="text-field__remind" data-form-go="remind">Не помните?</a>
+                          </div>
+                          <!--/text-field-->
+
+                        </section>
+                        <section class="form__group">
+
+                          <!--cols-->
+                          <div class="cols cols_space-between cols_vertical-center">
+                            <div class="cols__item">
+                              <label class="checkbox">
+                                <input type="checkbox" name="radio" hidden checked>
+                                <span>Запомнить <span class="hidden-xs">меня</span></span>
+                              </label>
+                            </div>
+                            <div class="cols__item">
+                              <button type="button" class="btn btn_primary">Войти</button>
+                            </div>
+                          </div>
+                          <!--/cols-->
+
+                        </section>
+                      </div>
+                      <div class="form__section" id="remind" style="display: none;">
+                        <section class="form__group">
+
+                          <!--text-field-->
+                          <div class="text-field text-field_float-label">
+                            <label class="text-field__label">Ваш E-Mail</label>
+                            <input type="email" class="text-field__control">
+                          </div>
+                          <!--/text-field-->
+
+                        </section>
+                        <section class="form__group">
+                          <button type="button" class="btn btn_primary">Напомнить пароль</button>
+                          <a style="margin-left: 8px;" href="#" data-form-go="login">Войти</a>
+                        </section>
+                      </div>
+                    </form>
+                    <!--/form-->
+
+                  </div>
+                </div>
+                <!--/cols-->
+
+              </div>
+            </div>
+            <!--/order-section-->
+
+            <br>
+
+            <form>
+
+              <!--order-section-->
+              <div class="order-section">
+                <div class="order-section__header">
+                  <h2 class="order-section__title">Личные данные</h2>
+                </div>
+                <div class="order-section__body">
+
+                  <!--form-->
+                  <div class="form">
+                    <div class="form__group">
+
+                      <!--text-field-->
+                      <div class="text-field text-field_float-label">
+                        <label class="text-field__label">Ваше Ф.И.О</label>
+                        <input type="text" class="text-field__control">
+                      </div>
+                      <!--/text-field-->
+
+                    </div>
+                    <div class="form__group">
+
+                      <!--cols-->
+                      <div class="cols">
+                        <div class="cols__item cols__item_sm-6">
+
+                          <!--text-field-->
+                          <div class="text-field text-field_float-label">
+                            <label class="text-field__label">Ваш E-Mail</label>
+                            <input type="email" class="text-field__control">
+                          </div>
+                          <!--/text-field-->
+
+                        </div>
+                        <div class="cols__item cols__item_sm-6">
+                          <br class="visible-xs">
+
+                          <!--text-field-->
+                          <div class="text-field text-field_float-label">
+                            <label class="text-field__label">Номер телефона</label>
+                            <input type="text" class="text-field__control">
+                          </div>
+                          <!--/text-field-->
+
+                        </div>
+                      </div>
+                      <!--/cols-->
+
+                    </div>
+                  </div>
+                  <!--/form-->
+
+                </div>
+              </div>
+              <!--/order-section-->
+
+              <br>
+
+              <!--order-section-->
+              <div class="order-section">
+                <div class="order-section__header">
+                  <h2 class="order-section__title">Регион доставки</h2>
+                  <div class="order-section__action">
+                    <a href="#" class="link-dotted">Изменить</a>
+                  </div>
+                </div>
+                <div class="order-section__body">
+                  <b>Местоположение:</b> Москва
+                </div>
+              </div>
+              <!--/order-section-->
+
+              <br>
+
+              <!--order-section-->
+              <div class="order-section">
+                <div class="order-section__header">
+                  <h2 class="order-section__title">Способ доставки</h2>
+                  <div class="order-section__action">
+                    <a href="#" class="link-dotted">Изменить</a>
+                  </div>
+                </div>
+                <div class="order-section__body">
+
+                  <!--cols-->
+                  <div class="cols cols_space-between">
+                    <div class="cols__item">
+                      Курьерская доставка Москва - менее 3кг
+                    </div>
+                    <div class="cols__item">
+                      <b>300 руб</b>
+                    </div>
+                  </div>
+                  <!--/cols-->
+
+                </div>
+              </div>
+              <!--/order-section-->
+
+              <br>
+
+              <!--order-section-->
+              <div class="order-section">
+                <div class="order-section__header">
+                  <h2 class="order-section__title">Адрес доставки</h2>
+                </div>
+                <div class="order-section__body">
+
+                  <!--form-->
+                  <div class="form">
+                    <textarea type="text" placeholder="Полный адрес доставки"></textarea>
+
+                    <div class="form__hint">Например, Москва, Садовая улица, 28, к.1, кв. 132</div>
+                  </div>
+                  <!--/form-->
+
+                </div>
+              </div>
+              <!--/order-section-->
+
+              <br>
+
+              <!--order-section-->
+              <div class="order-section">
+                <div class="order-section__header">
+                  <h2 class="order-section__title">Способ оплаты</h2>
+                  <div class="order-section__action">
+                    <a href="#" class="link-dotted">Изменить</a>
+                  </div>
+                </div>
+                <div class="order-section__body">
+                  Банковские карты (кроме Сбербанка)
+                </div>
+              </div>
+              <!--/order-section-->
+
+              <br>
+
+              <!--cols-->
+              <div class="cols cols_sm-and-down-row cols_space-between cols_vertical-center">
+                <div class="cols__item">
+                  <br class="hidden-sm hidden-xs">
+                  <label class="checkbox">
+                    <input type="checkbox" hidden>
+                    <span>Согласен на использование <a href="">персональных данных</a></span>
+                  </label>
+                  <br>
+                </div>
+                <div class="cols__item">
+                  <button type="submit" class="btn btn_primary btn_large btn_block-sm">Оформить заказ</button>
+                </div>
+              </div>
+              <!--/cols-->
+
+            </form>
+
+          </article>
+          <aside class="main-cols__aside">
+
+            <!--order-buy-->
+            <div class="order-buy">
+              <div class="order-buy__headline">
+                <div class="order-buy__title">
+                  <img src="./img/icon-basket-primary.svg" alt="">
+                  <h4>Корзина</h4>
+                </div>
+                <div class="order-buy__edit-order">
+
+                  <!--link-icon-->
+                  <a href="" class="link-icon">
+                    <img src="./img/icon-chevron-left-primary.svg" alt="">
+                    <span>Редактировать заказ</span>
+                  </a>
+                  <!--/link-icon-->
+
+                </div>
+              </div>
+              <div class="order-buy__body">
+
+                <!--list-orders-->
+                <ul class="list-orders">
+                  <li class="list-orders__item">
+                    <div class="list-orders__img">
+                      <div class="list-orders__img-inner">
+                        <img src="https://rybkinaulybka.ru/shop/image/cache/catalog/Products/Zima/Udochki/Rapala/zimnyaya-udochka-Rapala_TeleStick_Ice-1200x1200.jpg" alt="">
+                      </div>
+                    </div>
+                    <div class="list-orders__inner">
+                      <a href="" class="list-orders__title">Катушка Fox EOS 5000 (Spool шпуля)</a>
+                      <div class="list-orders__params">
+                        <b>1 150 руб</b> x 1шт.
+                      </div>
+                    </div>
+                  </li>
+                  <li class="list-orders__item">
+                    <div class="list-orders__img">
+                      <div class="list-orders__img-inner">
+                        <img src="https://rybkinaulybka.ru/shop/image/cache/catalog/Products/Zima/Udochki/Rapala/zimnyaya-udochka-Rapala_TeleStick_Ice-1200x1200.jpg" alt="">
+                      </div>
+                    </div>
+                    <div class="list-orders__inner">
+                      <a href="" class="list-orders__title">Катушка Fox EOS 5000 (Spool шпуля)</a>
+                      <div class="list-orders__params">
+                        <b>1 150 руб</b> x 1шт.
+                      </div>
+                    </div>
+                  </li>
+                  <li class="list-orders__item">
+                    <div class="list-orders__img">
+                      <div class="list-orders__img-inner">
+                        <img src="https://rybkinaulybka.ru/shop/image/cache/catalog/Products/Zima/Udochki/Rapala/zimnyaya-udochka-Rapala_TeleStick_Ice-1200x1200.jpg" alt="">
+                      </div>
+                    </div>
+                    <div class="list-orders__inner">
+                      <a href="" class="list-orders__title">Катушка Fox EOS 5000 (Spool шпуля)</a>
+                      <div class="list-orders__params">
+                        <b>1 150 руб</b> x 1шт.
+                      </div>
+                    </div>
+                  </li>
+                </ul>
+                <!--/list-orders-->
+
+              </div>
+              <div class="order-buy__sum">
+                Итого: 12 600 руб.
+              </div>
+            </div>
+            <!--/order-buy-->
+
+          </aside>
+        </div>
+        <!--main-cols-->
+
+
+      </div>
+    </section>
+    <!--/section-->
+
+  </main>
+
+
+  <footer id="footer" class="page__footer">
+
+    <!--footer-->
+    <div class="footer">
+      <div class="footer__inner">
+        <div class="footer__top">
+          <div class="footer__col">
+            <h5 class="footer__headline"><a href="">Контакты</a></h5>
+            <div class="footer__phone">8 800 505-06-41</div>
+            <a class="footer__email" href="mailto:sales@englishfishing.ru">sales@englishfishing.ru</a>
+
+            <!--social-links-->
+            <ul class="social-links">
+              <li>
+                <a href="" rel="nofollow">
+                  <img src="./img/icon-fb-white.svg" alt="">
+                </a>
+              </li>
+              <li>
+                <a href="" rel="nofollow">
+                  <img src="./img/icon-vk-white.svg" alt="">
+                </a>
+              </li>
+              <li>
+                <a href="" rel="nofollow">
+                  <img src="./img/icon-yt-white.svg" alt="">
+                </a>
+              </li>
+            </ul>
+            <!--/social-links-->
+
+          </div>
+          <div class="footer__col">
+            <h5 class="footer__headline">Информация</h5>
+            
+            <!--list-->
+            <ul class="footer__links list list_row">
+              <li><a href="">О магазине</a></li>
+              <li><a href="">Как сделать заказ</a></li>
+              <li><a href="">Условия доставки</a></li>
+              <li><a href="">Способы оплаты</a></li>
+              <li><a href="">Форум</a></li>
+            </ul>
+            <!--/list-->
+            
+          </div>
+          <div class="footer__col">
+            <h5 class="footer__headline"><a href="">Доставка</a></h5>
+            <p>
+              Курьером или самовывоз в&nbsp;Москве и&nbsp;Санкт-Петербурге
+            </p>
+            <p>
+              По&nbsp;России, а&nbsp;также в&nbsp;Белоруссию, Украину и&nbsp;страны СНГ — почтовыми службами
+            </p>
+          </div>
+          <div class="footer__col">
+            <h5 class="footer__headline"><a href="">Оплата</a></h5>
+            <p>
+              Принимаем оплату наличными, безналичными, банковским переводом
+            </p>
+
+            <!--pay-method-->
+            <ul class="pay-method">
+              <li>
+                <a href="" rel="nofollow" target="_blank">
+                  <img src="./img/logo-mastercard.svg" alt="">
+                </a>
+              </li>
+              <li>
+                <a href="" rel="nofollow" target="_blank">
+                  <img src="./img/logo-visa.svg" alt="">
+                </a>
+              </li>
+              <li>
+                <a href="" rel="nofollow" target="_blank">
+                  <img src="./img/logo-paypal.svg" alt="">
+                </a>
+              </li>
+              <li>
+                <a href="" rel="nofollow" target="_blank">
+                  <img src="./img/logo-mir.svg" alt="">
+                </a>
+              </li>
+            </ul>
+            <!--/pay-method-->
+
+          </div>
+        </div>
+        <div class="footer__bottom">
+          <div>© Английская Снасть, 2013 — 2019</div>
+          <div>Дизайн — <a href="" rel="nofollow" target="_blank">auddit</a></div>
+        </div>
+      </div>
+    </div>
+    <!--/footer-->
+
+  </footer>
+</div>
+
+
+<div id="dialogs">
+  <!-- place for dialogs -->
+</div>
+
+<!-- scripts -->
+<script src="./plugins/jquery/jquery-3.3.1.min.js"></script>
+<script src="./plugins/fancybox/jquery.fancybox.min.js"></script>
+<script src="./plugins/select2/select2.full.min.js"></script>
+<script src="./js/helpers.js"></script>
+<script src="./js/common.min.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,39 @@
+/* order-buy ***********************/
+.order-buy {
+  border: 2px solid $c-primary;
+  border-radius: $r-medium;
+  padding: $indent-medium + $indent-small $indent-medium 0 $indent-medium;
+
+  &__headline {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  &__title {
+    display: flex;
+    align-items: center;
+
+    > * {
+      margin-bottom: 0;
+    }
+    img {
+      margin-right: $indent-small;
+    }
+  }
+  &__edit-order {
+    font-size: 14px;
+  }
+  &__body {
+    padding-top: $indent-medium;
+    padding-bottom: $indent-medium;
+  }
+  &__sum {
+    background-color: $c-primary;
+    color: white;
+    font-size: $fz-large;
+    text-align: center;
+    padding: $indent-medium $indent-small;
+    margin-left: -$indent-medium;
+    margin-right: -$indent-medium;
+  }
+}

@@ -1,0 +1,29 @@
+/* list-orders ***********************/
+.list-orders {
+  @include reset-list;
+
+  &__item {
+    padding-top: $indent-small;
+    padding-bottom: $indent-small;
+    display: flex;
+  }
+  &__img {
+    position: relative;
+    height: 55px;
+    @include width(80px);
+    margin-right: $indent-medium;
+    @media (max-width: $screen-sm) {
+      @include width(60px);
+    }
+
+    &-inner {
+      @include img-cover;
+    }
+  }
+  &__title {
+    font-size: 14px;
+  }
+  &__params {
+    font-size: 14px;
+  }
+}

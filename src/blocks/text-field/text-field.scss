@@ -1,0 +1,39 @@
+/* text-field ***********************/
+.text-field {
+  position: relative;
+
+  &__control {}
+  &__label {}
+  &__remind {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 14px;
+  }
+
+  &_float-label &__control {
+    height: $input-large;
+    padding-bottom: 0;
+    padding-top: 16px;
+  }
+  &_float-label &__label {
+    position: absolute;
+    left: 10px;
+    line-height: 1;
+    top: $input-large / 2 - 14 / 2;
+    font-size: 14px;
+    color: $c-secondary;
+    transition: $trans-medium;
+    pointer-events: none;
+  }
+
+  &_focused.text-field_float-label &__label {
+    font-size: 12px;
+    top: 8px;
+  }
+
+  &_remind &__control {
+    padding-right: 110px;
+  }
+}

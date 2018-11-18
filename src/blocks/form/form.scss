@@ -1,0 +1,16 @@
+/* form ***********************/
+.form {
+  @include reset-last-indent;
+
+  &__section {
+    @include reset-last-indent;
+  }
+  &__group {
+    margin-bottom: $indent-medium;
+  }
+  &__hint {
+    font-size: 14px;
+    color: $c-secondary;
+    margin-top: $indent-small;
+  }
+}

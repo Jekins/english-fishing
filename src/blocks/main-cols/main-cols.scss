@@ -22,4 +22,15 @@
       margin-bottom: $indent-large;
     }
   }
+
+  &_v2 &__aside {
+    @media (min-width: $screen-lg) {
+      @include width(35%);
+    }
+  }
+  &_v2 &__article {
+    @media (min-width: $screen-lg) {
+      @include width(65%);
+    }
+  }
 }
