@@ -256,7 +256,7 @@
       <div class="back-path__inner">
         <ul class="back-path__links">
           <li><a href="">Главная</a></li>
-          <li><a href="">Вход на сайт</a></li>
+          <li><a href="">Регистрация</a></li>
         </ul>
       </div>
     </div>
@@ -267,21 +267,41 @@
       <div class="auth__container">
         <div class="auth__inner">
           <header class="auth__header">
-            <h1 class="auth__title">Войти на сайт</h1>
+            <h1 class="auth__title">Регистрация</h1>
             <div class="auth__header-link">
-              <a href="/registration.html">Регистрация</a>
+              <a href="/login.html">Войти</a>
             </div>
           </header>
           <div class="auth__body">
 
             <!--form-->
             <form class="form">
-              <div class="form__section" id="login">
+              <div class="form__section">
                 <section class="form__group form__group_large">
 
                   <!--text-field-->
                   <div class="text-field text-field_float-label">
-                    <label class="text-field__label">Логин</label>
+                    <label class="text-field__label">Имя</label>
+                    <input type="text" class="text-field__control">
+                  </div>
+                  <!--/text-field-->
+
+                </section>
+                <section class="form__group form__group_large">
+
+                  <!--text-field-->
+                  <div class="text-field text-field_float-label">
+                    <label class="text-field__label">Фамилия</label>
+                    <input type="text" class="text-field__control">
+                  </div>
+                  <!--/text-field-->
+
+                </section>
+                <section class="form__group form__group_large">
+
+                  <!--text-field-->
+                  <div class="text-field text-field_float-label">
+                    <label class="text-field__label">Логин<sup>*</sup> (минимум 3 символа)</label>
                     <input type="text" class="text-field__control">
                   </div>
                   <!--/text-field-->
@@ -291,45 +311,38 @@
 
                   <!--text-field-->
                   <div class="text-field text-field_remind text-field_float-label">
-                    <label class="text-field__label">Пароль</label>
+                    <label class="text-field__label">Пароль<sup>*</sup> (минимум 6 символов)</label>
                     <input type="password" class="text-field__control">
-                    <a href="#" class="text-field__remind" data-form-go="remind">Не помните?</a>
                   </div>
                   <!--/text-field-->
 
                 </section>
                 <section class="form__group form__group_large">
 
-                  <!--cols-->
-                  <div class="cols cols_space-between cols_vertical-center">
-                    <div class="cols__item">
-                      <label class="checkbox">
-                        <input type="checkbox" name="radio" hidden checked>
-                        <span>Запомнить <span class="hidden-xs">меня</span></span>
-                      </label>
-                    </div>
-                    <div class="cols__item">
-                      <button type="button" class="btn btn_primary btn_large">Войти</button>
-                    </div>
+                  <!--text-field-->
+                  <div class="text-field text-field_remind text-field_float-label">
+                    <label class="text-field__label">Повторите пароль<sup>*</sup></label>
+                    <input type="password" class="text-field__control">
                   </div>
-                  <!--/cols-->
+                  <!--/text-field-->
 
                 </section>
-              </div>
-              <div class="form__section" id="remind" style="display: none;">
                 <section class="form__group form__group_large">
 
                   <!--text-field-->
                   <div class="text-field text-field_float-label">
-                    <label class="text-field__label">Ваш E-Mail</label>
+                    <label class="text-field__label">E-Mail<sup>*</sup></label>
                     <input type="email" class="text-field__control">
                   </div>
                   <!--/text-field-->
 
+                  <div class="form__hint">На ваш E-Mail придет письмо для подтверждения</div>
                 </section>
                 <section class="form__group form__group_large">
-                  <button type="button" class="btn btn_primary btn_large">Напомнить пароль</button>
-                  <a style="margin-left: 16px;" href="#" data-form-go="login">Войти</a>
+                  reCAPTCHA
+                </section>
+                <section class="form__group form__group_large">
+                  <button type="button" class="btn btn_primary btn_large btn_block">Зарегистрироваться</button>
                 </section>
               </div>
             </form>
