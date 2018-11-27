@@ -20,3 +20,19 @@
     width: 100%;
   }
 }
+
+.container-small,
+%container-small {
+  width: 585px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: $indent-medium;
+  padding-right: $indent-medium;
+
+  @media (max-width: $screen-sm) {
+    width: $screen-xs;
+  }
+  @media (max-width: $screen-xs) {
+    width: 100%;
+  }
+}

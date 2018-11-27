@@ -1,0 +1,94 @@
+/* order-complete ***********************/
+.order-complete {
+  position: relative;
+  padding-top: $indent-xlarge;
+  padding-bottom: $indent-xlarge;
+  @media (max-width: $screen-sm) {
+    padding-top: $indent-medium;
+    padding-bottom: $indent-medium;
+  }
+
+  &__bg {
+    @include absolute;
+    background-color: $c-primary;
+    height: 300px;
+    top: 0;
+    left: 0;
+    right: 0;
+
+    &-inner {
+      background-position: center center;
+      background-size: cover;
+      @include absolute;
+      opacity: .1;
+    }
+  }
+  &__container {
+    position: relative;
+    @extend %container-small;
+  }
+  &__inner {
+    position: relative;
+    background-color: white;
+    border-radius: $r-medium;
+    border: 1px solid $c-border;
+  }
+  &__header {
+    padding: 40px;
+    @include reset-last-indent;
+    @media (max-width: $screen-sm) {
+      padding: $indent-large;
+    }
+    @media (max-width: $screen-xs) {
+      padding: $indent-medium;
+    }
+  }
+  &__title {
+    color: $c-success;
+    margin-bottom: $indent-small;
+    font-size: 28px;
+    @media (max-width: $screen-sm) {
+      font-size: $fz-xlarge;
+    }
+  }
+  &__sub-title {
+    margin-bottom: 0;
+    font-size: 28px;
+    @media (max-width: $screen-sm) {
+      font-size: $fz-xlarge;
+    }
+  }
+  &__note {
+    @include reset-last-indent;
+    background-color: #FDF9E2;
+    padding: $indent-large 40px;
+    border-top: 1px dashed $c-border;
+    border-bottom: 1px dashed $c-border;
+    @media (max-width: $screen-sm) {
+      padding: $indent-large;
+    }
+    @media (max-width: $screen-xs) {
+      padding: $indent-medium;
+    }
+
+    p {
+      margin-bottom: $indent-small;
+    }
+  }
+  &__body {
+    padding: 40px;
+    @media (max-width: $screen-sm) {
+      padding: $indent-large;
+    }
+    @media (max-width: $screen-xs) {
+      padding: $indent-medium;
+    }
+  }
+  &__action {
+    text-align: center;
+    margin-top: $input-large;
+    @media (max-width: $screen-sm) {
+      margin-top: $input-medium;
+    }
+  }
+}
