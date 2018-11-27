@@ -7,6 +7,12 @@
   }
   &__group {
     margin-bottom: $indent-medium;
+
+    &_large {
+      @media (min-width: $screen-sm + 1) {
+        margin-bottom: $indent-large;
+      }
+    }
   }
   &__hint {
     font-size: 14px;

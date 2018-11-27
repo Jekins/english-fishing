@@ -1,0 +1,47 @@
+/* auth ***********************/
+.auth {
+  position: relative;
+  padding-top: $indent-xlarge;
+  padding-bottom: $indent-xlarge;
+  background-image: url($img + 'img-auth.jpg');
+  background-position: top center;
+  background-repeat: no-repeat;
+  @media (max-width: $screen-sm) {
+    padding-top: $indent-large;
+    padding-bottom: $indent-large;
+    background: none;
+    background-color: $bg-secondary-light;
+  }
+
+  &__container {
+    position: relative;
+    @extend %container-small;
+  }
+  &__inner {
+    position: relative;
+    @media (min-width: $screen-sm + 1) {
+      background-color: white;
+      border-radius: $r-large;
+      border: 1px solid $c-border;
+      box-shadow: 0 0 15px rgba(0, 0, 0, 0.05);
+      padding: 50px 100px;
+    }
+  }
+  &__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    @include reset-last-indent;
+  }
+  &__title {
+    margin-bottom: 0;
+    font-size: 24px;
+    @media (max-width: $screen-sm) {
+      font-size: $fz-xlarge;
+    }
+  }
+  &__body {
+    padding-top: $indent-large;
+  }
+}
+
