@@ -6,7 +6,10 @@
   border: none !important;
 
   span {
-    margin-left: $indent-small;
     display: block;
+  }
+  span + img,
+  img + span {
+    margin-left: $indent-small;
   }
 }

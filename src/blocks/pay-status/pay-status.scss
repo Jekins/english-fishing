@@ -1,0 +1,25 @@
+/* pay-status ***********************/
+.pay-status {
+  display: inline-block;
+  border-radius: $r-medium;
+  border: 1px solid #C5C5C5;
+  transition: $trans-medium;
+  color: $c-secondary;
+  padding: 7px 10px;
+  line-height: 1;
+  font-size: 13px;
+  text-decoration: none !important;
+  text-align: center;
+
+  &_paid {
+    background-color: $bg-success;
+    border-color: $c-primary;
+    color: $c-success;
+  }
+
+  &_not-paid {
+    background-color: $bg-danger;
+    border-color: $c-danger;
+    color: $c-attention;
+  }
+}

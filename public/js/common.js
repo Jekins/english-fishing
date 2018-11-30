@@ -1,4 +1,4 @@
-/*! Englishfishing 27-11-2018 | Front-end: Jekins */
+/*! Englishfishing 30-11-2018 | Front-end: Jekins */
 /* close-outside ***********************/
 function closeOutside(el, activeClass) {
   $('html').on('click', function(e) {
