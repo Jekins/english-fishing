@@ -7,6 +7,7 @@
   }
   &__group {
     margin-bottom: $indent-medium;
+    @include reset-last-indent;
 
     &_large {
       @media (min-width: $screen-sm + 1) {

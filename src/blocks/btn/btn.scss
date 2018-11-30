@@ -47,6 +47,8 @@
   }
   &_link {
     @include btn-color(transparent, transparent, $c-link);
+    font-size: 14px;
+    font-weight: $fw-regular;
   }
 
   &_block {
