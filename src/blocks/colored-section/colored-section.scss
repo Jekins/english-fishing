@@ -1,0 +1,17 @@
+/* colored-section ***********************/
+.colored-section {
+  padding: 22px;
+  @include reset-last-indent;
+  border-radius: $r-medium;
+
+  &_secondary {
+    background-color: $bg-secondary-light;
+  }
+
+  &_warning {
+    background-color: $bg-warning;
+  }
+  &_bordered {
+    border: 1px solid $c-border;
+  }
+}

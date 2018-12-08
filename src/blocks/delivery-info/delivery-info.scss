@@ -1,0 +1,83 @@
+/* delivery-info ***********************/
+.delivery-info {
+  font-size: 14px;
+
+  &__container {
+    @extend %container;
+    position: relative;
+  }
+  &__header {
+    background-color: $c-primary;
+    background-position: center center;
+    background-size: cover;
+    padding-top: $indent-xlarge;
+    padding-bottom: $indent-xlarge;
+    position: relative;
+    @media (max-width: $screen-sm) {
+      padding-top: $indent-large;
+      padding-bottom: $indent-large;
+    }
+
+    &,
+    *,
+    a:hover {
+      color: white;
+    }
+    &:before {
+      content: '';
+      display: block;
+      background-position: center center;
+      background-size: cover;
+      background-image: url($img + 'img-bg-1.jpg');
+      @include absolute;
+      opacity: .1;
+    }
+  }
+  &__title {
+    margin-bottom: 20px;
+  }
+  &__lead {
+    margin-bottom: $indent-large;
+  }
+  &__contacts {
+    @include reset-last-indent;
+    @media (min-width: $screen-lg) {
+      @include width(75%);
+    }
+    @media (min-width: $screen-sm) {
+      @include cols($indent-medium);
+    }
+
+    h5 {
+      font-weight: $fw-regular;
+      font-size: 14px;
+      margin-bottom: $indent-medium;
+    }
+    &-item {
+      @media (min-width: $screen-sm) {
+        @include width(50%);
+      }
+      @media (max-width: $screen-sm) {
+        margin-bottom: $indent-large;
+      }
+    }
+    &-content {
+      font-size: 24px;
+      line-height: 1;
+      text-decoration: none !important;
+      border-bottom: 1px solid rgba(255,255,255,.3);
+
+      &:hover {
+        border-bottom-color: transparent;
+      }
+    }
+  }
+  &__body {
+    padding-top: $indent-section;
+    padding-bottom: $indent-section;
+    @media (max-width: $screen-sm) {
+      padding-top: $indent-large;
+      padding-bottom: $indent-large;
+    }
+  }
+}

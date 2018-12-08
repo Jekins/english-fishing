@@ -16,6 +16,7 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   overflow-x: hidden;
+  word-break: break-word;
 }
 
 a {
@@ -64,7 +65,7 @@ h5,
 .h5 {
   margin-top: 0;
   font-weight: $fw-bold;
-  line-height: 1.1;
+  line-height: 1.2;
 }
 
 h1 {
@@ -135,7 +136,7 @@ i {
 }
 
 ul {
-  list-style: square outside;
+  list-style: circle outside;
   margin-bottom: $indent-medium;
   padding-left: $indent-medium;
   @include reset-last-indent;

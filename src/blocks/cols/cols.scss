@@ -19,6 +19,38 @@
         @include width(100%);
       }
     }
+    &_sm-9 {
+      @media (min-width: $screen-sm) {
+        @include width(9 * 100% / 12);
+      }
+      @media (max-width: $screen-sm) {
+        @include width(100%);
+      }
+    }
+    &_sm-8 {
+      @media (min-width: $screen-sm) {
+        @include width(8 * 100% / 12);
+      }
+      @media (max-width: $screen-sm) {
+        @include width(100%);
+      }
+    }
+    &_sm-3 {
+      @media (min-width: $screen-sm) {
+        @include width(3 * 100% / 12);
+      }
+      @media (max-width: $screen-sm) {
+        @include width(100%);
+      }
+    }
+    &_sm-4 {
+      @media (min-width: $screen-sm) {
+        @include width(4 * 100% / 12);
+      }
+      @media (max-width: $screen-sm) {
+        @include width(100%);
+      }
+    }
   }
 
   &_reverse-xs {
