@@ -51,6 +51,12 @@
     font-weight: $fw-regular;
   }
 
+  &_bordered {
+    &-white {
+      @include btn-color-bordered(transparent, rgba(255, 255, 255, 0.5), white);
+    }
+  }
+
   &_block {
     width: 100%;
     display: block;

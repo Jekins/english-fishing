@@ -631,6 +631,24 @@ $zero: 0;
   }
 }
 
+@mixin btn-color-bordered($bg, $bc, $c) {
+  font-weight: $fw-regular;
+  border-color: $bc;
+  color: $c;
+  background: $bg;
+
+  &:hover {
+    color: $c;
+    border-color: darken(desaturate($bc, 20%), 2%);
+    background-color: darken(desaturate($bg, 20%), 2%);
+  }
+  &:active {
+    color: $c;
+    border-color: darken(desaturate($bc, 20%), 8%);
+    background-color: darken(desaturate($bg, 20%), 8%);
+  }
+}
+
 @mixin reset-last-indent() {
   > *:last-child {
     margin-bottom: 0 !important;
@@ -669,7 +687,7 @@ $zero: 0;
   }
   a {
     text-decoration: none;
-    border-bottom: 1px solid rgba(255,255,255,.2);
+    border-bottom: 1px solid rgba(255,255,255,.4);
 
     &:hover {
       border-bottom-color: transparent;
