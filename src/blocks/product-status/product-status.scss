@@ -1,9 +1,9 @@
 /* product-status ***********************/
 .product-status {
   position: relative;
-  padding-left: 13px + $indent-small;
-  font-size: 14px;
-  color: $c-success;
+  padding-left: 8px + $indent-small;
+  font-size: 12px;
+  color: $c-secondary;
   line-height: $lh-small;
 
   &:before {
@@ -13,8 +13,8 @@
     left: 0;
     top: 50%;
     transform: translateY(-50%);
-    width: 13px;
-    height: 13px;
+    width: 8px;
+    height: 8px;
     border-radius: 100%;
     background-color: $bg-primary;
   }

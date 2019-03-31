@@ -1,0 +1,148 @@
+/* mobile-sidebar ***********************/
+@keyframes mobileSidebarInner {
+  from {
+    transform: translateX(-100%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
+.mobile-sidebar {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 900;
+
+  &__backdrop {
+    @include absolute;
+    background-color: rgba(0,0,0,.3);
+  }
+  &__inner {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    width: 280px;
+    background-color: white;
+    font-size: 14px;
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+    display: flex;
+    flex-direction: column;
+    animation: .3s mobileSidebarInner;
+
+    &-body {
+      flex-grow: 1;
+    }
+  }
+  &_active &__inner {
+  }
+  &__top-actions {
+    a {
+      display: block;
+      padding: $indent-medium;
+    }
+  }
+  &__auth-actions {
+    display: flex;
+
+    a {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-top: 1px solid $c-border;
+      border-bottom: 1px solid $c-border;
+      text-align: center;
+      height: 38px;
+      @include width(50%);
+      color: black;
+      text-decoration: none !important;
+
+      &:first-child {
+        border-right: 1px solid $c-border;
+      }
+      img {
+        margin-right: $indent-small;
+        width: 15px;
+      }
+    }
+  }
+  &__container {
+    padding-left: $indent-medium;
+    padding-right: $indent-medium;
+  }
+  &__menu {
+    padding-top: $indent-medium;
+    padding-bottom: $indent-medium;
+    border-bottom: 1px solid $c-border;
+
+    ul {
+      @include reset-list;
+
+      li {
+        a {
+          padding-top: $indent-small;
+          padding-bottom: $indent-small;
+          color: black;
+          display: block;
+        }
+      }
+    }
+  }
+  &__phones {
+    padding-top: $indent-medium;
+    padding-bottom: $indent-medium;
+
+    a {
+      display: flex;
+      align-items: center;
+      padding-top: $indent-small;
+      padding-bottom: $indent-small;
+
+      img {
+        margin-right: $indent-small;
+        width: 18px;
+      }
+    }
+  }
+  &__footer-menu {
+    border-top: 1px solid $c-border;
+    padding-top: $indent-medium;
+    padding-bottom: $indent-medium;
+
+    ul {
+      @include reset-list;
+
+      li {
+        a {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          color: black;
+          padding-top: $indent-small;
+          padding-bottom: $indent-small;
+
+          span {
+            display: flex;
+            align-items: center;
+
+            &:last-child {
+              border-radius: 2px;
+              background-color: $c-primary;
+              color: white;
+              line-height: 1;
+              padding: 2px 5px;
+            }
+          }
+          img {
+            margin-right: $indent-small;
+            width: 18px;
+          }
+        }
+      }
+    }
+  }
+}

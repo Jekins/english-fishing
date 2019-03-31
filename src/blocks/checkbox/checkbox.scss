@@ -63,7 +63,7 @@
   }
 
   [type="checkbox"]:checked + span:after {
-    background-image: url($img + 'icon-check-primary.svg');
+    background-image: url($img + 'icons/icon-check-primary.svg');
     background-repeat: no-repeat;
     background-position: center center;
     background-size: 100%;

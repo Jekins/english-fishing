@@ -28,7 +28,7 @@
       display: block;
       background-position: center center;
       background-size: cover;
-      background-image: url($img + 'img-bg-1.jpg');
+      background-image: url($img + 'covers/cover-bg-1.jpg');
       @include absolute;
       opacity: .1;
     }

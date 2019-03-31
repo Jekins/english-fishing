@@ -639,12 +639,12 @@ $zero: 0;
 
   &:hover {
     color: $c;
-    border-color: darken(desaturate($bc, 20%), 2%);
+    border-color: darken(desaturate($bc, 20%), 2%) !important;
     background-color: darken(desaturate($bg, 20%), 2%);
   }
   &:active {
     color: $c;
-    border-color: darken(desaturate($bc, 20%), 8%);
+    border-color: darken(desaturate($bc, 20%), 8%) !important;
     background-color: darken(desaturate($bg, 20%), 8%);
   }
 }

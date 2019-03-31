@@ -1,6 +1,9 @@
 /* header ***********************/
 .header {
   padding-bottom: 10px;
+  @media (max-width: $screen-lg) {
+    padding-bottom: 0;
+  }
 
   &__top-line {
     background-color: black;
@@ -69,6 +72,8 @@
       @media (max-width: $screen-lg) {
         align-items: center;
         @include cols($indent-medium);
+        padding-top: 20px;
+        padding-bottom: 20px;
       }
       @media (max-width: $screen-sm) {
         padding-top: $indent-medium;
@@ -115,13 +120,16 @@
   &__logo {
     display: block;
     text-decoration: none !important;
+    @media (max-width: $screen-sm) {
+      flex-grow: 1;
+    }
 
     img {
       @media (max-width: $screen-lg) {
         width: 217px;
       }
-      @media (max-width: $screen-xs) {
-        width: 197px;
+      @media (max-width: $screen-sm) {
+        width: 202px;
       }
     }
     span {
@@ -131,8 +139,6 @@
       font-size: 14px;
       @media (max-width: $screen-sm) {
         margin-top: 0;
-      }
-      @media (max-width: $screen-xs) {
         font-size: 13px;
       }
     }
@@ -263,6 +269,16 @@
         font-size: 14px;
         opacity: .7;
       }
+    }
+  }
+  &__mobile-menu-activator {
+    padding-top: $indent-small;
+    padding-bottom: $indent-small;
+    padding-right: 0;
+    display: block;
+    flex-shrink: 0;
+    @media (min-width: $screen-sm + 1) {
+      display: none;
     }
   }
 }

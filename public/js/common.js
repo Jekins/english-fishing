@@ -1,4 +1,4 @@
-/*! Englishfishing 10-03-2019 | Front-end: Jekins */
+/*! Englishfishing 01-04-2019 | Front-end: Jekins */
 /* close-outside ***********************/
 function closeOutside(el, activeClass) {
   $('html').on('click', function(e) {
@@ -124,6 +124,42 @@ $.fn.listFiltersToggle = function () {
 $(function () {
   $('.list-filters__activator').listFiltersToggle();
 });
+/* mobile-sidebar ***********************/
+$.fn.mobileSidebarClose = function (e, blockName) {
+  e.preventDefault();
+
+  var active = blockName + '_active',
+      $block = $('.' + blockName);
+
+  $block.removeClass(active);
+  $block.hide();
+  $('body').removeClass('body-fixed');
+};
+
+$.fn.mobileSidebarOpen = function (e, blockName) {
+  e.preventDefault();
+
+  var active = blockName + '_active',
+      $block = $('.' + blockName);
+
+  $block.addClass(active);
+  $block.show();
+  $('body').addClass('body-fixed');
+};
+
+$(function () {
+  var blockName = 'mobile-sidebar',
+      closer = '[data-close="' + blockName + '"]',
+      opener = '[data-open="' + blockName + '"]';
+
+  $(document).on('click', closer, function (e) {
+    $(this).mobileSidebarClose(e, blockName);
+  });
+
+  $(document).on('click', opener, function (e) {
+    $(this).mobileSidebarOpen(e, blockName);
+  });
+});
 /* product-gallery ***********************/
 $.fn.initFancyboxGallery = function (selected) {
   var blockClassName = '.product-gallery',
@@ -240,6 +276,46 @@ $.fn.initProductsSet = function () {
 
 $(function () {
   $('.products-set').initProductsSet();
+});
+/* products-slider ***********************/
+var productsSlider;
+
+function initProductSlider() {
+  productsSlider = new Swiper('.products-slider__inner', {
+    navigation: {
+      nextEl: '.products-slider__next',
+      prevEl: '.products-slider__prev',
+    },
+  });
+}
+
+$(function () {
+  $(window).on('resize', function () {
+    var windowWidth = $(window).width();
+
+    initProductSlider();
+
+    if (windowWidth <= 768) {
+      productsSlider.params.slidesPerView = 1.3;
+    } else if (windowWidth <= 1230) {
+      productsSlider.params.slidesPerView = 3.3;
+    } else {
+      productsSlider.params.slidesPerView = 5;
+    }
+  }).trigger('resize');
+});
+
+/* promo-block-slider ***********************/
+var promoBlockSlider = new Swiper('.promo-block-slider', {
+  navigation: {
+    nextEl: '.promo-block-slider__next',
+    prevEl: '.promo-block-slider__prev',
+  },
+  pagination: {
+    el: '.swiper-pagination',
+    clickable: true,
+  },
+  loop: true
 });
 /* scroll-to ***********************/
 $(function() {

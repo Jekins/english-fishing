@@ -15,7 +15,7 @@
     position: absolute;
     left: 0;
     top: 2px;
-    background-image: url($img + 'icon-star-outline-accent.svg');
+    background-image: url($img + 'icons/icon-star-outline-accent.svg');
     background-repeat: no-repeat;
     background-position: center center;
     background-size: 100%;
@@ -26,7 +26,7 @@
     color: $c-accent;
 
     &:before {
-      background-image: url($img + 'icon-star-accent.svg');
+      background-image: url($img + 'icons/icon-star-accent.svg');
     }
   }
 }

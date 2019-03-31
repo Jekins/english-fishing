@@ -73,9 +73,18 @@
     display: inline-flex;
     align-items: center;
 
+    svg {
+      transition: $trans-medium;
+    }
     span {
       display: block;
       margin-left: $indent-small;
+    }
+    &-right {
+      span {
+        margin-right: $indent-small;
+        margin-left: 0;
+      }
     }
   }
   &_icon-single {

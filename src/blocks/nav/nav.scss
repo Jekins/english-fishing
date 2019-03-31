@@ -38,6 +38,18 @@
           transform: scale(1);
         }
       }
+      b {
+        width: 19px;
+        height: 19px;
+        background: red;
+        border-radius: 100%;
+        color: white;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        margin-right: $indent-xsmall;
+      }
     }
     &_active {
       > a {

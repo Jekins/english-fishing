@@ -1,105 +1,63 @@
 /* promo-block ***********************/
 .promo-block {
-  position: relative;
-  @include white-content;
+  padding-top: $indent-large;
+  @media (min-width: $screen-lg) {
+    border-top: 1px solid $c-border;
+  }
+  @media (max-width: $screen-lg) {
+    padding-top: 20px;
+  }
 
-  &__bg {
-    @include img-cover;
-    background: #354771;
+  &__inner {
+    @extend %container;
+    display: flex;
+    flex-wrap: wrap;
+    @media (max-width: $screen-sm) {
+      width: 100%;
+      padding-left: 0;
+      padding-right: 0;
+    }
+  }
+  &__slider {
+    @include width(65%);
+    padding-right: $indent-large;
+    @media (max-width: $screen-lg) {
+      @include width(100%);
+      padding-right: 0;
+    }
+  }
+  &__banners {
+    @include width(35%);
+    @include reset-last-indent;
+    @media (max-width: $screen-lg) {
+      margin-top: $indent-medium;
+      @include width(100%);
+      display: flex;
+    }
+    @media (max-width: $screen-sm) {
+      @include width($screen-xs);
+      padding-left: $indent-medium;
+      padding-right: $indent-medium;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    @media (max-width: $screen-xs) {
+      @include width(100%);
+    }
 
     > * {
-      mix-blend-mode: overlay;
-    }
-  }
-  &__inner {
-    position: relative;
-    @extend %container;
-    padding-top: $indent-xlarge;
-    padding-bottom: $indent-xlarge;
-    display: flex;
-    justify-content: space-between;
-    @media (max-width: $screen-sm) {
-      flex-direction: column;
-      padding-top: $indent-medium;
-      padding-bottom: $indent-medium;
-    }
-
-    &-left {
-      @include width(49%);
-      @media (max-width: $screen-sm) {
-        text-align: center;
-        @include width(100%);
-        margin-bottom: $indent-medium;
-      }
-    }
-    &-right {
-      @include width(33.3333%);
-      @include reset-last-indent;
+      margin-bottom: $indent-large;
       @media (max-width: $screen-lg) {
         @include width(49%);
-      }
-      @media (max-width: $screen-sm) {
-        @include width(100%);
-      }
+        margin-right: $indent-medium;
+        margin-bottom: 0;
 
-      > * {
-        margin-bottom: $indent-large;
-        @media (max-width: $screen-sm) {
-          margin-bottom: $indent-medium;
+        &:last-child {
+          margin-right: 0;
         }
       }
-    }
-  }
-  &__title {
-    font-weight: $fw-light;
-    font-size: 36px;
-    line-height: 1.1;
-    @media (max-width: $screen-lg) {
-      line-height: 34px;
-      font-size: 32px;
-      margin-bottom: $indent-medium;
-    }
-    @media (max-width: $screen-sm) {
-      line-height: 28px;
-      font-size: 24px;
-    }
-  }
-  &__lead {
-    line-height: 1.7;
-    @media (max-width: $screen-sm) {
-      line-height: 20px;
-      font-size: 14px;
-    }
-  }
-  &__advantage {
-    align-items: center;
-    display: flex;
-
-    &-icon {
-      width: 60px;
-      height: 60px;
-      background-color: white;
-      border-radius: 100%;
-      position: relative;
-      margin-right: $indent-large;
-      flex-shrink: 0;
       @media (max-width: $screen-sm) {
-        margin-right: $indent-medium;
-      }
-
-      img {
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-      }
-    }
-    &-title {
-      color: $c-primary;
-      margin-bottom: $indent-small;
-      font-weight: $fw-semi-bold;
-      @media (max-width: $screen-sm) {
-        margin-bottom: $indent-xsmall;
+        @include width(48%);
       }
     }
   }

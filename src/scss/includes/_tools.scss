@@ -1,4 +1,12 @@
 /* tools ***********************/
+.body-fixed {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+}
+
 .td {
   &-none {
     text-decoration: none;
@@ -120,6 +128,9 @@
   }
   &-attention {
     color: $c-attention !important;
+  }
+  &-primary {
+    color: $c-primary !important;
   }
 }
 

@@ -1,0 +1,113 @@
+/* product-card ***********************/
+.product-card {
+  display: flex;
+  border-top: 1px solid #e5e5e5;
+  border-bottom: 1px solid #e5e5e5;
+  border-left: 1px solid #e5e5e5;
+  box-shadow: 1px 0 0 0 #e5e5e5;
+  padding: $indent-medium;
+  position: relative;
+
+  &__img {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 20px;
+    height: 160px;
+
+    a {
+      display: block;
+    }
+    img {
+      max-width: 230px;
+      max-height: 160px;
+    }
+  }
+  &__content {
+    @include reset-last-indent;
+  }
+  &__title {
+    a {
+      color: black;
+    }
+  }
+  &__status {
+    margin-bottom: $indent-xsmall;
+  }
+  &__action {
+    margin-top: $indent-medium;
+
+    .btn {
+      justify-content: center;
+      @include btn-color($c-primary, $c-primary, white);
+
+      svg {
+        fill: white;
+      }
+    }
+  }
+  &__discount {
+    position: absolute;
+    top: $indent-medium;
+    left: $indent-medium;
+    background-color: $c-attention;
+    color: white;
+    padding: 3px 5px;
+    font-size: $fz-small;
+    line-height: 1;
+    border-radius: $r-medium;
+  }
+  &__fav {
+    position: absolute;
+    right: $indent-medium;
+    top: $indent-medium;
+  }
+
+  &_col {
+    flex-direction: column;
+    transition: $trans-medium;
+
+    &:hover {
+      box-shadow: 0 0 30px rgba(0, 0, 0, 0.15);
+    }
+  }
+  &_col &__img {
+    margin-right: 0;
+    margin-bottom: $indent-medium;
+
+    img {
+      max-width: 186px;
+    }
+  }
+  &_col &__content {
+    margin-bottom: 10px;
+  }
+  &_col &__title {
+    font-size: 13px;
+  }
+  &_col &__action {
+    margin-top: $indent-medium;
+
+    .btn {
+      @include btn-color(transparent, transparent, $c-link);
+
+      span {
+        font-weight: $fw-semi-bold;
+      }
+      svg {
+        fill: $c-primary;
+      }
+    }
+  }
+  &_col:hover &__action {
+    .btn {
+      background-color: $c-primary;
+      border-color: $c-primary;
+      color: white;
+
+      svg {
+        fill: white;
+      }
+    }
+  }
+}
