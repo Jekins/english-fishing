@@ -7,6 +7,9 @@
   box-shadow: 1px 0 0 0 #e5e5e5;
   padding: $indent-medium;
   position: relative;
+  @media (max-width: $screen-sm) {
+    flex-direction: column;
+  }
 
   &__img {
     display: flex;
@@ -14,6 +17,15 @@
     justify-content: center;
     margin-right: 20px;
     height: 160px;
+    @include width(230px);
+    @media (max-width: $screen-lg) {
+      @include width(180px);
+    }
+    @media (max-width: $screen-sm) {
+      @include width(100%);
+      margin-right: 0;
+      margin-bottom: $indent-medium;
+    }
 
     a {
       display: block;
@@ -25,8 +37,26 @@
   }
   &__content {
     @include reset-last-indent;
+    @media (min-width: $screen-sm) {
+      flex-grow: 1;
+      margin-right: $indent-medium;
+    }
+  }
+  &__params {
+    @include width(180px);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    @media (max-width: $screen-sm) {
+      margin-top: $indent-medium;
+      @include width(100%);
+      justify-content: flex-start;
+    }
   }
   &__title {
+    font-size: $fz-medium;
+    margin-bottom: $indent-small;
+
     a {
       color: black;
     }
@@ -41,6 +71,9 @@
       justify-content: center;
       @include btn-color($c-primary, $c-primary, white);
 
+      span {
+        font-weight: $fw-semi-bold;
+      }
       svg {
         fill: white;
       }
@@ -56,11 +89,45 @@
     font-size: $fz-small;
     line-height: 1;
     border-radius: $r-medium;
+    font-weight: $fw-bold;
   }
   &__fav {
     position: absolute;
     right: $indent-medium;
     top: $indent-medium;
+    font-size: 14px;
+    @media (min-width: $screen-sm) {
+      width: 180px;
+    }
+
+    a {
+      display: flex;
+      align-items: center;
+      color: $c-secondary;
+      text-decoration: none !important;
+
+      span {
+        display: block;
+        margin-left: $indent-xsmall;
+        @media (max-width: $screen-sm) {
+          display: none;
+        }
+      }
+    }
+  }
+  &__info {
+    margin-bottom: $indent-small;
+    @include cols($indent-small);
+    flex-wrap: wrap;
+    font-size: 14px;
+
+    span {
+      color: $c-secondary;
+    }
+  }
+  &__desc {
+    font-size: 14px;
+    color: $c-dark;
   }
 
   &_col {
@@ -68,22 +135,48 @@
     transition: $trans-medium;
 
     &:hover {
-      box-shadow: 0 0 30px rgba(0, 0, 0, 0.15);
+      @media (min-width: $screen-lg) {
+        box-shadow: 0 0 30px rgba(0, 0, 0, 0.15);
+      }
     }
+  }
+  &_col &__price {
+    height: 38px;
+    overflow: hidden;
+  }
+  &_col &__desc,
+  &_col &__info {
+    display: none;
   }
   &_col &__img {
     margin-right: 0;
     margin-bottom: $indent-medium;
+    @include width(100%);
 
     img {
       max-width: 186px;
     }
   }
+  &_col &__fav {
+    width: auto;
+
+    a {
+      span {
+        display: none;
+      }
+    }
+  }
   &_col &__content {
     margin-bottom: 10px;
   }
+  &_col &__params {
+    @include width(100%);
+    display: block;
+  }
   &_col &__title {
     font-size: 13px;
+    height: 45px;
+    overflow: hidden;
   }
   &_col &__action {
     margin-top: $indent-medium;
@@ -91,9 +184,6 @@
     .btn {
       @include btn-color(transparent, transparent, $c-link);
 
-      span {
-        font-weight: $fw-semi-bold;
-      }
       svg {
         fill: $c-primary;
       }

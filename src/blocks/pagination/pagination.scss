@@ -1,0 +1,92 @@
+/* pagination ***********************/
+.pagination {
+  display: flex;
+  margin-top: $indent-section;
+  padding-bottom: $indent-medium;
+  justify-content: center;
+  @media (max-width: $screen-lg) {
+    padding-bottom: 0;
+    margin-top: $indent-large;
+  }
+  @media (max-width: $screen-xs) {
+    margin-left: -$indent-medium;
+    margin-right: -$indent-medium;
+  }
+
+  &__next,
+  &__prev {
+    display: flex;
+    align-items: center;
+
+    a {
+      display: flex;
+      align-items: center;
+      height: 32px;
+      padding-left: $indent-medium;
+      padding-right: $indent-medium;
+      transition: $trans-medium;
+      border-radius: $r-large;
+      text-decoration: none !important;
+
+      &:hover {
+        background-color: lighten($bg-primary, 50%);
+      }
+    }
+    img {
+      position: relative;
+      top: 1px;
+    }
+    span {
+      @media (max-width: $screen-sm) {
+        display: none;
+      }
+    }
+  }
+  &__prev {
+    span {
+      margin-left: $indent-small;
+    }
+  }
+  &__next {
+    span {
+      margin-right: $indent-small;
+    }
+  }
+  &__list {
+    @include reset-list;
+    padding-left: $indent-small;
+    padding-right: $indent-small;
+    @include cols($indent-xsmall);
+  }
+  &__item {
+    display: flex;
+    align-items: center;
+    color: $c-primary;
+
+    a {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 32px;
+      height: 32px;
+      text-decoration: none !important;
+      border-radius: $r-large;
+      transition: $trans-medium;
+
+      &:hover {
+        background-color: lighten($bg-primary, 50%);
+      }
+    }
+    &_active {
+      a {
+        background-color: $bg-primary;
+        color: white;
+        font-weight: $fw-semi-bold;
+
+        &:hover {
+          background-color: $bg-primary;
+        }
+      }
+    }
+  }
+}

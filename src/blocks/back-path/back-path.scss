@@ -9,9 +9,6 @@
     padding-top: $indent-medium;
     padding-bottom: $indent-medium;
     white-space: nowrap;
-    @media (max-width: $screen-sm) {
-      padding-top: 0;
-    }
   }
   &__links {
     @include  reset-list;

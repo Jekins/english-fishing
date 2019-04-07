@@ -52,6 +52,9 @@
     </div>
     <div class="header__inner">
       <div class="header__inner-top">
+        <a href="#" class="header__mobile-menu-activator" data-open="mobile-sidebar">
+          <img src="./img/icons/icon-menu-black.svg" alt="">
+        </a>
         <a class="header__logo" href="/">
           <img src="./img/logos/logo.svg" alt="Логотип">
           <span>Рыболовный интернет магазин</span>
@@ -103,74 +106,72 @@
               <span>Весь каталог</span>
               <img src="./img/icons/icon-chevron-down-white.svg" alt="">
             </a>
-            <ul class="dropdown__list list-catalog" style="width: 300px">
-              <li>
-                <a href="">
-                  <span class="list-catalog__text">Подарочные сертификаты</span>
-                  <span class="list-catalog__count">32</span>
-                </a>
-              </li>
-              <li>
-                <a href="">
-                  <span class="list-catalog__text">Удилища Фидерные</span>
-                  <span class="list-catalog__count">54</span>
-                </a>
-              </li>
-              <li>
-                <a href="">
-                  <span class="list-catalog__text">Вершинки</span>
-                  <span class="list-catalog__count">19</span>
-                </a>
-              </li>
-              <li>
-                <a href="">
-                  <span class="list-catalog__text">Удилища Карповые</span>
-                  <span class="list-catalog__count">18</span>
-                </a>
-              </li>
-              <li>
-                <a href="">
-                  <span class="list-catalog__text">Удилища Матчевые</span>
-                  <span class="list-catalog__count">28</span>
-                </a>
-              </li>
-              <li>
-                <a href="">
-                  <span class="list-catalog__text">Удилища Специальные</span>
-                  <span class="list-catalog__count">11</span>
-                </a>
-              </li>
-              <li>
-                <a href="">
-                  <span class="list-catalog__text">Спиннинги и удилища для ловли хищника</span>
-                  <span class="list-catalog__count">19</span>
-                </a>
-              </li>
-              <li>
-                <a href="">
-                  <span class="list-catalog__text">Воблеры, приманки</span>
-                  <span class="list-catalog__count">42</span>
-                </a>
-              </li>
-              <li>
-                <a href="">
-                  <span class="list-catalog__text">Армы, стойки, триподы</span>
-                  <span class="list-catalog__count">23</span>
-                </a>
-              </li>
-              <li>
-                <a href="">
-                  <span class="list-catalog__text">Бойлы, бустеры, дипы, насадки, пеллетс, прикормка</span>
-                  <span class="list-catalog__count">58</span>
-                </a>
-              </li>
-              <li>
-                <a href="">
-                  <span class="list-catalog__text">Вёдра, столики, тазы</span>
-                  <span class="list-catalog__count">28</span>
-                </a>
-              </li>
-            </ul>
+            <div class="dropdown__list list-catalog list-catalog_full-width">
+              <nav class="list-catalog__menu">
+                <section class="list-catalog__menu-col">
+                  <ul>
+                    <li class="list-catalog__heading"><a href="">Удочки и катушки</a></li>
+                    <li><a href="">Удилища фидерные</a></li>
+                    <li><a href="">Вершинки</a></li>
+                    <li><a href="">Удилища карповые</a></li>
+                    <li><a href="">Удилища матчевые</a></li>
+                    <li><a href="">Удилища специальные</a></li>
+                    <li><a href="">Для ловли хищника</a></li>
+                  </ul>
+                  <ul>
+                    <li class="list-catalog__heading"><a href="">Прикормка</a></li>
+                    <li><a href="">Кормушки, кобры, ракеты, рогатки</a></li>
+                    <li><a href="">ПВА & Арма материалы</a></li>
+                  </ul>
+                </section>
+
+                <section class="list-catalog__menu-col">
+                  <ul>
+                    <li class="list-catalog__heading"><a href="">Оснастка</a></li>
+                    <li><a href="">Принедлежности для ловли хищника</a></li>
+                    <li><a href="">Бойлы, бустеры, дипы, насадки, пеллетс, прикормка</a></li>
+                    <li><a href="">Грузила, дробь, оливки</a></li>
+                    <li><a href="">Инструменты</a></li>
+                    <li><a href="">Катушки</a></li>
+                    <li><a href="">Комплекты</a></li>
+                    <li><a href="">Лески, шнуры, поводковый материал</a></li>
+                    <li><a href="">Поплавки, сигнализаторы</a></li>
+                    <li><a href="">Садки, подсачеки</a></li>
+                  </ul>
+                </section>
+
+                <section class="list-catalog__menu-col">
+                  <ul>
+                    <li class="list-catalog__heading"><a href="">Комфорт</a></li>
+                    <li><a href="">Кресла, модули, платформы, транспортные системы</a></li>
+                    <li><a href="">Крепления и аксессуары к креслам и модулям</a></li>
+                    <li><a href="">Сумки, чехлы, коробки</a></li>
+                    <li><a href="">Шелтеры, палатки, зонты, раскладушки</a></li>
+                    <li><a href="">Подставки, стойки, столы</a></li>
+                  </ul>
+                  <ul>
+                    <li class="list-catalog__heading"><a href="">Наборы и комплекты</a></li>
+                    <li><a href="">Подарочные наборы</a></li>
+                  </ul>
+                </section>
+
+                <section class="list-catalog__menu-col">
+                  <ul>
+                    <li class="list-catalog__heading"><a href="">Хранение</a></li>
+                    <li><a href="">Ящики для хранения рыбы</a></li>
+                    <li><a href="">Морозильник</a></li>
+                    <li><a href="">Сачки и что-то еще</a></li>
+                  </ul>
+                  <ul>
+                    <li class="list-catalog__heading"><a href="">Одежда</a></li>
+                    <li><a href="">Куртки и кардиганы</a></li>
+                    <li><a href="">Ботинки и Сапоги</a></li>
+                    <li><a href="">Брюки</a></li>
+                    <li><a href="">Термобелье</a></li>
+                  </ul>
+                </section>
+              </nav>
+            </div>
           </div>
           <!--/dropdown-->
 

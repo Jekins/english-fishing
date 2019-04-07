@@ -13,19 +13,50 @@
     padding-bottom: $indent-large;
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    position: relative;
     @media (max-width: $screen-lg) {
       padding-bottom: 0;
+      flex-direction: column;
     }
   }
   &__title {
     margin-bottom: 0;
+    max-width: 65%;
+    @media (max-width: $screen-lg) {
+      max-width: 100%;
+    }
     @media (max-width: $screen-sm) {
       font-size: 22px;
     }
   }
-  &__sort {
+  &__actions {
+    display: flex;
     @media (max-width: $screen-lg) {
+      position: absolute;
+      top: 100%;
+      right: 0;
+      width: 50%;
+      flex-direction: row-reverse;
+      padding-right: $indent-medium;
+      margin-top: $indent-large;
+    }
+    @media (max-width: $screen-sm) {
+      margin-top: $indent-medium + $indent-small - 1;
+    }
+  }
+  &__sort {
+    padding-right: $indent-large;
+    @media (max-width: $screen-lg) {
+      padding-right: 0;
+      padding-left: $indent-medium;
+      flex-grow: 1;
+    }
+    @media (max-width: $screen-sm) {
+      padding-left: 0;
+    }
+  }
+  &__toggle-view {
+    @media (max-width: $screen-sm) {
       display: none;
     }
   }

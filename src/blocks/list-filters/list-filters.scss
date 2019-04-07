@@ -55,7 +55,7 @@
   }
   &__activator {
     padding-left: $indent-medium;
-    padding-right: $indent-medium * 3;
+    padding-right: $indent-medium * 2;
     font-size: 14px;
     text-transform: uppercase;
     position: relative;
@@ -66,12 +66,19 @@
 
     span {
       font-weight: $fw-semi-bold;
+      @media (max-width: $screen-sm) {
+        font-size: 12px;
+      }
     }
     img {
+      &:first-child {
+        width: 17px;
+      }
       &:last-child {
         position: absolute;
         right: $indent-medium;
         transition: $trans-medium;
+        width: 10px;
       }
     }
   }

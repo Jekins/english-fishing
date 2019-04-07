@@ -12,6 +12,8 @@ function initProductSlider() {
 
 $(function () {
   $(window).on('resize', function () {
+    if (!$('.products-slider').length) return;
+
     var windowWidth = $(window).width();
 
     initProductSlider();

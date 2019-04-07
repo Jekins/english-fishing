@@ -1,4 +1,26 @@
-/*! Englishfishing 01-04-2019 | Front-end: Jekins */
+/*! Englishfishing 07-04-2019 | Front-end: Jekins */
+/* button-toggle ***********************/
+$.fn.buttonToggle = function (selectedIndex, cb) {
+  var $block = $(this),
+      $btn = $block.find('.button-toggle__btn'),
+      active = 'button-toggle__btn_active';
+
+  function selectBtn ($this) {
+    $btn.removeClass(active);
+    $this.addClass(active);
+    cb && cb($btn.index($this));
+  }
+
+  $btn.each(function (index) {
+    if (index === selectedIndex) {
+      selectBtn($(this));
+    }
+  });
+
+  $btn.on('click', function () {
+    selectBtn($(this));
+  });
+};
 /* close-outside ***********************/
 function closeOutside(el, activeClass) {
   $('html').on('click', function(e) {
@@ -123,6 +145,31 @@ $.fn.listFiltersToggle = function () {
 
 $(function () {
   $('.list-filters__activator').listFiltersToggle();
+});
+/* list-products ***********************/
+$.fn.initListProductsView = function (indexView) {
+  var productCardCol = 'product-card_col',
+      listProductsCols = 'list-products_cols',
+      $listProducts = $(this),
+      $item = $listProducts.find('.product-card');
+
+  if (indexView === 1) {
+    $item.addClass(productCardCol);
+    $listProducts.addClass(listProductsCols);
+  } else {
+    $item.removeClass(productCardCol);
+    $listProducts.removeClass(listProductsCols);
+  }
+};
+
+$(function () {
+  var $listProducts = $('#list-products'),
+      nameView = $listProducts.data('products-view'),
+      indexView = Number(nameView === 'cols');
+
+  $('#toggle-view-products').buttonToggle(indexView, function (index) {
+    $listProducts.initListProductsView(index);
+  });
 });
 /* mobile-sidebar ***********************/
 $.fn.mobileSidebarClose = function (e, blockName) {
@@ -291,6 +338,8 @@ function initProductSlider() {
 
 $(function () {
   $(window).on('resize', function () {
+    if (!$('.products-slider').length) return;
+
     var windowWidth = $(window).width();
 
     initProductSlider();
@@ -306,17 +355,19 @@ $(function () {
 });
 
 /* promo-block-slider ***********************/
-var promoBlockSlider = new Swiper('.promo-block-slider', {
-  navigation: {
-    nextEl: '.promo-block-slider__next',
-    prevEl: '.promo-block-slider__prev',
-  },
-  pagination: {
-    el: '.swiper-pagination',
-    clickable: true,
-  },
-  loop: true
-});
+if (document.querySelector('.promo-block-slider')) {
+  var promoBlockSlider = new Swiper('.promo-block-slider', {
+    navigation: {
+      nextEl: '.promo-block-slider__next',
+      prevEl: '.promo-block-slider__prev',
+    },
+    pagination: {
+      el: '.swiper-pagination',
+      clickable: true,
+    },
+    loop: true
+  });
+}
 /* scroll-to ***********************/
 $(function() {
   function scrollTo(el) {

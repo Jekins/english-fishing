@@ -38,11 +38,9 @@
 @import "../blocks/select/select";
 @import "../blocks/back-path/back-path";
 @import "../blocks/catalog-headline/catalog-headline";
-@import "../blocks/sort/sort";
 @import "../blocks/main-cols/main-cols";
 @import "../blocks/catalog-menu/catalog-menu";
 @import "../blocks/list-filters/list-filters";
-@import "../blocks/top-filters/top-filters";
 @import "../blocks/divider/divider";
 @import "../blocks/list-products/list-products";
 @import "../blocks/product-preview/product-preview";
@@ -87,3 +85,5 @@
 @import "../blocks/products-slider/products-slider";
 @import "../blocks/product-card/product-card";
 @import "../blocks/price/price";
+@import "../blocks/button-toggle/button-toggle";
+@import "../blocks/pagination/pagination";
