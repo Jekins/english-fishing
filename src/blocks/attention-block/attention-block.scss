@@ -1,0 +1,10 @@
+/* attention-block ***********************/
+.attention-block {
+  background-color: $bg-danger;
+  border: 1px solid darken($bg-danger, 8%);
+  padding: 10px 12px;
+  text-align: center;
+  color: $c-attention;
+  border-radius: $r-xmedium;
+  font-size: 12px;
+}

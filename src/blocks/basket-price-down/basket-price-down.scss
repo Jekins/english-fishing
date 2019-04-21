@@ -1,0 +1,16 @@
+/* basket-price-down ***********************/
+.basket-price-down {
+  background-color: $bg-warning;
+  border: 1px solid darken($bg-warning, 8%);
+  padding: 24px;
+  text-align: center;
+  margin-bottom: 15px;
+  border-radius: $r-xmedium;
+  @media (max-width: $screen-sm) {
+    padding: 20px;
+  }
+
+  a {
+    font-weight: $fw-bold;
+  }
+}

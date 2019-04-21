@@ -1,8 +1,15 @@
 /* basket-buy-card ***********************/
 .basket-buy-card {
-  padding: $indent-medium $indent-large $indent-large $indent-large;
-  border: 2px solid $c-primary;
-  border-radius: $r-medium;
+  background: #FFFFFF;
+  box-shadow: 0 0 12px rgba(0, 0, 0, 0.06);
+  padding: 30px;
+  margin-top: -70px;
+  @media (max-width: $screen-lg) {
+    margin-top: 45px;
+  }
+  @media (max-width: $screen-sm) {
+    padding: 20px;
+  }
 
   &__layer {
     display: flex;
@@ -28,16 +35,17 @@
     padding-top: $indent-medium;
     margin-top: $indent-small + $indent-xsmall;
     border-top: 1px solid $c-border;
-    @media (min-width: $screen-sm) and (max-width: $screen-lg) {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-    }
+    @include reset-last-indent;
 
+    > * {
+      margin-bottom: 15px;
+    }
     &-inner {
       display: flex;
       justify-content: space-between;
       align-items: center;
+      margin-bottom: 0;
+      padding-bottom: 15px;
 
       > *:first-child {
         @media (min-width: $screen-sm) and (max-width: $screen-lg) {
@@ -47,14 +55,24 @@
     }
   }
   &__price {
-    font-size: 24px;
-    color: $c-success;
+    font-size: 20px;
+    font-weight: $fw-bold;
     line-height: 1;
+    @media (max-width: $screen-sm) {
+      font-size: 18px;
+    }
   }
   &__action {
-    margin-top: $indent-large;
+    margin-top: 15px;
     @media (min-width: $screen-sm) and (max-width: $screen-lg) {
       margin-top: 0;
+    }
+
+    &-one-click {
+      font-weight: $fw-bold;
+      text-align: center;
+      display: block;
+      margin-top: 15px;
     }
   }
 }

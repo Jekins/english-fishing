@@ -2,8 +2,9 @@
 .coupon-panel {
   background-color: $bg-promo;
   padding: 25px 20px;
-  border-top: 1px dashed rgba(0, 0, 0, 0.2);
+  border-bottom: 1px dashed rgba(0, 0, 0, 0.2);
   position: relative;
+  border-radius: $r-large;
 
   &:before {
     content: '';
@@ -14,7 +15,7 @@
     width: 22px;
     height: 17px;
     position: absolute;
-    top: -9px;
+    bottom: -9px;
     right: 20px;
   }
   &__inner {
@@ -22,33 +23,9 @@
     align-items: center;
     flex-wrap: wrap;
     position: relative;
+    @include reset-last-indent;
     @media (max-width: $screen-sm) {
       justify-content: center;
-    }
-
-    &:after,
-    &:before {
-      content: '';
-      display: block;
-      width: 32px;
-      height: 32px;
-      border-radius: 100%;
-      background-color: white;
-      position: absolute;
-      top: 50%;
-      transform: translateY(-50%);
-      @media (max-width: $screen-sm) {
-        width: 20px;
-        height: 20px;
-      }
-    }
-    &:before {
-      right: 100%;
-      margin-right: -5px;
-    }
-    &:after {
-      left: 100%;
-      margin-left: -5px;
     }
   }
   &__input {
@@ -78,11 +55,38 @@
     }
   }
   &__status {
-    line-height: 1;
     color: $c-success;
   }
   &__discount {
-    line-height: 1;
     color: #333333;
+    display: flex;
+    align-items: center;
+    @media (max-width: $screen-sm) {
+      flex-direction: column;
+      justify-content: center;
+    }
+    a {
+      @media (max-width: $screen-sm) {
+        display: flex;
+        align-items: center;
+        font-size: 14px;
+        color: $c-secondary;
+        margin-top: 10px;
+      }
+
+      span {
+        display: none;
+        @media (max-width: $screen-sm) {
+          display: block;
+        }
+      }
+    }
+    img {
+      margin-left: 8px;
+      @media (max-width: $screen-sm) {
+        margin-left: 0;
+        margin-right: 8px;
+      }
+    }
   }
 }

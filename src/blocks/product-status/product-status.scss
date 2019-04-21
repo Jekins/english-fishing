@@ -23,12 +23,12 @@
     color: $c-secondary;
 
     &:before {
-      background-color: #999999;
+      background-color: $c-attention;
     }
   }
 
   &_expected {
-    color: $c-accent;
+    color: $c-secondary;
 
     &:before {
       background-color: $c-accent;

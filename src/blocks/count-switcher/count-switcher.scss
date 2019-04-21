@@ -11,14 +11,54 @@
   }
   button {
     @include reset-button;
-    height: 36px;
-    width: 36px;
-    font-size: 26px;
-    color: $c-secondary;
+    height: 32px;
+    width: 32px;
     transition: $trans-medium;
+    position: relative;
 
     &:hover {
-      color: $c-success;
+      &:before,
+      &:after {
+        background-color: $c-primary;
+      }
     }
+  }
+  &__minus {
+    border-right: 1px solid $c-border !important;
+
+    &:before {
+      content: '';
+      display: block;
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%,-50%);
+      height: 2px;
+      width: 12px;
+      background-color: #999999;
+    }
+  }
+  &__plus {
+    border-left: 1px solid $c-border !important;
+
+    &:after,
+    &:before {
+      content: '';
+      display: block;
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%,-50%);
+      height: 2px;
+      width: 12px;
+      background-color: #999999;
+    }
+    &:after {
+      transform: translate(-50%,-50%) rotate(90deg);
+    }
+  }
+  &__count {
+    width: 36px;
+    text-align: center;
   }
 }

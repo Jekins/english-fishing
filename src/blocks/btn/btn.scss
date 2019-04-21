@@ -6,7 +6,7 @@
   border-width: 1px;
   font-weight: $fw-regular;
   font-size: 14px;
-  border-radius: $r-medium;
+  border-radius: $r-xmedium;
   line-height: $btn-medium - 3px;
   height: $btn-medium;
   padding: 0 20px;
@@ -55,6 +55,10 @@
     &-white {
       @include btn-color-bordered(transparent, rgba(255, 255, 255, 0.5), white);
     }
+    &-primary {
+      @include btn-color-bordered(white, $c-primary, $c-primary);
+      font-weight: $fw-bold;
+    }
   }
 
   &_block {
@@ -94,5 +98,9 @@
 
   &_upp {
     text-transform: uppercase;
+  }
+
+  &[disabled] {
+    opacity: .7;
   }
 }

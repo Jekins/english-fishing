@@ -3,10 +3,18 @@
   &__now {
     font-weight: $fw-bold;
 
+    small,
     span {
       color: $c-secondary;
       font-weight: $fw-regular;
       font-size: 14px;
+    }
+    small {
+      line-height: 1;
+      font-size: 12px;
+    }
+    &_fw-normal {
+      font-weight: $fw-regular;
     }
   }
   &__old {
@@ -22,5 +30,13 @@
     display: inline-block;
     border-radius: $r-medium;
     line-height: 1;
+  }
+
+  &_large &__now {
+    font-size: 26px;
+    line-height: 1;
+  }
+  &_large &__old {
+    font-size: 14px;
   }
 }

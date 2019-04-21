@@ -5,7 +5,8 @@
   padding-bottom: $indent-large;
   @media (max-width: $screen-lg) {
     padding-top: $indent-medium;
-    padding-bottom: $indent-medium;
+    padding-bottom: 0;
+    background-color: transparent;
   }
 
   &__inner {

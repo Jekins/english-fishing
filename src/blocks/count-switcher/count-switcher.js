@@ -10,7 +10,7 @@ $.fn.initCountSwitcher = function () {
         max = Number($('body').find('[data-count-switcher-max]').data('count-switcher-max')) || 1e9,
         sum = price,
         $sum = $('body').find('[data-count-switcher-sum] > span'),
-        count = 0;
+        count = $input.val() ? Number($input.val()) - 1 : 0;
 
     $btnMinus.click(function (e) {
       e.preventDefault();

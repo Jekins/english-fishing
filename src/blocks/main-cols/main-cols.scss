@@ -23,14 +23,23 @@
     }
   }
 
+  &_v2 {
+    margin-left: -22px;
+    margin-right: -22px;
+
+    > * {
+      padding-left: 22px;
+      padding-right: 22px;
+    }
+  }
   &_v2 &__aside {
     @media (min-width: $screen-lg) {
-      @include width(35%);
+      @include width(33%);
     }
   }
   &_v2 &__article {
     @media (min-width: $screen-lg) {
-      @include width(65%);
+      @include width(67%);
     }
   }
 }
