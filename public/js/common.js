@@ -1,4 +1,4 @@
-/*! Englishfishing 21-04-2019 | Front-end: Jekins */
+/*! Englishfishing 22-06-2019 | Front-end: Jekins */
 /* button-toggle ***********************/
 $.fn.buttonToggle = function (selectedIndex, cb) {
   var $block = $(this),

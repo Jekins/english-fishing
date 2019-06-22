@@ -10,54 +10,49 @@
     @media (max-width: $screen-sm) {
       flex-wrap: wrap;
     }
-
-    > * {
-      @include width(100% / 3);
-      @media (max-width: $screen-lg) {
-        @include width(100% / 2);
-      }
-      @media (max-width: $screen-sm) {
-        @include width(100%);
-      }
-    }
   }
   &__gallery {
+    @include width(380px);
     @media (max-width: $screen-sm) {
       margin-bottom: $indent-medium;
     }
   }
-  &__description {
+  &__info {
     font-size: 14px;
     @include reset-last-indent;
   }
-  &__menu-actions {
-    margin-top: $indent-medium + $indent-small;
-    padding-top: $indent-medium + $indent-small;
-    border-top: 1px solid $c-border;
+  &__params {
+    @include cols($indent-medium);
+    display: flex !important;
+    flex-wrap: wrap;
+    width: auto !important;
 
-    ul {
-      @include reset-list;
-      @include cols($indent-medium);
-    }
-    li {
-      a {
-        text-decoration: none !important;
-        border-bottom: 1px dotted $c-link;
+    dl {
+      display: flex !important;
+      justify-content: space-between;
+      width: 50% !important;
 
-        &:hover {
-          border-bottom-color: transparent;
-        }
+      dt {
+        width: auto;
+        flex-grow: 1;
+        display: block;
+      }
+      dd {
+        display: block;
       }
     }
   }
-  &__buy-card {
+  &__buy-cards {
+    margin-top: $indent-large;
+  }
+  &__delivery {
+    margin-top: $indent-large;
     font-size: 14px;
+    border-radius: $r-medium;
+    border: 1px solid $c-border;
+    padding-left: $indent-small + $indent-medium;
+    padding-right: $indent-small + $indent-medium;
 
-    &-inner {
-      border-radius: $r-medium;
-      border: 1px solid $c-border;
-      padding: $indent-small + $indent-medium;
-    }
     &-row {
       display: flex;
       justify-content: space-between;

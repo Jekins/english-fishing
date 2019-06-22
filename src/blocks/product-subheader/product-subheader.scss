@@ -1,0 +1,25 @@
+/* product-subheader ***********************/
+.product-subheader {
+  position: relative;
+  top: -20px;
+
+  &__inner {
+    @extend %container;
+    @include reset-last-indent;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    font-size: 14px;
+
+    a {
+      font-weight: $fw-bold;
+    }
+    > * {
+      margin-right: $indent-medium;
+
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+  }
+}

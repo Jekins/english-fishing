@@ -1,0 +1,49 @@
+/* articles-list ***********************/
+.articles-list {
+  ul {
+    @include reset-list;
+    @include reset-last-indent;
+
+    li {
+      display: flex;
+    }
+  }
+  &__img {
+    display: block;
+    margin-right: $indent-medium;
+    flex-shrink: 0;
+    margin-bottom: $indent-medium;
+
+    img {
+      width: 99px;
+      border-radius: $r-large;
+    }
+  }
+  &__inner {
+    padding-bottom: $indent-medium;
+    margin-bottom: $indent-medium;
+    border-bottom: 1px solid $c-border;
+  }
+  &__title {
+    font-size: 16px;
+  }
+  &__lead {
+    font-size: 13px;
+    color: $c-secondary;
+  }
+  &__more-link {
+    display: flex;
+    align-items: center;
+    margin-left: 99px + $indent-medium;
+
+    span {
+      text-transform: uppercase;
+      font-size: 11px;
+      letter-spacing: 1.1px;
+      font-weight: $fw-bold;
+    }
+    img {
+      margin-left: $indent-small;
+    }
+  }
+}
