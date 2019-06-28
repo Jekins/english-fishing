@@ -1,0 +1,33 @@
+/* set-rating ***********************/
+.set-rating {
+  display: flex;
+  align-items: center;
+
+  &__count {
+    color: $c-secondary;
+    margin-right: 10px;
+  }
+  &__like,
+  &__dislike {
+    display: block;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    width: 16px;
+    height: 14px;
+    position: relative;
+    transition: $trans-medium;
+
+    &:hover {
+      transform: scale(1.2);
+    }
+  }
+  &__like {
+    background-image: url($img + 'icons/icon-like.svg');
+    margin-right: $indent-medium;
+    top: -1px;
+  }
+  &__dislike {
+    background-image: url($img + 'icons/icon-dislike.svg');
+    top: 2px;
+  }
+}

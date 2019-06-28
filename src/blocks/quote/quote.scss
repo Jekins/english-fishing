@@ -1,0 +1,26 @@
+/* quote ***********************/
+.quote {
+  background-color: #FFFAEC;
+  border-left: 5px solid rgba(0, 0, 0, 0.15);
+  padding: 10px 40px 10px 15px;
+  border-radius: $r-xmedium;
+  @include reset-last-indent;
+  position: relative;
+
+  &:after {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    background-image: url($img + 'icons/icon-quote-gray.svg');
+    background-repeat: no-repeat;
+    background-size: 100%;
+    width: 20px;
+    height: 20px;
+  }
+  &__author {
+    font-size: 13px;
+    color: $c-secondary;
+  }
+}

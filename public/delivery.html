@@ -15,6 +15,7 @@
   <!-- styles -->
   <link href="./plugins/fancybox/jquery.fancybox.min.css" rel="stylesheet">
   <link href="./plugins/select2/select2.min.css" rel="stylesheet">
+  <link href="./plugins/swiper/swiper.min.css" rel="stylesheet">
   <link href="./css/common.min.css" rel="stylesheet">
 
   <!-- for using jquery in bottom -->
@@ -53,7 +54,7 @@
               <span>Пт-Пн с 9 до 18</span>
             </div>
             <div>
-              <a href="" class="btn btn_small btn_bordered-white">Заказать звонок</a>
+              <a href="javascript:;" class="btn btn_small btn_bordered-white" data-fancybox data-src="#dialog-return-call">Заказать звонок</a>
             </div>
           </div>
           <div class="header__top-line-right">
@@ -589,13 +590,122 @@
 
 
 <div id="dialogs">
-  <!-- place for dialogs -->
+
+  <!-- mobile-sidebar -->
+  <div class="mobile-sidebar" style="display: none;">
+    <a href="#" class="mobile-sidebar__backdrop" data-close="mobile-sidebar"></a>
+    <div class="mobile-sidebar__inner">
+      <div class="mobile-sidebar__inner-body">
+        <div class="mobile-sidebar__top-actions">
+          <a href="#" data-close="mobile-sidebar"><img src="./img/icons/icon-close-black.svg" alt=""></a>
+        </div>
+        <div class="mobile-sidebar__auth-actions">
+          <a href="">
+            <img src="./img/icons/icon-exit-black-outline.svg" alt="">
+            Вход
+          </a>
+          <a href="">
+            Регистрация
+          </a>
+        </div>
+        <div class="mobile-sidebar__container">
+          <nav class="mobile-sidebar__menu">
+            <ul>
+              <li><a href="">О компании</a></li>
+              <li><a href="">Доставка и самовывоз</a></li>
+              <li><a href="">Условия оплаты</a></li>
+            </ul>
+          </nav>
+          <div class="mobile-sidebar__phones">
+            <a href="tel:88005050641">
+              <img src="./img/icons/icon-phone-primary.svg" alt="">
+              8 800 505-06-41
+            </a>
+            <a href="tel:84121234567">
+              <img src="./img/icons/icon-phone-primary.svg" alt="">
+              8 412 123-45-67
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="mobile-sidebar__inner-footer">
+        <div class="mobile-sidebar__container">
+          <nav class="mobile-sidebar__footer-menu">
+            <ul>
+              <li>
+                <a href="">
+                  <span>
+                    <img src="./img/icons/icon-star-accent.svg" alt="">
+                    Избранное
+                  </span>
+                  <span>
+                    5
+                  </span>
+                </a>
+              </li>
+              <li>
+                <a href="">
+                  <span>
+                    <img src="./img/icons/icon-basket-primary.svg" alt="">
+                    Корзина
+                  </span>
+                  <span>
+                    2
+                  </span>
+                </a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- /mobile-sidebar -->
+
+  <!--dialog-return-call -->
+  <div class="dialog-return-call" id="dialog-return-call" style="display: none;">
+    <form class="dialog-return-call__form form">
+      <section class="form__group">
+        <div class="dialog-return-call__title">Заказать обратный звонок</div>
+        <div class="dialog-return-call__info">
+          Оставьте телефон, мы позвоним вам в рабочее время и ответим на все вопросы, а также поможем оформить заказ
+        </div>
+      </section>
+      <section class="form__group">
+
+        <!--text-field-->
+        <div class="text-field">
+          <label class="text-field__label">Ваше имя</label>
+          <input type="text" class="text-field__control">
+        </div>
+        <!--/text-field-->
+
+      </section>
+      <section class="form__group">
+
+        <!--text-field-->
+        <div class="text-field">
+          <label class="text-field__label">Номер телефона</label>
+          <input type="text" class="text-field__control">
+        </div>
+        <!--/text-field-->
+
+      </section>
+      <section class="form__group dialog-return-call__actions">
+        <button type="button" class="btn btn_bordered-primary" data-fancybox-close>Отмена</button>
+        <button type="button" class="btn btn_primary">Отправить</button>
+      </section>
+    </form>
+  </div>
+  <!--/dialog-return-call -->
+
 </div>
 
 <!-- scripts -->
 <script src="./plugins/jquery/jquery-3.3.1.min.js"></script>
 <script src="./plugins/fancybox/jquery.fancybox.min.js"></script>
 <script src="./plugins/select2/select2.full.min.js"></script>
+<script src="./plugins/swiper/swiper.min.js"></script>
 <script src="./js/helpers.js"></script>
 <script src="./js/common.min.js"></script>
 

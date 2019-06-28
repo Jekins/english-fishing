@@ -17,6 +17,9 @@
     img {
       width: 99px;
       border-radius: $r-large;
+      @media (max-width: $screen-sm) {
+        width: 50px;
+      }
     }
   }
   &__inner {
@@ -35,6 +38,9 @@
     display: flex;
     align-items: center;
     margin-left: 99px + $indent-medium;
+    @media (max-width: $screen-sm) {
+      margin-left: 50px + $indent-medium;
+    }
 
     span {
       text-transform: uppercase;

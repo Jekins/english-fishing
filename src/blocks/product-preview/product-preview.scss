@@ -60,7 +60,7 @@
     }
   }
   &__params {
-    @media (min-width: $screen-sm) {
+    @media (min-width: $screen-sm + 1) {
       display: flex;
       align-items: flex-start;
     }
@@ -75,7 +75,7 @@
     }
   }
   &__footer {
-    @media (min-width: $screen-sm) {
+    @media (min-width: $screen-sm + 1) {
       display: flex;
       justify-content: space-between;
     }

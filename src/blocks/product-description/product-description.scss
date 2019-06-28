@@ -1,4 +1,21 @@
 /* product-description ***********************/
 .product-description {
-  @include reset-last-indent;
+  @media (max-width: $screen-sm) {
+    font-size: 14px;
+  }
+
+  &__inner {
+    @include reset-last-indent;
+    @media (max-width: $screen-sm) {
+      height: 355px;
+      overflow: hidden;
+    }
+  }
+  &__show-more {
+    display: none;
+    @media (max-width: $screen-sm) {
+      display: inline-block;
+      margin-top: $indent-medium;
+    }
+  }
 }

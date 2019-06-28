@@ -1,11 +1,14 @@
 /* product-info ***********************/
 .product-info {
   @extend %container;
+  @media (max-width: $screen-sm) {
+    margin-bottom: $indent-medium;
+  }
 
   &__inner {
     @include cols($indent-medium);
     @media (max-width: $screen-lg) {
-      margin-bottom: $indent-large;
+      display: block;
     }
     @media (max-width: $screen-sm) {
       flex-wrap: wrap;
@@ -13,6 +16,10 @@
   }
   &__gallery {
     @include width(380px);
+    @media (max-width: $screen-lg) {
+      @include width(100%);
+      margin-bottom: $indent-large;
+    }
     @media (max-width: $screen-sm) {
       margin-bottom: $indent-medium;
     }
@@ -21,16 +28,25 @@
     font-size: 14px;
     @include reset-last-indent;
   }
+  &__short-info {
+    @media (max-width: $screen-sm) {
+      display: none;
+    }
+  }
   &__params {
-    @include cols($indent-medium);
-    display: flex !important;
-    flex-wrap: wrap;
-    width: auto !important;
+    @media (min-width: $screen-sm + 1) {
+      @include cols($indent-medium);
+      display: flex !important;
+      flex-wrap: wrap;
+      width: auto !important;
+    }
 
     dl {
       display: flex !important;
       justify-content: space-between;
-      width: 50% !important;
+      @media (min-width: $screen-sm + 1) {
+        width: 50% !important;
+      }
 
       dt {
         width: auto;
@@ -44,6 +60,9 @@
   }
   &__buy-cards {
     margin-top: $indent-large;
+    @media (max-width: $screen-sm) {
+      margin-top: $indent-medium;
+    }
   }
   &__delivery {
     margin-top: $indent-large;
@@ -52,6 +71,9 @@
     border: 1px solid $c-border;
     padding-left: $indent-small + $indent-medium;
     padding-right: $indent-small + $indent-medium;
+    @media (max-width: $screen-sm) {
+      margin-top: $indent-medium;
+    }
 
     &-row {
       display: flex;

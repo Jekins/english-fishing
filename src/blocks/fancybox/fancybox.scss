@@ -1,0 +1,23 @@
+/* fancybox ***********************/
+.fancybox {
+  &-bg {
+    background-color: #000000;
+  }
+  &-is-open &-bg {
+    opacity: .4;
+  }
+  &-content {
+    background: #FFFFFF;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.25);
+    border-radius: 5px;
+    padding: 35px 60px;
+    @media (max-width: $screen-sm) {
+      padding: 15px;
+    }
+  }
+  &-close-small {
+    path {
+      fill: $c-secondary !important;
+    }
+  }
+}

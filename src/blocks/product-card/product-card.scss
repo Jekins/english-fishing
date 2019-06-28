@@ -37,7 +37,7 @@
   }
   &__content {
     @include reset-last-indent;
-    @media (min-width: $screen-sm) {
+    @media (min-width: $screen-sm + 1) {
       flex-grow: 1;
       margin-right: $indent-medium;
     }
@@ -96,7 +96,7 @@
     right: $indent-medium;
     top: $indent-medium;
     font-size: 14px;
-    @media (min-width: $screen-sm) {
+    @media (min-width: $screen-sm + 1) {
       width: 180px;
     }
 

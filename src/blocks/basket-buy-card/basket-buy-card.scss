@@ -48,7 +48,7 @@
       padding-bottom: 15px;
 
       > *:first-child {
-        @media (min-width: $screen-sm) and (max-width: $screen-lg) {
+        @media (min-width: $screen-sm + 1) and (max-width: $screen-lg) {
           margin-right: $indent-large;
         }
       }
@@ -64,7 +64,7 @@
   }
   &__action {
     margin-top: 15px;
-    @media (min-width: $screen-sm) and (max-width: $screen-lg) {
+    @media (min-width: $screen-sm + 1) and (max-width: $screen-lg) {
       margin-top: 0;
     }
 

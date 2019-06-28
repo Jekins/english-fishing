@@ -25,7 +25,7 @@ $.fn.initFancyboxGallery = function (selected) {
       }
     });
 
-    $.fancybox.destroy();
+    $.fancybox.close();
     $.fancybox.open(images, {
       loop : true
     });

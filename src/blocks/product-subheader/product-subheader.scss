@@ -2,6 +2,9 @@
 .product-subheader {
   position: relative;
   top: -20px;
+  @media (max-width: $screen-sm) {
+    display: none;
+  }
 
   &__inner {
     @extend %container;

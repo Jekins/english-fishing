@@ -1,14 +1,21 @@
 /* buy-cards ***********************/
 .buy-cards {
   font-size: 14px;
-  border-radius: $r-medium;
-  border: 1px solid $c-border;
+  @media (min-width: $screen-sm + 1) {
+    border-radius: $r-medium;
+    border: 1px solid $c-border;
+  }
 
   &__item {
     display: flex;
     align-items: center;
     padding: $indent-medium;
     border-bottom: 1px solid $c-border;
+    @media (max-width: $screen-sm) {
+      margin-left: -$indent-space;
+      margin-right: -$indent-space;
+      flex-wrap: wrap;
+    }
 
     &:last-child {
       border-bottom: none;
@@ -20,6 +27,10 @@
   &__header {
     flex-grow: 1;
     padding-right: $indent-medium;
+    @media (max-width: $screen-sm) {
+      @include width(100%);
+      margin-bottom: $indent-medium;
+    }
   }
   &__title {
     margin-bottom: $indent-xsmall;
@@ -32,14 +43,31 @@
     color: $c-secondary;
   }
   &__action {
-    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     @include reset-last-indent;
+    @media (max-width: $screen-sm) {
+      flex-direction: row-reverse;
+      flex-grow: 1;
+    }
 
     > * {
       margin-bottom: $indent-xsmall;
+      @media (max-width: $screen-sm) {
+        margin-bottom: 0;
+        margin-right: $indent-medium;
+
+        &:first-child {
+          margin-right: 0;
+        }
+      }
     }
     .btn {
-      font-weight: $fw-bold;
+      @media (max-width: $screen-xs) {
+        padding-left: 10px;
+        padding-right: 10px;
+      }
     }
   }
   &__info {

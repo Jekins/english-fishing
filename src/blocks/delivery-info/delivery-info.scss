@@ -1,6 +1,9 @@
 /* delivery-info ***********************/
 .delivery-info {
   font-size: 14px;
+  @media (max-width: $screen-lg) {
+    margin-top: $indent-medium;
+  }
 
   &__container {
     @extend %container;
@@ -44,7 +47,7 @@
     @media (min-width: $screen-lg) {
       @include width(75%);
     }
-    @media (min-width: $screen-sm) {
+    @media (min-width: $screen-sm + 1) {
       @include cols($indent-medium);
     }
 
@@ -54,7 +57,7 @@
       margin-bottom: $indent-medium;
     }
     &-item {
-      @media (min-width: $screen-sm) {
+      @media (min-width: $screen-sm + 1) {
         @include width(50%);
       }
       @media (max-width: $screen-sm) {

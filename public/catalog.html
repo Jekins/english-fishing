@@ -13,7 +13,9 @@
   <title>English fishing project</title>
 
   <!-- styles -->
+  <link href="./plugins/fancybox/jquery.fancybox.min.css" rel="stylesheet">
   <link href="./plugins/select2/select2.min.css" rel="stylesheet">
+  <link href="./plugins/swiper/swiper.min.css" rel="stylesheet">
   <link href="./css/common.min.css" rel="stylesheet">
 
   <!-- for using jquery in bottom -->
@@ -52,7 +54,7 @@
               <span>Пт-Пн с 9 до 18</span>
             </div>
             <div>
-              <a href="" class="btn btn_small btn_bordered-white">Заказать звонок</a>
+              <a href="javascript:;" class="btn btn_small btn_bordered-white" data-fancybox data-src="#dialog-return-call">Заказать звонок</a>
             </div>
           </div>
           <div class="header__top-line-right">
@@ -995,6 +997,8 @@
 
 
 <div id="dialogs">
+
+  <!-- mobile-sidebar -->
   <div class="mobile-sidebar" style="display: none;">
     <a href="#" class="mobile-sidebar__backdrop" data-close="mobile-sidebar"></a>
     <div class="mobile-sidebar__inner">
@@ -1063,11 +1067,52 @@
       </div>
     </div>
   </div>
+  <!-- /mobile-sidebar -->
+
+  <!--dialog-return-call -->
+  <div class="dialog-return-call" id="dialog-return-call" style="display: none;">
+    <form class="dialog-return-call__form form">
+      <section class="form__group">
+        <div class="dialog-return-call__title">Заказать обратный звонок</div>
+        <div class="dialog-return-call__info">
+          Оставьте телефон, мы позвоним вам в рабочее время и ответим на все вопросы, а также поможем оформить заказ
+        </div>
+      </section>
+      <section class="form__group">
+
+        <!--text-field-->
+        <div class="text-field">
+          <label class="text-field__label">Ваше имя</label>
+          <input type="text" class="text-field__control">
+        </div>
+        <!--/text-field-->
+
+      </section>
+      <section class="form__group">
+
+        <!--text-field-->
+        <div class="text-field">
+          <label class="text-field__label">Номер телефона</label>
+          <input type="text" class="text-field__control">
+        </div>
+        <!--/text-field-->
+
+      </section>
+      <section class="form__group dialog-return-call__actions">
+        <button type="button" class="btn btn_bordered-primary" data-fancybox-close>Отмена</button>
+        <button type="button" class="btn btn_primary">Отправить</button>
+      </section>
+    </form>
+  </div>
+  <!--/dialog-return-call -->
+
 </div>
 
 <!-- scripts -->
 <script src="./plugins/jquery/jquery-3.3.1.min.js"></script>
+<script src="./plugins/fancybox/jquery.fancybox.min.js"></script>
 <script src="./plugins/select2/select2.full.min.js"></script>
+<script src="./plugins/swiper/swiper.min.js"></script>
 <script src="./js/helpers.js"></script>
 <script src="./js/common.min.js"></script>
 

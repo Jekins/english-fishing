@@ -4,6 +4,9 @@
   @media (min-width: $screen-lg) {
     padding-top: $indent-large;
   }
+  @media (max-width: $screen-sm) {
+    padding-bottom: 20px;
+  }
 
   &__inner {
     @extend %container;
@@ -21,5 +24,9 @@
   &__info {
     display: flex;
     align-items: center;
+    margin-top: $indent-xsmall;
+    @media (max-width: $screen-sm) {
+      display: none;
+    }
   }
 }

@@ -14,7 +14,7 @@
     @include reset-last-indent;
     display: flex;
     flex-wrap: wrap;
-    @media (min-width: $screen-sm) {
+    @media (min-width: $screen-sm + 1) {
       justify-content: space-between;
       align-items: center;
     }

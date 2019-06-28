@@ -3,7 +3,12 @@
   position: relative;
 
   &__control {}
-  &__label {}
+  &__label {
+    color: $c-secondary;
+    font-size: 14px;
+    margin-bottom: $indent-xsmall;
+    display: block;
+  }
   &__remind {
     position: absolute;
     right: 10px;
@@ -22,10 +27,9 @@
     left: 10px;
     line-height: 1;
     top: $input-large / 2 - 14 / 2;
-    font-size: 14px;
-    color: $c-secondary;
     transition: $trans-medium;
     pointer-events: none;
+    margin-bottom: 0;
   }
 
   &_focused.text-field_float-label &__label {

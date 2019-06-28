@@ -58,7 +58,7 @@
   }
 }
 
-@media (min-width: $screen-sm) and (max-width: $screen-md - 1) {
+@media (min-width: $screen-sm + 1) and (max-width: $screen-md - 1) {
   .visible-sm {
     display: block !important;
   }
@@ -77,19 +77,19 @@
   }
 }
 
-@media (min-width: $screen-sm) and (max-width: $screen-md - 1) {
+@media (min-width: $screen-sm + 1) and (max-width: $screen-md - 1) {
   .visible-sm-block {
     display: block !important;
   }
 }
 
-@media (min-width: $screen-sm) and (max-width: $screen-md - 1) {
+@media (min-width: $screen-sm + 1) and (max-width: $screen-md - 1) {
   .visible-sm-inline {
     display: inline !important;
   }
 }
 
-@media (min-width: $screen-sm) and (max-width: $screen-md - 1) {
+@media (min-width: $screen-sm + 1) and (max-width: $screen-md - 1) {
   .visible-sm-inline-block {
     display: inline-block !important;
   }

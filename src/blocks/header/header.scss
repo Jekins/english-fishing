@@ -189,7 +189,7 @@
         &:last-child {
           position: absolute;
           right: $indent-medium;
-          @media (min-width: $screen-sm) {
+          @media (min-width: $screen-sm + 1) {
             display: none;
           }
         }

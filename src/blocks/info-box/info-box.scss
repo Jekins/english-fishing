@@ -1,0 +1,36 @@
+/* info-box ***********************/
+.info-box {
+  display: flex;
+  align-items: center;
+  padding: $indent-medium;
+  background-color: $bg-warning;
+  border: 1px solid #EBECE8;
+  border-radius: $r-xmedium;
+
+  &__img {
+    margin-right: 80px;
+    @media (max-width: $screen-sm) {
+      display: none;
+    }
+  }
+  &__inner {}
+  &__title {
+    font-size: 24px;
+    font-weight: $fw-bold;
+    line-height: 1.1;
+    margin-bottom: 10px;
+    @media (max-width: $screen-sm) {
+      font-size: 18px;
+      line-height: 21px;
+    }
+  }
+  &__lead {
+    @media (max-width: $screen-sm) {
+      font-size: 14px;
+    }
+
+    a {
+      font-weight: $fw-bold;
+    }
+  }
+}

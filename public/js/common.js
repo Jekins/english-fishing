@@ -1,4 +1,4 @@
-/*! Englishfishing 22-06-2019 | Front-end: Jekins */
+/*! Englishfishing 28-06-2019 | Front-end: Jekins */
 /* button-toggle ***********************/
 $.fn.buttonToggle = function (selectedIndex, cb) {
   var $block = $(this),
@@ -35,6 +35,12 @@ function closeOutside(el, activeClass) {
     }
   });
 }
+/* comments ***********************/
+$(function () {
+  // $('.comments__gallery').each(function () {
+  //   $(this).initFancyboxGallery();
+  // });
+});
 /* count-switcher ***********************/
 $.fn.initCountSwitcher = function () {
   this.each(function () {
@@ -207,6 +213,18 @@ $(function () {
     $(this).mobileSidebarOpen(e, blockName);
   });
 });
+/* product-description ***********************/
+$(function () {
+  var block = '.product-description',
+      inner = block + '__inner',
+      showMore = block + '__show-more';
+
+  $(document).on('click', showMore, function (e) {
+    e.preventDefault();
+    $(inner).css('height', '100%');
+    $(this).hide();
+  });
+});
 /* product-gallery ***********************/
 $.fn.initFancyboxGallery = function (selected) {
   var blockClassName = '.product-gallery',
@@ -234,7 +252,7 @@ $.fn.initFancyboxGallery = function (selected) {
       }
     });
 
-    $.fancybox.destroy();
+    $.fancybox.close();
     $.fancybox.open(images, {
       loop : true
     });
@@ -327,30 +345,38 @@ $(function () {
 /* products-slider ***********************/
 var productsSlider;
 
-function initProductSlider() {
-  productsSlider = new Swiper('.products-slider__inner', {
+function initProductSlider($slider) {
+  var id = $slider.attr('id');
+
+  id = '#' + id;
+
+  productsSlider = new Swiper(id + ' .products-slider__inner', {
     navigation: {
-      nextEl: '.products-slider__next',
-      prevEl: '.products-slider__prev',
+      nextEl: id + ' .products-slider__next',
+      prevEl: id + ' .products-slider__prev',
     },
   });
 }
 
 $(function () {
+  var $slider = $('.products-slider');
+
   $(window).on('resize', function () {
-    if (!$('.products-slider').length) return;
+    if (!$slider.length) return;
 
-    var windowWidth = $(window).width();
+    $slider.each(function () {
+      var windowWidth = $(window).width();
 
-    initProductSlider();
+      initProductSlider($(this));
 
-    if (windowWidth <= 768) {
-      productsSlider.params.slidesPerView = 1.3;
-    } else if (windowWidth <= 1230) {
-      productsSlider.params.slidesPerView = 3.3;
-    } else {
-      productsSlider.params.slidesPerView = 5;
-    }
+      if (windowWidth <= 767) {
+        productsSlider.params.slidesPerView = 1.3;
+      } else if (windowWidth <= 1230) {
+        productsSlider.params.slidesPerView = 3.3;
+      } else {
+        productsSlider.params.slidesPerView = 5;
+      }
+    });
   }).trigger('resize');
 });
 

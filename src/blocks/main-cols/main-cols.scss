@@ -12,6 +12,10 @@
     @media (max-width: $screen-lg) {
       margin-bottom: $indent-large;
     }
+
+    &_no-indent {
+      margin-bottom: 0 !important;
+    }
   }
   &__article {
     @include reset-last-indent;

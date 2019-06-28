@@ -7,106 +7,41 @@
     }
   }
   &__item {
-    height: 284px;
     position: relative;
     @include width(241px);
     width: 241px;
-    margin-left: -1px;
     @media (max-width: $screen-sm) {
-      height: auto;
       @include width(100%);
       width: 100%;
-      margin-left: 0;
     }
 
-    &-inner {
-      padding: $indent-medium;
-      border: 1px solid $c-border;
-      background-color: white;
-      transition: $trans-medium;
-      @media (min-width: $screen-sm) {
-        height: 284px;
-        @include absolute;
-      }
-      @media (max-width: $screen-sm) {
-        margin-top: -1px;
-      }
+    .product-card {
+      display: block;
+      height: 100%;
     }
-    &:hover &-inner {
-      @media (min-width: $screen-sm) {
-        z-index: 1;
-        bottom: auto;
-        height: 330px;
-        box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
-      }
-    }
-    &:first-child {
-      margin-left: 0;
-    }
-    &:nth-child(n+6) {
-      display: none;
-    }
-    @media (max-width: $screen-lg) {
-      &:nth-child(n+4) {
-        display: none;
-      }
-    }
-  }
-  &__img {
-    position: relative;
-    height: 150px;
-    margin-bottom: $indent-medium;
+    .product-card__action {
+      margin-top: 15px;
+      display: flex;
+      justify-content: center;
 
-    &-inner {
-      @include img-cover;
-    }
-    img {
-      border-radius: $r-medium;
-    }
-  }
-  &__title {
-    @include reset-last-indent;
-    @media (min-width: $screen-sm) {
-      height: 64px;
-      overflow: hidden;
-    }
-    @media (max-width: $screen-sm) {
-      margin-bottom: $indent-medium;
-    }
+      .checkbox {
+        position: relative;
+        top: 5px;
 
-    > * {
-      font-size: 14px;
-      font-weight: $fw-regular;
-      line-height: $lh-small;
+        span {
+          color: $c-success;
+          font-weight: $fw-semi-bold;
+        }
+      }
     }
-    a {
-      color: $c-text;
-    }
-  }
-  &__discount {
-    position: absolute;
-    top: $indent-medium;
-    left: $indent-medium;
-    width: 32px;
-    height: 32px;
-    background-color: $c-attention;
-    color: white;
-    font-size: 12px;
-    border-radius: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-weight: $fw-bold;
-  }
-  &__action {
-    margin-top: $indent-small;
-    @media (min-width: $screen-sm) {
-      animation: products-card-line $trans-medium forwards;
-      display: none;
-    }
-  }
-  &__item:hover &__action {
-    display: block;
+    //&:nth-child(n+6) {
+    //  display: none;
+    //}
+    //@media (max-width: $screen-lg) {
+    //  &:nth-child(n+4) {
+    //    display: none;
+    //  }
+    //}
   }
   &__checkbox {
     position: absolute;

@@ -17,7 +17,7 @@
     }
   }
   &__col {
-    @media (min-width: $screen-sm) {
+    @media (min-width: $screen-sm + 1) {
       padding-right: $indent-medium + $indent-small;
     }
     @media (max-width: $screen-sm) {
@@ -145,7 +145,7 @@
 
     a {
       display: block;
-      @media (min-width: $screen-sm) {
+      @media (min-width: $screen-sm + 1) {
         width: 20px;
         height: 20px;
         margin-bottom: 12px;
@@ -163,7 +163,7 @@
         color: $c-secondary;
         display: block;
         margin-left: 8px;
-        @media (min-width: $screen-sm) {
+        @media (min-width: $screen-sm + 1) {
           display: none;
         }
       }
