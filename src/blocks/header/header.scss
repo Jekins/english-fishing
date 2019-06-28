@@ -116,6 +116,12 @@
         }
       }
     }
+
+    &_active:hover {
+      .basket-preview__inner {
+        display: block !important;
+      }
+    }
   }
   &__logo {
     display: block;

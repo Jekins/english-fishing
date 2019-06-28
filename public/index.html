@@ -94,9 +94,10 @@
           <div class="header__search">
 
             <!--search-form-->
-            <form class="search-form">
+            <form class="search-form" action="catalog.html">
               <div class="search-form__control">
-                <input type="text" placeholder="Поиск среди 4500 товаров">
+                <input id="search-input" type="text" name="query" hidden style="display: none;">
+                <select id="search-form"></select>
               </div>
               <div class="search-form__action">
                 <button type="submit" class="btn btn_icon-single">
