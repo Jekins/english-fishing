@@ -27,7 +27,12 @@ $.fn.initFancyboxGallery = function (selected) {
 
     $.fancybox.close();
     $.fancybox.open(images, {
-      loop : true
+      loop : true,
+      touch: {
+        momentum: true,
+        vertical: true,
+        horizontal: true,
+      }
     });
   });
 };

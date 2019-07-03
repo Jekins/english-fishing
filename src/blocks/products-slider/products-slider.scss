@@ -39,4 +39,17 @@
     right: 100%;
     margin-right: $indent-medium;
   }
+
+  .swiper-slide {
+    width: 240px;
+    @media (max-width: $screen-lg) {
+      width: 223px;
+    }
+    @media (max-width: $screen-sm) {
+      width: 260px;
+    }
+    @media (max-width: $screen-xs) {
+      width: 222px;
+    }
+  }
 }

@@ -1,4 +1,4 @@
-/*! Englishfishing 29-06-2019 | Front-end: Jekins */
+/*! Englishfishing 04-07-2019 | Front-end: Jekins */
 /* button-toggle ***********************/
 $.fn.buttonToggle = function (selectedIndex, cb) {
   var $block = $(this),
@@ -111,6 +111,9 @@ $.fn.dropdown = function () {
 $(function() {
   $('.dropdown').dropdown();
 });
+/* fancybox ***********************/
+$.fancybox.defaults.touch = null;
+
 /* form ***********************/
 $.fn.formGo = function () {
   $(this).on('click', function (e) {
@@ -254,7 +257,12 @@ $.fn.initFancyboxGallery = function (selected) {
 
     $.fancybox.close();
     $.fancybox.open(images, {
-      loop : true
+      loop : true,
+      touch: {
+        momentum: true,
+        vertical: true,
+        horizontal: true,
+      }
     });
   });
 };
@@ -347,37 +355,45 @@ var productsSlider;
 
 function initProductSlider($slider) {
   var id = $slider.attr('id');
+  var windowWidth = $(window).width();
+  var countSlides = 1;
 
   id = '#' + id;
+
+  if (windowWidth <= 767) {
+    countSlides = 1.3;
+  } else if (windowWidth <= 1230) {
+    countSlides = 3.3;
+  } else {
+    countSlides = 5;
+  }
 
   productsSlider = new Swiper(id + ' .products-slider__inner', {
     navigation: {
       nextEl: id + ' .products-slider__next',
       prevEl: id + ' .products-slider__prev',
     },
+    loop: false,
+    slidesPerView: countSlides
   });
 }
 
 $(function () {
-  var $slider = $('.products-slider');
+  function init () {
+    var $slider = $('.products-slider');
 
-  $(window).on('resize', function () {
     if (!$slider.length) return;
 
     $slider.each(function () {
-      var windowWidth = $(window).width();
-
       initProductSlider($(this));
-
-      if (windowWidth <= 767) {
-        productsSlider.params.slidesPerView = 1.3;
-      } else if (windowWidth <= 1230) {
-        productsSlider.params.slidesPerView = 3.3;
-      } else {
-        productsSlider.params.slidesPerView = 5;
-      }
     });
-  }).trigger('resize');
+  }
+
+  $(window).on('resize', function () {
+    init();
+  });
+
+  init();
 });
 
 /* promo-block-slider ***********************/
