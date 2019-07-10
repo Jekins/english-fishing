@@ -1,4 +1,6 @@
 /* checkbox ***********************/
+$checkbox-size: 18px;
+
 .checkbox,
 .radio {
   [type="checkbox"]:not(:checked),
@@ -20,7 +22,7 @@
   [type="radio"]:not(:checked) + span,
   [type="radio"]:checked + span {
     position: relative;
-    padding-left: 24px + $indent-small;
+    padding-left: $checkbox-size + $indent-small;
     cursor: pointer;
     font-size: 14px;
     display: block;
@@ -33,9 +35,9 @@
     content: "";
     position: absolute;
     left: 0;
-    top: -1px;
-    width: 24px;
-    height: 24px;
+    top: 2px;
+    width: $checkbox-size;
+    height: $checkbox-size;
     border: 1px solid $c-border;
     transition: $trans-medium;
   }
@@ -67,10 +69,10 @@
     background-repeat: no-repeat;
     background-position: center center;
     background-size: 100%;
-    width: 15px;
-    height: 15px;
-    left: 5px;
-    top: 3px;
+    width: 12px;
+    height: 12px;
+    left: 4px;
+    top: 4px;
     animation: $trans-medium checkbox backwards;
   }
 
@@ -86,7 +88,7 @@
   [type="radio"]:checked + span:after {
     width: 6px;
     height: 6px;
-    left: 9px;
+    left: 6px;
     top: 8px;
     border-radius: 100%;
     background-color: $bg-primary;
